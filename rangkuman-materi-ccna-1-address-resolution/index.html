@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Rangkuman Materi CCNA-1: Address Resolution</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=146492131e" />
+
+    <link rel="canonical" href="http://localhost:2368/rangkuman-materi-ccna-1-address-resolution/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="unixkuy" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Rangkuman Materi CCNA-1: Address Resolution" />
+    <meta property="og:description" content="Address Resolution adalah proses mengubah alamat logis (seperti alamat IP) menjadi alamat fisik (seperti alamat MAC) yang digunakan oleh perangkat jaringan untuk mengirimkan paket data ke perangkat tujuan. Proses ini diperlukan karena setiap perangkat jaringan hanya dapat menerima dan mengirimkan paket data melalui interface fisiknya (misalnya, kartu jaringan), yang memiliki" />
+    <meta property="og:url" content="http://localhost:2368/rangkuman-materi-ccna-1-address-resolution/" />
+    <meta property="og:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg" />
+    <meta property="article:published_time" content="2023-01-04T08:48:10.000Z" />
+    <meta property="article:modified_time" content="2023-01-04T09:12:58.000Z" />
+    <meta property="article:tag" content="ccna-1" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rangkuman Materi CCNA-1: Address Resolution" />
+    <meta name="twitter:description" content="Address Resolution adalah proses mengubah alamat logis (seperti alamat IP) menjadi alamat fisik (seperti alamat MAC) yang digunakan oleh perangkat jaringan untuk mengirimkan paket data ke perangkat tujuan. Proses ini diperlukan karena setiap perangkat jaringan hanya dapat menerima dan mengirimkan paket data melalui interface fisiknya (misalnya, kartu jaringan), yang memiliki" />
+    <meta name="twitter:url" content="http://localhost:2368/rangkuman-materi-ccna-1-address-resolution/" />
+    <meta name="twitter:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Ferry Ananda Febian" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="ccna-1" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta property="og:image:width" content="5000" />
+    <meta property="og:image:height" content="3500" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "unixkuy",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ferry Ananda Febian",
+        "url": "http://localhost:2368/author/ferry/",
+        "sameAs": []
+    },
+    "headline": "Rangkuman Materi CCNA-1: Address Resolution",
+    "url": "http://localhost:2368/rangkuman-materi-ccna-1-address-resolution/",
+    "datePublished": "2023-01-04T08:48:10.000Z",
+    "dateModified": "2023-01-04T09:12:58.000Z",
+    "keywords": "ccna-1",
+    "description": "\n\n\nAddress Resolution adalah proses mengubah alamat logis (seperti alamat IP) menjadi alamat fisik (seperti alamat MAC) yang digunakan oleh perangkat jaringan untuk mengirimkan paket data ke perangkat tujuan. Proses ini diperlukan karena setiap perangkat jaringan hanya dapat menerima dan mengirimkan paket data melalui interface fisiknya (misalnya, kartu jaringan), yang memiliki alamat MAC unik.\n\n\n\n\n\nUntuk menentukan alamat MAC dari perangkat tujuan, perangkat yang akan mengirimkan paket data ter",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.38" />
+    <link rel="alternate" type="application/rss+xml" title="unixkuy" href="http://localhost:2368/rss/" />
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.25/umd/portal.min.js" data-ghost="http://localhost:2368/" data-key="15ceee4aa109bb38c146da1571" data-api="http://localhost:2368/ghost/api/content/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="15ceee4aa109bb38c146da1571" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
+    <link href="http://localhost:2368/webmentions/receive/" rel="webmention" />
+    <script defer src="/public/cards.min.js?v=146492131e"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=146492131e">
+    <script defer src="/public/member-attribution.min.js?v=146492131e"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+</head>
+<body class="post-template tag-ccna-1 tag-hash-wordpress tag-hash-import-2023-03-12-12-53 is-head-left-logo has-cover">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head outer">
+        <div class="gh-head-inner inner">
+            <div class="gh-head-brand">
+                <a class="gh-head-logo no-image" href="http://localhost:2368">
+                        unixkuy
+                </a>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="http://localhost:2368/">Home</a></li>
+    <li class="nav-about"><a href="http://localhost:2368/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                    <button class="gh-search gh-icon-btn" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                    <div class="gh-head-members">
+                                <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
+                                <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+
+
+
+<main id="site-main" class="site-main">
+<article class="article post tag-ccna-1 tag-hash-wordpress tag-hash-import-2023-03-12-12-53 no-image ">
+
+    <header class="article-header gh-canvas">
+
+        <div class="article-tag post-card-tags">
+                <span class="post-card-primary-tag">
+                    <a href="/tag/ccna-1/">ccna-1</a>
+                </span>
+        </div>
+
+        <h1 class="article-title">Rangkuman Materi CCNA-1: Address Resolution</h1>
+
+
+        <div class="article-byline">
+        <section class="article-byline-content">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="/author/ferry/" class="author-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+                </li>
+            </ul>
+
+            <div class="article-byline-meta">
+                <h4 class="author-name"><a href="/author/ferry/">Ferry Ananda Febian</a></h4>
+                <div class="byline-meta-content">
+                    <time class="byline-meta-date" datetime="2023-01-04">Jan 4, 2023</time>
+                        <span class="byline-reading-time"><span class="bull">&bull;</span> 3 min read</span>
+                </div>
+            </div>
+
+        </section>
+        </div>
+
+
+    </header>
+
+    <section class="gh-content gh-canvas">
+        <!--kg-card-begin: html-->
+<p>Address Resolution adalah proses mengubah alamat logis (seperti alamat IP) menjadi alamat fisik (seperti alamat MAC) yang digunakan oleh perangkat jaringan untuk mengirimkan paket data ke perangkat tujuan. Proses ini diperlukan karena setiap perangkat jaringan hanya dapat menerima dan mengirimkan paket data melalui interface fisiknya (misalnya, kartu jaringan), yang memiliki alamat MAC unik.</p>
+
+
+
+<p>Untuk menentukan alamat MAC dari perangkat tujuan, perangkat yang akan mengirimkan paket data terlebih dahulu mengirimkan request ke jaringan untuk mencari tahu alamat MAC dari perangkat tujuan. Apabila perangkat tujuan ditemukan, maka perangkat tersebut akan mengirimkan balasan yang berisi alamat MAC-nya ke perangkat yang meminta. Setelah perangkat pengirim menerima alamat MAC perangkat tujuan, maka paket data dapat dikirimkan ke perangkat tujuan melalui interface fisiknya.</p>
+
+
+
+<p>Proses address resolution terdiri dari beberapa tahap, yaitu:</p>
+
+
+
+<ul>
+<li>Perangkat pengirim mengirimkan request ke jaringan untuk mencari tahu alamat MAC perangkat tujuan.</li>
+
+
+
+<li>Perangkat tujuan menerima request dan mengirimkan balasan yang berisi alamat MAC-nya ke perangkat pengirim.</li>
+
+
+
+<li>Perangkat pengirim menerima alamat MAC perangkat tujuan dan mengirimkan paket data ke perangkat tujuan melalui interface fisiknya.</li>
+</ul>
+
+
+
+<p>Dengan menggunakan proses address resolution, perangkat jaringan dapat saling berkomunikasi dengan efisien, meskipun hanya memiliki alamat logis (seperti alamat IP) yang tidak dapat digunakan langsung untuk mengirimkan paket data.</p>
+
+
+
+<h2>MAC and IP</h2>
+
+
+
+<p>Alamat MAC (Media Access Control) adalah alamat fisik yang terdapat pada setiap perangkat jaringan, sedangkan alamat IP (Internet Protocol) adalah alamat logis yang digunakan untuk mengidentifikasi perangkat jaringan di dalam jaringan.&nbsp;</p>
+
+
+
+<p>Berikut ini adalah perbedaan utama antara alamat MAC dan alamat IP:</p>
+
+
+
+<ul>
+<li>Fungsi: Alamat MAC digunakan untuk mengirimkan paket data antar perangkat jaringan pada jaringan lokal (local area network atau LAN), sedangkan alamat IP digunakan untuk mengirimkan paket data antar jaringan (internet).</li>
+
+
+
+<li>Penggunaan: Alamat MAC hanya digunakan di dalam jaringan LAN, sedangkan alamat IP dapat digunakan di jaringan manapun yang terhubung ke internet.</li>
+
+
+
+<li>Format: Alamat MAC terdiri dari enam byte atau 48 bit yang ditulis dalam bentuk hexadecimal (misalnya, 00:11:22:33:44:55), sedangkan alamat IP terdiri dari empat blok angka yang dipisahkan oleh titik (misalnya, 192.168.0.1).</li>
+
+
+
+<li>Unik: Setiap perangkat jaringan memiliki alamat MAC yang unik dan tidak dapat digunakan oleh perangkat lain, sedangkan alamat IP dapat digunakan oleh beberapa perangkat jaringan dengan menggunakan teknik NAT (Network Address Translation).</li>
+
+
+
+<li>Durasi: Alamat MAC tidak dapat diubah setelah perangkat jaringan dibuat, sedangkan alamat IP dapat diubah sesuai kebutuhan.</li>
+</ul>
+
+
+
+<p>Kesimpulannya, alamat MAC digunakan untuk mengirimkan paket data antar perangkat jaringan pada jaringan lokal, sedangkan alamat IP digunakan untuk mengirimkan paket data antar jaringan dan mengidentifikasi perangkat jaringan di dalam jaringan.</p>
+
+
+
+<h2>ARP</h2>
+
+
+
+<p>ARP (Address Resolution Protocol) adalah protokol yang digunakan untuk mengubah alamat logis (seperti alamat IP) menjadi alamat fisik (seperti alamat MAC) yang digunakan oleh perangkat jaringan untuk mengirimkan paket data ke perangkat tujuan. Protokol ini digunakan untuk menyelesaikan proses address resolution di dalam jaringan lokal (local area network atau LAN).</p>
+
+
+
+<p>Tujuan utama dari ARP adalah untuk memungkinkan perangkat jaringan saling berkomunikasi dengan efisien, meskipun hanya memiliki alamat logis (seperti alamat IP) yang tidak dapat digunakan langsung untuk mengirimkan paket data. Dengan menggunakan ARP, perangkat jaringan dapat dengan mudah mencari tahu alamat MAC perangkat tujuan yang dibutuhkan untuk mengirimkan paket data ke perangkat tersebut.</p>
+
+
+
+<p>Secara garis besar, proses yang dilakukan oleh ARP terdiri dari beberapa tahap, yaitu:</p>
+
+
+
+<ul>
+<li>Perangkat pengirim mengirimkan request ke jaringan untuk mencari tahu alamat MAC perangkat tujuan.</li>
+
+
+
+<li>Perangkat tujuan menerima request dan mengirimkan balasan yang berisi alamat MAC-nya ke perangkat pengirim.</li>
+
+
+
+<li>Perangkat pengirim menerima alamat MAC perangkat tujuan dan mengirimkan paket data ke perangkat tujuan melalui interface fisiknya.</li>
+</ul>
+
+
+
+<p>Dengan demikian, ARP memiliki fungsi penting dalam proses komunikasi di dalam jaringan lokal, yaitu dengan memungkinkan perangkat jaringan saling berkomunikasi dengan menggunakan alamat logis (seperti alamat IP) yang lebih mudah dikenali oleh manusia.</p>
+
+
+
+<h2>Neighbor Discovery</h2>
+
+
+
+<p>IPv6 Neighbor Discovery adalah proses yang digunakan oleh perangkat jaringan untuk menemukan perangkat lain yang terhubung dalam jaringan yang sama, serta menentukan alamat dan informasi lain yang dibutuhkan untuk berkomunikasi dengan perangkat tersebut. Proses ini merupakan bagian dari protokol IPv6 yang digunakan untuk mengelola komunikasi di dalam jaringan.</p>
+
+
+
+<p>Secara garis besar, proses IPv6 Neighbor Discovery terdiri dari beberapa tahap, yaitu:</p>
+
+
+
+<ul>
+<li>Perangkat jaringan mengirimkan request multicast ke jaringan untuk mencari tahu apakah ada perangkat lain yang terhubung dalam jaringan yang sama.</li>
+
+
+
+<li>Perangkat lain yang terhubung dalam jaringan yang sama akan mengirimkan balasan yang berisi informasi tentang diri mereka (seperti alamat IP dan MAC).</li>
+
+
+
+<li>Perangkat jaringan yang mengirimkan request akan menerima balasan dari perangkat lain dan menyimpannya di dalam tabel neighbor untuk digunakan sebagai referensi ketika akan berkomunikasi dengan perangkat tersebut di kemudian hari.</li>
+</ul>
+
+
+
+<p>Dengan menggunakan proses IPv6 Neighbor Discovery, perangkat jaringan dapat dengan mudah menemukan dan berkomunikasi dengan perangkat lain yang terhubung dalam jaringan yang sama, sehingga proses transmisi data dapat berlangsung dengan efisien.</p>
+
+
+
+<p>Baca kumpulan rangkuman materi CCNA-1 lainnya</p>
+
+
+
+<div class="is-layout-flex wp-block-buttons">
+<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button" href="https://unixkuy.com/rangkuman-materi-ccna-1-bahasa-indonesia/?ref=unixkuy">CCNA-1</a></div>
+</div>
+<!--kg-card-end: html-->
+    </section>
+
+
+</article>
+</main>
+
+    <section class="footer-cta outer">
+        <div class="inner">
+            <h2 class="footer-cta-title">Sign up for more like this.</h2>
+            <a class="footer-cta-button" href="#/portal" data-portal>
+                <div class="footer-cta-input">Enter your email</div>
+                <span>Subscribe</span>
+            </a>
+        </div>
+    </section>
+
+
+
+            <aside class="read-more-wrap outer">
+                <div class="read-more inner">
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-list/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/image.png 300w,
+                    /content/images/size/w600/wordpress/2023/03/image.png 600w,
+                    /content/images/size/w1000/wordpress/2023/03/image.png 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/image.png 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/image.png"
+            alt="Belajar React Dasar | List"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-list/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | List
+                </h2>
+            </header>
+                <div class="post-card-excerpt">List sangat penting dalam hal mengembangkan UI situs web. Terutama sering digunakan untuk menampilkan menu di situs web, misalnya menu navbar. Pada JavaScript biasa, kita dapat menggunakan array untuk membuat list. Kita dapat membuat list di React dengan cara yang sama seperti yang dilakukan pada javascript biasa.
+
+
+
+
+
+Selanjutnya artikel ini</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-07">Mar 7, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+
+        <img class="post-card-image"
+            srcset="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 300w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 600w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 1000w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE"
+            alt="Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Oke gan, mungkin hampir semua orang sudah pernah mengalami atau ingin tau, siapa aja sih orang yang tidak memfollback akun instagram kita. Apapun alasan kalian mengunjungi artikel ini, saya hanya akan share bagaimana cara mengetahui orang yang tidak memfollback dan mengunfollow akun tersebut secara grup.
+
+
+
+
+
+
+Syarat
+
+
+
+
+
+Sebelum masuk ke tutorial,</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-06">Mar 6, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-reactdom/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/REACT-DOM.jpg 300w,
+                    /content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg 600w,
+                    /content/images/size/w1000/wordpress/2023/03/REACT-DOM.jpg 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/REACT-DOM.jpg 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg"
+            alt="Belajar React Dasar | ReactDOM"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-reactdom/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | ReactDOM
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Di artikel sebelumnya yaitu Pengantar JSX, kita sudah mempelajari bahwa developer bisa menggunakan JSX untuk menyimpan markup HTML di dalam variabel Javascript. Karena, ReactJS adalah sebuah library untuk membangun Antarmuka Pengguna yang aktif sehingga rendering adalah salah satu bagian yang tidak terpisahkan dari ReactJS. React menyediakan sebuah paket yang bernama</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-05">Mar 5, 2023</time>
+                <span class="post-card-meta-length">3 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                </div>
+            </aside>
+
+
+
+    </div>
+
+    <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="http://localhost:2368">unixkuy</a> &copy; 2023</section>
+            <nav class="site-footer-nav">
+                <ul class="nav">
+    <li class="nav-sign-up"><a href="#/portal/">Sign up</a></li>
+</ul>
+
+            </nav>
+            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+</script>
+<script src="/assets/built/casper.js?v=146492131e"></script>
+<script>
+$(document).ready(function () {
+    // Mobile Menu Trigger
+    $('.gh-burger').click(function () {
+        $('body').toggleClass('gh-head-open');
+    });
+    // FitVids - Makes video embeds responsive
+    $(".gh-content").fitVids();
+});
+</script>
+
+
+
+</body>
+</html>

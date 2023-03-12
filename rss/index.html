@@ -1,0 +1,1681 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[unixkuy]]></title><description><![CDATA[Thoughts, stories and ideas.]]></description><link>http://localhost:2368/</link><image><url>http://localhost:2368/favicon.png</url><title>unixkuy</title><link>http://localhost:2368/</link></image><generator>Ghost 5.38</generator><lastBuildDate>Sun, 12 Mar 2023 12:55:34 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Belajar React Dasar | List]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>List sangat penting dalam hal mengembangkan UI situs web. Terutama sering digunakan untuk menampilkan menu di situs web, misalnya menu navbar. Pada JavaScript biasa, kita dapat menggunakan array untuk membuat list. Kita dapat membuat list di React dengan cara yang sama seperti yang dilakukan pada javascript biasa.</p>
+
+
+
+<p>Selanjutnya artikel ini</p>]]></description><link>http://localhost:2368/belajar-react-dasar-list/</link><guid isPermaLink="false">640dcb54b2a4271144649fee</guid><category><![CDATA[coding]]></category><category><![CDATA[javascript]]></category><category><![CDATA[react]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Tue, 07 Mar 2023 03:11:28 GMT</pubDate><media:content url="http://localhost:2368/content/images/wordpress/2023/03/image.png" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="http://localhost:2368/content/images/wordpress/2023/03/image.png" alt="Belajar React Dasar | List"><p>List sangat penting dalam hal mengembangkan UI situs web. Terutama sering digunakan untuk menampilkan menu di situs web, misalnya menu navbar. Pada JavaScript biasa, kita dapat menggunakan array untuk membuat list. Kita dapat membuat list di React dengan cara yang sama seperti yang dilakukan pada javascript biasa.</p>
+
+
+
+<p>Selanjutnya artikel ini akan membahas lebih dalam terkait list pada React.</p>
+
+
+
+<h2>Pengertian</h2>
+
+
+
+<p>List pada React adalah salah satu tipe data yang digunakan untuk menyimpan kumpulan nilai atau elemen dalam sebuah variabel. List juga bisa disebut sebagai daftar atau array.</p>
+
+
+
+<h2>Cara Membuat List</h2>
+
+
+
+<p>Untuk membuat list pada React, kita dapat menggunakan sintaksis yang sama seperti di JavaScript, yaitu dengan menempatkan elemen-elemen atau nilai-nilai yang ingin kita simpan di dalam tanda kurung siku ([]). Kita juga dapat menggunakan method-method seperti map(), filter(), dan reduce() untuk memanipulasi data di dalam list tersebut.</p>
+
+
+
+<p>Berikut adalah contoh fungsi JavaScript map() untuk menelusuri list:</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#282A36"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="var nomor = [1, 2, 3, 4, 5];
+const updateNomor = nomor.map((number) =&gt; {
+&#xA0;&#xA0;return number + 2;
+});
+
+console.log(updateNomor);" style="color:#f6f6f4;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki dracula-soft" style="background-color: #282A36"><code><span class="line"><span style="color: #F286C4">var</span><span style="color: #F6F6F4"> nomor </span><span style="color: #F286C4">=</span><span style="color: #F6F6F4"> [</span><span style="color: #BF9EEE">1</span><span style="color: #F6F6F4">, </span><span style="color: #BF9EEE">2</span><span style="color: #F6F6F4">, </span><span style="color: #BF9EEE">3</span><span style="color: #F6F6F4">, </span><span style="color: #BF9EEE">4</span><span style="color: #F6F6F4">, </span><span style="color: #BF9EEE">5</span><span style="color: #F6F6F4">];</span></span>
+<span class="line"><span style="color: #F286C4">const</span><span style="color: #F6F6F4"> updateNomor </span><span style="color: #F286C4">=</span><span style="color: #F6F6F4"> nomor.</span><span style="color: #62E884">map</span><span style="color: #F6F6F4">((</span><span style="color: #FFB86C; font-style: italic">number</span><span style="color: #F6F6F4">) </span><span style="color: #F286C4">=&gt;</span><span style="color: #F6F6F4"> {</span></span>
+<span class="line"><span style="color: #F6F6F4">&#xA0;&#xA0;</span><span style="color: #F286C4">return</span><span style="color: #F6F6F4"> number </span><span style="color: #F286C4">+</span><span style="color: #F6F6F4"> </span><span style="color: #BF9EEE">2</span><span style="color: #F6F6F4">;</span></span>
+<span class="line"><span style="color: #F6F6F4">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F6F6F4">console.</span><span style="color: #62E884">log</span><span style="color: #F6F6F4">(updateNomor);</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#282a36;color:#ebebe6;font-size:12px;line-height:1;position:relative">JavaScript</span></div>
+
+
+
+<p>Kode diatas akan menghasilkan output seperti di bawah ini:</p>
+
+
+
+<p><strong>[3, 4, 5, 6, 7]</strong></p>
+
+
+
+<p>Selanjutnya kita akan coba menampilkan kumpulan data dalam bentuk list atau daftar di dalam komponen React. Dalam React, rendering list biasanya dilakukan dengan menggunakan konsep &#x201C;pengulangan&#x201D; atau &#x201C;looping&#x201D;, yang memungkinkan kita untuk menampilkan setiap elemen dalam list secara otomatis.</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#282A36"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="import React from &quot;react&quot;;
+import ReactDOM from &quot;react-dom&quot;;
+
+function Navmenu(props) {
+&#xA0;&#xA0;const list = props.menuitems;
+&#xA0;&#xA0;const updatedList = list.map((listItems) =&gt; {
+&#xA0;&#xA0;&#xA0;&#xA0;return &lt;li&gt;{listItems}&lt;/li&gt;;
+&#xA0;&#xA0;});
+&#xA0;&#xA0;return &lt;ul&gt;{updatedList}&lt;/ul&gt;;
+}
+
+const menuItems = [1, 2, 3, 4, 5];
+
+ReactDOM.render(&lt;Navmenu menuitems={menuItems} /&gt;, document.getElementById(&quot;root&quot;));" style="color:#f6f6f4;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki dracula-soft" style="background-color: #282A36"><code><span class="line"><span style="color: #F286C4">import</span><span style="color: #F6F6F4"> React </span><span style="color: #F286C4">from</span><span style="color: #F6F6F4"> </span><span style="color: #DEE492">&quot;</span><span style="color: #E7EE98">react</span><span style="color: #DEE492">&quot;</span><span style="color: #F6F6F4">;</span></span>
+<span class="line"><span style="color: #F286C4">import</span><span style="color: #F6F6F4"> ReactDOM </span><span style="color: #F286C4">from</span><span style="color: #F6F6F4"> </span><span style="color: #DEE492">&quot;</span><span style="color: #E7EE98">react-dom</span><span style="color: #DEE492">&quot;</span><span style="color: #F6F6F4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F286C4">function</span><span style="color: #F6F6F4"> </span><span style="color: #62E884">Navmenu</span><span style="color: #F6F6F4">(</span><span style="color: #FFB86C; font-style: italic">props</span><span style="color: #F6F6F4">) {</span></span>
+<span class="line"><span style="color: #F6F6F4">&#xA0;&#xA0;</span><span style="color: #F286C4">const</span><span style="color: #F6F6F4"> list </span><span style="color: #F286C4">=</span><span style="color: #F6F6F4"> props.menuitems;</span></span>
+<span class="line"><span style="color: #F6F6F4">&#xA0;&#xA0;</span><span style="color: #F286C4">const</span><span style="color: #F6F6F4"> updatedList </span><span style="color: #F286C4">=</span><span style="color: #F6F6F4"> list.</span><span style="color: #62E884">map</span><span style="color: #F6F6F4">((</span><span style="color: #FFB86C; font-style: italic">listItems</span><span style="color: #F6F6F4">) </span><span style="color: #F286C4">=&gt;</span><span style="color: #F6F6F4"> {</span></span>
+<span class="line"><span style="color: #F6F6F4">&#xA0;&#xA0;&#xA0;&#xA0;</span><span style="color: #F286C4">return</span><span style="color: #F6F6F4"> &lt;</span><span style="color: #F286C4">li</span><span style="color: #F6F6F4">&gt;</span><span style="color: #F286C4">{</span><span style="color: #F6F6F4">listItems</span><span style="color: #F286C4">}</span><span style="color: #F6F6F4">&lt;/</span><span style="color: #F286C4">li</span><span style="color: #F6F6F4">&gt;;</span></span>
+<span class="line"><span style="color: #F6F6F4">&#xA0;&#xA0;});</span></span>
+<span class="line"><span style="color: #F6F6F4">&#xA0;&#xA0;</span><span style="color: #F286C4">return</span><span style="color: #F6F6F4"> &lt;</span><span style="color: #F286C4">ul</span><span style="color: #F6F6F4">&gt;</span><span style="color: #F286C4">{</span><span style="color: #F6F6F4">updatedList</span><span style="color: #F286C4">}</span><span style="color: #F6F6F4">&lt;/</span><span style="color: #F286C4">ul</span><span style="color: #F6F6F4">&gt;;</span></span>
+<span class="line"><span style="color: #F6F6F4">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F286C4">const</span><span style="color: #F6F6F4"> menuItems </span><span style="color: #F286C4">=</span><span style="color: #F6F6F4"> [</span><span style="color: #BF9EEE">1</span><span style="color: #F6F6F4">, </span><span style="color: #BF9EEE">2</span><span style="color: #F6F6F4">, </span><span style="color: #BF9EEE">3</span><span style="color: #F6F6F4">, </span><span style="color: #BF9EEE">4</span><span style="color: #F6F6F4">, </span><span style="color: #BF9EEE">5</span><span style="color: #F6F6F4">];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F6F6F4">ReactDOM.</span><span style="color: #62E884">render</span><span style="color: #F6F6F4">(&lt;</span><span style="color: #97E1F1; font-style: italic">Navmenu</span><span style="color: #F6F6F4"> </span><span style="color: #62E884; font-style: italic">menuitems</span><span style="color: #F286C4">={</span><span style="color: #F6F6F4">menuItems</span><span style="color: #F286C4">}</span><span style="color: #F6F6F4"> /&gt;, document.</span><span style="color: #62E884">getElementById</span><span style="color: #F6F6F4">(</span><span style="color: #DEE492">&quot;</span><span style="color: #E7EE98">root</span><span style="color: #DEE492">&quot;</span><span style="color: #F6F6F4">));</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#282a36;color:#ebebe6;font-size:12px;line-height:1;position:relative">JavaScript</span></div>
+
+
+
+<p>Output yang dihasilkan:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="http://localhost:2368/content/images/wordpress/2023/03/image.png" alt="Belajar React Dasar | List" class="wp-image-1852" width="476" height="418" srcset="http://localhost:2368/content/images/wordpress/2023/03/image.png 476w, http://localhost:2368/content/images/wordpress/2023/03/image-300x263.png 300w" sizes="(max-width: 476px) 100vw, 476px"><figcaption class="wp-element-caption">output</figcaption></figure></div>
+
+
+<p>Bisa dilihat pada output di atas, unordered list berhasil di render ke browser tetapi pesan warning dicatat ke konsol.</p>
+
+
+
+<p><strong>Peringatan</strong>: Setiap child dalam larik atau iterator harus memiliki penyangga &#x201C;key&#x201D; yang unik</p>
+
+
+
+<p>Pesan warning di atas mengatakan bahwa setiap item daftar dalam daftar unordered harus memiliki kunci yang unik. &#x201C;Kunci&#x201D; adalah atribut string khusus yang perlu disertakan saat membuat daftar elemen di React. Materi tentang key akan dibahas secara rinci di artikel selanjutnya.</p>
+
+
+
+<p>Berikut adalah contoh kode React yang sudah diperbaharui dengan key:</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#282A36"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="import React from &quot;react&quot;;
+import ReactDOM from &quot;react-dom&quot;;
+
+function Navmenu(props) {
+&#xA0;&#xA0;const list = props.menuitems;
+&#xA0;&#xA0;const updatedList = list.map((listItems) =&gt; {
+&#xA0;&#xA0;&#xA0;&#xA0;return &lt;li key={listItems.toString()}&gt;{listItems}&lt;/li&gt;;
+&#xA0;&#xA0;});
+
+&#xA0;&#xA0;return &lt;ul&gt;{updatedList}&lt;/ul&gt;;
+}
+
+const menuItems = [1, 2, 3, 4, 5];
+
+ReactDOM.render(&lt;Navmenu menuitems={menuItems} /&gt;, document.getElementById(&quot;root&quot;));" style="color:#f6f6f4;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki dracula-soft" style="background-color: #282A36"><code><span class="line"><span style="color: #F286C4">import</span><span style="color: #F6F6F4"> React </span><span style="color: #F286C4">from</span><span style="color: #F6F6F4"> </span><span style="color: #DEE492">&quot;</span><span style="color: #E7EE98">react</span><span style="color: #DEE492">&quot;</span><span style="color: #F6F6F4">;</span></span>
+<span class="line"><span style="color: #F286C4">import</span><span style="color: #F6F6F4"> ReactDOM </span><span style="color: #F286C4">from</span><span style="color: #F6F6F4"> </span><span style="color: #DEE492">&quot;</span><span style="color: #E7EE98">react-dom</span><span style="color: #DEE492">&quot;</span><span style="color: #F6F6F4">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F286C4">function</span><span style="color: #F6F6F4"> </span><span style="color: #62E884">Navmenu</span><span style="color: #F6F6F4">(</span><span style="color: #FFB86C; font-style: italic">props</span><span style="color: #F6F6F4">) {</span></span>
+<span class="line"><span style="color: #F6F6F4">&#xA0;&#xA0;</span><span style="color: #F286C4">const</span><span style="color: #F6F6F4"> list </span><span style="color: #F286C4">=</span><span style="color: #F6F6F4"> props.menuitems;</span></span>
+<span class="line"><span style="color: #F6F6F4">&#xA0;&#xA0;</span><span style="color: #F286C4">const</span><span style="color: #F6F6F4"> updatedList </span><span style="color: #F286C4">=</span><span style="color: #F6F6F4"> list.</span><span style="color: #62E884">map</span><span style="color: #F6F6F4">((</span><span style="color: #FFB86C; font-style: italic">listItems</span><span style="color: #F6F6F4">) </span><span style="color: #F286C4">=&gt;</span><span style="color: #F6F6F4"> {</span></span>
+<span class="line"><span style="color: #F6F6F4">&#xA0;&#xA0;&#xA0;&#xA0;</span><span style="color: #F286C4">return</span><span style="color: #F6F6F4"> &lt;</span><span style="color: #F286C4">li</span><span style="color: #F6F6F4"> </span><span style="color: #62E884; font-style: italic">key</span><span style="color: #F286C4">={</span><span style="color: #F6F6F4">listItems.</span><span style="color: #62E884">toString</span><span style="color: #F6F6F4">()</span><span style="color: #F286C4">}</span><span style="color: #F6F6F4">&gt;</span><span style="color: #F286C4">{</span><span style="color: #F6F6F4">listItems</span><span style="color: #F286C4">}</span><span style="color: #F6F6F4">&lt;/</span><span style="color: #F286C4">li</span><span style="color: #F6F6F4">&gt;;</span></span>
+<span class="line"><span style="color: #F6F6F4">&#xA0;&#xA0;});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F6F6F4">&#xA0;&#xA0;</span><span style="color: #F286C4">return</span><span style="color: #F6F6F4"> &lt;</span><span style="color: #F286C4">ul</span><span style="color: #F6F6F4">&gt;</span><span style="color: #F286C4">{</span><span style="color: #F6F6F4">updatedList</span><span style="color: #F286C4">}</span><span style="color: #F6F6F4">&lt;/</span><span style="color: #F286C4">ul</span><span style="color: #F6F6F4">&gt;;</span></span>
+<span class="line"><span style="color: #F6F6F4">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F286C4">const</span><span style="color: #F6F6F4"> menuItems </span><span style="color: #F286C4">=</span><span style="color: #F6F6F4"> [</span><span style="color: #BF9EEE">1</span><span style="color: #F6F6F4">, </span><span style="color: #BF9EEE">2</span><span style="color: #F6F6F4">, </span><span style="color: #BF9EEE">3</span><span style="color: #F6F6F4">, </span><span style="color: #BF9EEE">4</span><span style="color: #F6F6F4">, </span><span style="color: #BF9EEE">5</span><span style="color: #F6F6F4">];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #F6F6F4">ReactDOM.</span><span style="color: #62E884">render</span><span style="color: #F6F6F4">(&lt;</span><span style="color: #97E1F1; font-style: italic">Navmenu</span><span style="color: #F6F6F4"> </span><span style="color: #62E884; font-style: italic">menuitems</span><span style="color: #F286C4">={</span><span style="color: #F6F6F4">menuItems</span><span style="color: #F286C4">}</span><span style="color: #F6F6F4"> /&gt;, document.</span><span style="color: #62E884">getElementById</span><span style="color: #F6F6F4">(</span><span style="color: #DEE492">&quot;</span><span style="color: #E7EE98">root</span><span style="color: #DEE492">&quot;</span><span style="color: #F6F6F4">));</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#282a36;color:#ebebe6;font-size:12px;line-height:1;position:relative">JavaScript</span></div>
+
+
+
+<p>Kode diatas akan memberikan output yang sama dengan kode sebelumnya tetapi kali ini tanpa peringatan apapun. Key digunakan dalam React untuk mengidentifikasi item mana dalam daftar yang diubah, diperbarui, atau dihapus. Dengan kata lain, key dapat digunakan untuk memberi identitas pada elemen dalam daftar.</p>
+<!--kg-card-end: html-->]]></content:encoded></item><item><title><![CDATA[Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>Oke gan, mungkin hampir semua orang sudah pernah mengalami atau ingin tau, siapa aja sih orang yang tidak memfollback akun instagram kita. Apapun alasan kalian mengunjungi artikel ini, saya hanya akan share bagaimana cara mengetahui orang yang tidak memfollback dan mengunfollow akun tersebut secara grup.</p>
+
+
+
+<h2>Syarat</h2>
+
+
+
+<p>Sebelum masuk ke tutorial,</p>]]></description><link>http://localhost:2368/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/</link><guid isPermaLink="false">640dcb54b2a4271144649fed</guid><category><![CDATA[instagram]]></category><category><![CDATA[script]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Mon, 06 Mar 2023 02:16:38 GMT</pubDate><media:content url="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE" alt="Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan"><p>Oke gan, mungkin hampir semua orang sudah pernah mengalami atau ingin tau, siapa aja sih orang yang tidak memfollback akun instagram kita. Apapun alasan kalian mengunjungi artikel ini, saya hanya akan share bagaimana cara mengetahui orang yang tidak memfollback dan mengunfollow akun tersebut secara grup.</p>
+
+
+
+<h2>Syarat</h2>
+
+
+
+<p>Sebelum masuk ke tutorial, pastikan kalian mempunyai laptop atau komputer yang sudah terinstall browser (rekomendasi chrome) dan juga koneksi internet, karena tutorial ini sepenuhnya optimal dijalankan menggunakan komputer.</p>
+
+
+
+<h2>Langkah-langkah</h2>
+
+
+
+<p>Di internet ada banyak banget tools dan juga website untuk mengetahui orang yang tidak memfollow akun instagram, tetapi banyak juga yang tools nya dipenuhi dengan iklan dan beberapa juga tidak berfungsi, untungnya saat ini sudah ada developer yang berbaik hati membuatkan script untuk mengatasi masalah ini.</p>
+
+
+
+<p>Berikut adalah langkah-langkah nya:</p>
+
+
+
+<ol>
+<li>Buka repository github berikut, <a href="https://github.com/davidarroyo1234/InstagramUnfollowers?ref=unixkuy">https://github.com/davidarroyo1234/InstagramUnfollowers</a></li>
+
+
+
+<li>Scroll aja kebawah, pada bagian <strong>usage</strong> di step <strong>1. Copy the following code</strong>, salin code<strong>&#xA0;</strong></li>
+</ol>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh4.googleusercontent.com/vHpOD1Dg0o7cQvc2hWYoH7Rhzis8EikLKsOOAfM71_rRg2Y2w0k5yAYIpNWIBHVFTOgLzcz31A99HYhNpeaPVyUNHo2QYbUULnSpb2WWaXW2cld8YiQCpEpO5YvuIxLkVu7DiKyLO-GTiJ1FGgg5aPo" alt="Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan"></figure>
+
+
+
+<ol start="3">
+<li>Setelah code disalin, buka browser lalu login ke akun instagram kalian <a href="http://instagram.com/?ref=unixkuy" target="_blank" data-type="URL" data-id="instagram.com" rel="noreferrer noopener">instagram.com</a></li>
+</ol>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><img decoding="async" src="https://lh4.googleusercontent.com/wSNp237zx_RCvihFKzINj5j12Tlm_KEJjJeKPNKbiFnckyf0cfXGFtJXVxW1AA-z6Q-lupepeYKmUcC4fv5UKB1Yla4foRitYyZTtpxIyZbVHC-QP8ovlVu6Z0aYyUUQ9i5GPthCGvM2gUHP161Uv9A" alt="Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan"></figure></div>
+
+
+<ol start="4">
+<li>Masuk ke console browser, pakai shortcut (ctrl+shift+j)</li>
+</ol>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><img decoding="async" src="https://lh4.googleusercontent.com/Hj--47ViOJqF6yFS__zck_CiHl4sFi1bjpjEbXjaWrn2Or4fhsWwYm0XuLaQfoVNj2hqi5Q1tKL_eWWa-dOuwOn7znpXsmuauQiH7eUyM_Yed8dUXw59C4SRFfj56xXYkinYsdTHJEU2UI1EcCwiuZo" alt="Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan"></figure></div>
+
+
+<ol start="5">
+<li>Paste code yang disalin dari github tadi ke console lalu enter</li>
+</ol>
+
+
+<div class="wp-block-image">
+<figure class="alignleft"><img decoding="async" src="https://lh4.googleusercontent.com/wBXdEGjaYPwoVwfh8KMm0s60HIKrU8hqfOIeYrGKDj94bC5ZxS1rgyIqCqcgODnbsLdack0nliWjAUYLgjPTDwmyGlaZKPqV6wLkyW_aEhSgQNxuj5SuzB1vBPAcEKx8bVjgh5VqsbTXdsV_rVN20Jg" alt="Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan"></figure></div>
+
+
+<ol start="6">
+<li>Setelah itu klik run, selamat mencoba</li>
+</ol>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><img decoding="async" src="https://lh3.googleusercontent.com/Y1e4kueGFSaxtN_4xRdjxAhsV6Hry90DvdQoDEBbyq_8NMGUBf6aBx06UoXaVGpSCbhcHVZsv2u9LiYD0U1oGxlL9n_SkhlbRFFEEaBsm30jWesPDtJzj-Nxmna3vzMJ8WmyUp4hlIdHxq-mn22SWBQ" alt="Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan"></figure></div>
+
+
+<h2>Note</h2>
+
+
+
+<p>Resiko tanggung sendiri</p>
+<!--kg-card-end: html-->]]></content:encoded></item><item><title><![CDATA[Belajar React Dasar | ReactDOM]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>Di artikel sebelumnya yaitu Pengantar JSX, kita sudah mempelajari bahwa developer bisa menggunakan JSX untuk menyimpan markup HTML di dalam variabel Javascript. Karena, ReactJS adalah sebuah library untuk membangun Antarmuka Pengguna yang aktif sehingga rendering adalah salah satu bagian yang tidak terpisahkan dari ReactJS. React menyediakan sebuah paket yang bernama</p>]]></description><link>http://localhost:2368/belajar-react-dasar-reactdom/</link><guid isPermaLink="false">640dcb54b2a4271144649fec</guid><category><![CDATA[coding]]></category><category><![CDATA[javascript]]></category><category><![CDATA[react]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Sun, 05 Mar 2023 08:15:18 GMT</pubDate><media:content url="http://localhost:2368/content/images/wordpress/2023/03/REACT-DOM.jpg" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="http://localhost:2368/content/images/wordpress/2023/03/REACT-DOM.jpg" alt="Belajar React Dasar | ReactDOM"><p>Di artikel sebelumnya yaitu Pengantar JSX, kita sudah mempelajari bahwa developer bisa menggunakan JSX untuk menyimpan markup HTML di dalam variabel Javascript. Karena, ReactJS adalah sebuah library untuk membangun Antarmuka Pengguna yang aktif sehingga rendering adalah salah satu bagian yang tidak terpisahkan dari ReactJS. React menyediakan sebuah paket yang bernama ReactDOM kepada para pengembang untuk mengakses dan memodifikasi DOM. Mari kita simak lebih lanjut.</p>
+
+
+
+<h2>Pengertian DOM</h2>
+
+
+
+<p>DOM (Document Object Model) adalah representasi dari struktur HTML dari suatu halaman web yang dapat dimanipulasi menggunakan JavaScript. Pada React, ReactDOM adalah library JavaScript yang memungkinkan kita untuk memanipulasi dan mengupdate DOM secara efisien. ReactDOM menyediakan metode dan fungsi-fungsi untuk mengakses elemen DOM, merender komponen React ke dalam DOM, dan mengupdate elemen DOM dengan data yang baru.</p>
+
+
+
+<p>Secara spesifik, ReactDOM.render() adalah fungsi utama yang digunakan untuk merender sebuah komponen React ke dalam DOM. Fungsi ini menerima dua parameter: elemen React yang ingin dirender dan elemen DOM tempat dimana elemen React tersebut akan dirender. Setelah elemen React di-render ke dalam DOM, ReactDOM memastikan bahwa setiap perubahan pada elemen React akan diupdate ke dalam DOM secara otomatis.</p>
+
+
+
+<h2>Pengertian ReactDOM</h2>
+
+
+
+<p>ReactDOM adalah sebuah paket yang menyediakan metode-metode khusus DOM yang dapat digunakan pada aplikasi web untuk memungkinkan cara yang efisien dalam mengelola elemen-elemen DOM pada halaman web. Berikut adalah API metode-metode yang umum digunakan dalam ReactDOM:&#xA0;</p>
+
+
+
+<ul>
+<li>render()</li>
+
+
+
+<li>findDOMNode()</li>
+
+
+
+<li>unmountComponentAtNode()</li>
+
+
+
+<li>hydrate()</li>
+
+
+
+<li>createPortal()</li>
+</ul>
+
+
+
+<p><strong>Prasyarat</strong>: Untuk menggunakan ReactDOM di aplikasi web React, kita harus mengimpor ReactDOM terlebih dahulu dari paket react-dom dengan menggunakan perintah berikut:&#xA0;&#xA0;</p>
+
+
+
+<pre class="wp-block-code"><code>import ReactDOM from &apos;react-dom&apos;</code></pre>
+
+
+
+<h3>render() Function</h3>
+
+
+
+<p>Fungsi ini umumnya digunakan untuk mendapatkan node DOM dimana komponen React tertentu di-render. Cara ini sangat jarang digunakan seperti contoh berikut yang dapat dilakukan dengan menambahkan atribut ref ke setiap komponen itu sendiri.&#xA0;</p>
+
+
+
+<p><strong>Sintaks</strong>:&#xA0;</p>
+
+
+
+<p>ReactDOM.findDOMNode(component)</p>
+
+
+
+<p><strong>Parameter</strong>: Metode ini mengambil satu parameter komponen yang mengharapkan sebuah Komponen React untuk dicari di DOM Browser.&#xA0;</p>
+
+
+
+<p><strong>Tipe Return</strong>: Fungsi ini mengembalikan simpul DOM, tempat komponen di-render jika berhasil, jika tidak, maka akan bernilai nol.</p>
+
+
+
+<h3>unmountComponentAtNode() Function</h3>
+
+
+
+<p>Fungsi ini digunakan untuk menghapus sebuah komponen React yang telah dirender ke dalam sebuah elemen DOM. Fungsi ini menerima satu parameter, yaitu elemen DOM tempat di mana komponen React telah dirender. Setelah fungsi ini dipanggil, komponen React akan dihapus dari elemen DOM tersebut.</p>
+
+
+
+<p><strong>Sintaks</strong>:&#xA0;</p>
+
+
+
+<p>ReactDOM.unmountComponentAtNode(container)</p>
+
+
+
+<p><strong>Parameter</strong>: Metode ini mengambil sebuah kontainer parameter tunggal yang mengharapkan kontainer DOM dari komponen React yang harus dihapus.</p>
+
+
+
+<p><strong>Tipe Return</strong>: Tipe kembalian dari fungsi ini adalah sebuah boolean, yaitu true jika komponen berhasil dihapus dari elemen DOM, dan false jika tidak ada komponen yang dihapus karena elemen DOM tersebut tidak memiliki komponen yang dirender.</p>
+
+
+
+<h3>hydrate() Function</h3>
+
+
+
+<p>Fungsi ini digunakan untuk memasangkan tampilan yang sudah di render pada server dengan JavaScript yang sudah dimuat pada sisi klien. Fungsi ini berguna ketika kita ingin meningkatkan performa aplikasi web dengan mengurangi waktu yang dibutuhkan oleh React untuk merender ulang tampilan yang sudah ada.</p>
+
+
+
+<p><strong>Sintaks</strong>:</p>
+
+
+
+<p>ReactDOM.hydrate(element, container, callback)</p>
+
+
+
+<p><strong>Parameter</strong>:&#xA0;</p>
+
+
+
+<ul>
+<li>element (elemen React): Elemen React yang ingin dirender.</li>
+
+
+
+<li>container (elemen DOM): Elemen DOM tempat dimana elemen React akan dirender.</li>
+
+
+
+<li>callback (fungsi opsional): Fungsi yang akan dijalankan setelah proses hydrate selesai.</li>
+</ul>
+
+
+
+<p><strong>Tipe Return</strong>: Fungsi ini mencoba melampirkan event listener ke markup yang ada dan mengembalikan referensi ke komponen atau null jika komponen tanpa nama di-render.</p>
+
+
+
+<h3>createPortal() Function</h3>
+
+
+
+<p>Fungsi yang memungkinkan untuk merender elemen React di luar hierarki DOM utama, yaitu di tempat lain pada dokumen HTML. Dengan menggunakan createPortal(), maka kita dapat merender elemen React di dalam kontainer yang terpisah dari elemen DOM di mana komponen utama dirender.</p>
+
+
+
+<p><strong>Sintaks</strong>:</p>
+
+
+
+<p>ReactDOM.createPortal(child, container)</p>
+
+
+
+<p><strong>Parameter</strong>:</p>
+
+
+
+<ul>
+<li>child: Elemen React yang ingin dirender.</li>
+
+
+
+<li>container: DOM element di mana elemen React akan dirender.</li>
+</ul>
+
+
+
+<p><strong>Tipe Return</strong>: Fungsi ini tidak mengembalikan apapun.</p>
+
+
+
+<h2>Poin Penting</h2>
+
+
+
+<ul>
+<li>ReactDOM.render() menggantikan child dari kontainer yang diberikan jika ada. Fungsi ini menggunakan algoritma diff yang sangat efisien dan dapat memodifikasi subtree dari DOM.</li>
+
+
+
+<li>Fungsi findDOMNode() hanya dapat diimplementasikan pada komponen yang sudah terpasang sehingga komponen fungsional tidak dapat digunakan dalam metode findDOMNode().</li>
+
+
+
+<li>ReactDOM menggunakan observable sehingga menyediakan cara yang efisien untuk menangani DOM.</li>
+
+
+
+<li>ReactDOM dapat digunakan di sisi klien dan server.</li>
+</ul>
+<!--kg-card-end: html-->]]></content:encoded></item><item><title><![CDATA[Belajar React Dasar | Virtual DOM]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>Virtual DOM adalah konsep yang mendasari cara kerja React dalam merender tampilan pada aplikasi web. Virtual DOM adalah sebuah representasi virtual dari DOM (Document Object Model) yang berisi struktur tampilan (HTML) dan data pada aplikasi. Virtual DOM adalah teknologi yang memungkinkan React untuk mempercepat proses rendering tampilan pada aplikasi web,</p>]]></description><link>http://localhost:2368/belajar-react-dasar-virtual-dom/</link><guid isPermaLink="false">640dcb54b2a4271144649feb</guid><category><![CDATA[coding]]></category><category><![CDATA[javascript]]></category><category><![CDATA[react]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Sun, 05 Mar 2023 05:01:16 GMT</pubDate><media:content url="https://lh4.googleusercontent.com/ti5skzS9M-bOZyIqGviB7SmFeprt_5Ob3QIJZYdNMPyRukZ_07uiPxt87rm-TSlC4yyKobVS9h_hwdx_6lFoBjkWmI5r_XercT_pZ_zLnoXueU_hdGwl6cBdp7PkNYCFpHLckh1jx5tFC8rU-4-sFQo" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="https://lh4.googleusercontent.com/ti5skzS9M-bOZyIqGviB7SmFeprt_5Ob3QIJZYdNMPyRukZ_07uiPxt87rm-TSlC4yyKobVS9h_hwdx_6lFoBjkWmI5r_XercT_pZ_zLnoXueU_hdGwl6cBdp7PkNYCFpHLckh1jx5tFC8rU-4-sFQo" alt="Belajar React Dasar | Virtual DOM"><p>Virtual DOM adalah konsep yang mendasari cara kerja React dalam merender tampilan pada aplikasi web. Virtual DOM adalah sebuah representasi virtual dari DOM (Document Object Model) yang berisi struktur tampilan (HTML) dan data pada aplikasi. Virtual DOM adalah teknologi yang memungkinkan React untuk mempercepat proses rendering tampilan pada aplikasi web, dengan mengurangi jumlah perubahan pada DOM yang harus dilakukan oleh browser.</p>
+
+
+
+<p>Ketika ada perubahan pada data di aplikasi, React akan melakukan perbandingan antara Virtual DOM baru dan Virtual DOM sebelumnya. Setelah dilakukan perbandingan, React akan mengidentifikasi perubahan-perubahan yang terjadi pada Virtual DOM dan menerapkannya pada DOM asli. Hal ini memungkinkan React untuk mengurangi jumlah manipulasi DOM yang dilakukan pada browser, yang mana manipulasi DOM yang terlalu banyak dapat menyebabkan aplikasi menjadi lambat dan tidak responsif.</p>
+
+
+
+<p>contoh :&#xA0;</p>
+
+
+
+<pre class="wp-block-code"><code>import React, { useState } from &apos;react&apos;;
+
+function Example() {
+&#xA0;&#xA0;const [count, setCount] = useState(0);
+&#xA0;&#xA0;function handleClick() {
+&#xA0;&#xA0;&#xA0;&#xA0;setCount(count + 1);
+&#xA0;&#xA0;}
+
+&#xA0;&#xA0;return (
+&#xA0;&#xA0;&#xA0;&#xA0;&lt;div&gt;
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&lt;p&gt;You clicked {count} times&lt;/p&gt;
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&lt;button onClick={handleClick}&gt;Klik saya&lt;/button&gt;
+&#xA0;&#xA0;&#xA0;&#xA0;&lt;/div&gt;
+&#xA0;&#xA0;);
+}</code></pre>
+
+
+
+<p>Pada contoh diatas, kode menggunakan fungsi useState untuk menyimpan nilai state <strong>count</strong> dan fungsi <strong>setCount</strong> untuk mengubah nilai <strong>state</strong> tersebut. Ketika tombol &#x201C;Klik saya&#x201D; di klik, maka nilai state count akan <strong>dinaikkan</strong> sebesar 1 dan komponen akan di-render ulang.</p>
+
+
+
+<p>Perhatikan bahwa pada saat state diubah, React akan membuat sebuah Virtual DOM baru yang memperbarui nilai dari state count. Setelah itu, React akan membandingkan Virtual DOM baru dengan Virtual DOM sebelumnya, dan mengupdate DOM asli hanya pada elemen yang berubah. Hal ini memungkinkan React untuk menghindari rendering ulang keseluruhan tampilan pada aplikasi dan mempercepat kinerja aplikasi secara signifikan.</p>
+<!--kg-card-end: html-->]]></content:encoded></item><item><title><![CDATA[Belajar React Dasar | Pengantar Babel]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>Di materi sebelumnya, kita sudah belajar tentang JSX dan di artikel ini kita akan lanjut membahas lebih dalam tentang babel.</p>
+
+
+
+<h2>Pengertian Babel</h2>
+
+
+
+<p>Babel adalah sebuah transpiler atau alat pengubah kode yang digunakan untuk mengubah kode JavaScript modern menjadi kode JavaScript yang lebih kompatibel dengan browser atau lingkungan runtime yang lebih</p>]]></description><link>http://localhost:2368/pengantar-babel/</link><guid isPermaLink="false">640dcb54b2a4271144649fea</guid><category><![CDATA[coding]]></category><category><![CDATA[javascript]]></category><category><![CDATA[react]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Sat, 04 Mar 2023 13:52:40 GMT</pubDate><media:content url="https://lh4.googleusercontent.com/pSpnWSaYdbdQR9AAD-Nzk6CYDQUigvfYLjwrK1z06xPpUU4rzQtdW2TZbe3C-CgXYRVJdGx3NxS4ofxZcX9evA2b4MTcQCPcqcafrcuGbKCXsMLNfWtzlDzorQwL0cY0FWV8SCNvt6eJYFJQZPDzbOA" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="https://lh4.googleusercontent.com/pSpnWSaYdbdQR9AAD-Nzk6CYDQUigvfYLjwrK1z06xPpUU4rzQtdW2TZbe3C-CgXYRVJdGx3NxS4ofxZcX9evA2b4MTcQCPcqcafrcuGbKCXsMLNfWtzlDzorQwL0cY0FWV8SCNvt6eJYFJQZPDzbOA" alt="Belajar React Dasar | Pengantar Babel"><p>Di materi sebelumnya, kita sudah belajar tentang JSX dan di artikel ini kita akan lanjut membahas lebih dalam tentang babel.</p>
+
+
+
+<h2>Pengertian Babel</h2>
+
+
+
+<p>Babel adalah sebuah transpiler atau alat pengubah kode yang digunakan untuk mengubah kode JavaScript modern menjadi kode JavaScript yang lebih kompatibel dengan browser atau lingkungan runtime yang lebih lama.</p>
+
+
+
+<p class="has-text-align-center"><img decoding="async" loading="lazy" src="https://lh3.googleusercontent.com/QGKdEvr_MUTkA55_xzONYAWk4dQU_gikwdfNLK205DJ0FIasPKTsJM-zs9LK_CIwfScfreX_DLweqYYY43LNMA06uHgM-0fvHuWVEYBHLwCXe_GXlD9sDNtSrM9xygoaAnP7JggbFInrI4NVHXSxapk" width="602" height="273" alt="Belajar React Dasar | Pengantar Babel"></p>
+
+
+
+<p>Babel biasanya digunakan untuk mengubah kode JavaScript yang ditulis dengan fitur-fitur terbaru (seperti arrow function, template literals, dan destructuring assignment) menjadi kode JavaScript yang dapat dijalankan pada browser atau lingkungan runtime yang tidak mendukung fitur-fitur tersebut. Dengan menggunakan Babel, kita dapat menulis kode JavaScript yang lebih baru dan modern tanpa khawatir tentang kompatibilitas lintas-platform.</p>
+
+
+
+<p>Babel juga dapat digunakan untuk mengubah kode JavaScript dari bahasa lain (seperti TypeScript atau Flow) menjadi kode JavaScript biasa yang dapat dijalankan di lingkungan yang berbeda. Babel dapat diinstal dan digunakan melalui paket npm dan memiliki berbagai plugin yang dapat ditambahkan untuk mengubah kode JavaScript dengan cara yang berbeda-beda.</p>
+
+
+
+<h2>Contoh sederhana</h2>
+
+
+
+<p>Berikut adalah contoh sederhana dari versi standar terbaru ES 2017 dan mari kita lihat apa yang terjadi pada kode saat kita meneruskannya ke babel.</p>
+
+
+
+<pre class="wp-block-code"><code>// contoh kode javascript versi baru
+const var1 = (x) =&gt; {x*2};
+
+const a = () =&gt; {};
+
+const b = (x) =&gt; x;
+
+[1, 2, 3].map((n)=&gt; n+1);</code></pre>
+
+
+
+<p>Beberapa kode di atas tidak didukung di beberapa browser, jadi setelah melakukan transpiler melalui Babel kita akan mendapatkan kode seperti berikut:</p>
+
+
+
+<pre class="wp-block-code"><code>// setelah transpiler
+&quot;use strict&quot;;
+
+var var1 = function var1(x) {
+&#xA0;&#xA0;x * 2;
+};
+
+var a = function a() {};
+
+var b = function b(x) {
+&#xA0;&#xA0;return x;
+};
+
+[1, 2, 3].map(function (n) {
+&#xA0;&#xA0;return n + 1;
+});</code></pre>
+<!--kg-card-end: html-->]]></content:encoded></item><item><title><![CDATA[Belajar React Dasar | Pengantar JSX]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>Sebelumnya kita sudah tau kalau <strong>React</strong> itu bukan merupakan <strong>framework</strong>, melainkan <strong>library</strong> JavaScript untuk membangun antarmuka aplikasi. Meskipun dibangun dengan JavaScript, tetapi React tidak dapat ditulis dengan JavaScript secara langsung, melainkan harus ditulis dalam bentuk <strong>JSX</strong>. Apa itu JSX? Kita akan bahas lebih jauh tentang JSX dalam artikel ini.</p>
+
+
+
+<p>Contoh</p>]]></description><link>http://localhost:2368/belajar-react-dasar-pengantar-jsx/</link><guid isPermaLink="false">640dcb54b2a4271144649fe9</guid><category><![CDATA[coding]]></category><category><![CDATA[react]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Sat, 04 Mar 2023 12:30:39 GMT</pubDate><media:content url="https://lh6.googleusercontent.com/TVVLEmDCJmV4156qoeMgcejpHgQYcliPEsJQvVKef5N4291pZZ3cwJ8Sn8viPW7vn7hTM8H8z6iUzHw6J70w1FCU9jkrhG3MVOwHEc9N6rMdlRD9hTbpuYyz2vYlZYYkiukOIdc2SUnxcQfFxTlh6a4" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="https://lh6.googleusercontent.com/TVVLEmDCJmV4156qoeMgcejpHgQYcliPEsJQvVKef5N4291pZZ3cwJ8Sn8viPW7vn7hTM8H8z6iUzHw6J70w1FCU9jkrhG3MVOwHEc9N6rMdlRD9hTbpuYyz2vYlZYYkiukOIdc2SUnxcQfFxTlh6a4" alt="Belajar React Dasar | Pengantar JSX"><p>Sebelumnya kita sudah tau kalau <strong>React</strong> itu bukan merupakan <strong>framework</strong>, melainkan <strong>library</strong> JavaScript untuk membangun antarmuka aplikasi. Meskipun dibangun dengan JavaScript, tetapi React tidak dapat ditulis dengan JavaScript secara langsung, melainkan harus ditulis dalam bentuk <strong>JSX</strong>. Apa itu JSX? Kita akan bahas lebih jauh tentang JSX dalam artikel ini.</p>
+
+
+
+<p>Contoh kode JSX:</p>
+
+
+
+<pre class="wp-block-code"><code>const contoh = &lt;h1&gt;Ini adalah contoh JSX&lt;/h1&gt;;</code></pre>
+
+
+
+<p>Kode diatas sekilas mirip seperti HTML dan variable JavaScript, kode diatas disebut dengan JSX. JSX adalah sintaksis dari JavaScript biasa dan digunakan untuk membuat elemen React. Elemen-elemen ini kemudian di-render ke React DOM.</p>
+
+
+
+<h2>JSX Template</h2>
+
+
+
+<p>JSX lebih cepat daripada JavaScript biasa karena melakukan pengoptimalan saat kode diterjemahkan ke JavaScript biasa. Hal ini memudahkan developer untuk membuat template, dibandingkan dengan cara tradisional yang harus memisahkan markup dan logika dalam file terpisah.</p>
+
+
+
+<p>React dapat menggunakan ekspresi JavaScript biasa dengan JSX. Untuk menampilkan ekspresi JavaScript dalam kode yang ditulis dalam JSX, kita harus membungkus ekspresi tersebut dalam kurung kurawal {}. Perhatikan contoh berikut ini:</p>
+
+
+
+<pre class="wp-block-code"><code>import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+
+const name = &quot;unixkuy&quot;;
+const element = &lt;h1&gt;Belajar JSX,
+{ name }.Selamat Datang di unixkuy.&lt; /h1&gt;;
+ReactDOM.render(
+&#xA0;&#xA0;&#xA0;&#xA0;element,
+&#xA0;&#xA0;&#xA0;&#xA0;document.getElementById(&quot;root&quot;)
+);</code></pre>
+
+
+
+<p>Pada program di atas, kita telah menyematkan ekspresi javascript const name = &#x201C;unixkuy&#x201D;; pada kode JSX. Ada beberapa baris di bagian atas yang digunakan untuk mengimpor beberapa API React yang akan dijelaskan di artikel selanjutnya. Selain itu kita menyematkan penggunaan ekspresi JavaScript ke dalam JSX dengan membungkusnya dalam tanda kurung kurawal kecuali pernyataan if-else. Tetapi kita dapat menggunakan pernyataan kondisional ini sebagai pengganti pernyataan if-else di JSX.&#xA0;</p>
+
+
+
+<p>Biar lebih jelas, perhatikan kode dibawah ini, dimana ekspresi bersyarat disematkan dalam JSX:</p>
+
+
+
+<pre class="wp-block-code"><code>import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+
+let i = 1;
+const element = &lt;h1&gt;{ (i == 1) ? &apos;Belajar React Otodidak!&apos; : &apos;False!&apos; } &lt; /h1&gt;;
+
+ReactDOM.render(
+element,
+document.getElementById(&quot;root&quot;)
+);</code></pre>
+
+
+
+<p>Pada contoh diatas, variabel <strong>i</strong> akan diperiksa apakah bernilai 1. Karena nilainya sama dengan 1 maka string &#x2018;Belajar React Otodidak!&#x2019; akan dikembalikan ke kode JSX. Jika kita mengubah nilai variabel i maka string &#x2018;False&#x2019; akan dikembalikan.</p>
+
+
+
+<h2>Atribut dalam JSX</h2>
+
+
+
+<p>JSX memungkinkan kita untuk menggunakan atribut dengan elemen HTML seperti yang kita lakukan pada HTML biasa. Tetapi pada JSX, penamaan class menggunakan camelCase. Sebagai contoh, class pada HTML menjadi namaClass pada JSX. Alasannya karena beberapa nama atribut dalam HTML seperti &#x2018;class&#x2019; adalah kata kunci yang dicadangkan dalam JavaScripts. Jadi, untuk menghindari masalah ini, JSX menggunakan konvensi penamaan huruf besar-kecil untuk atribut. Kita juga dapat menggunakan atribut khusus di JSX. Nama atribut tersebut harus diawali dengan data-. Pada contoh dibawah ini, kita telah menggunakan atribut custom dengan nama<strong> data-sampleAttribute </strong>untuk tag <strong>&lt;h2&gt;</strong>.</p>
+
+
+
+<p>contoh :&#xA0;</p>
+
+
+
+<pre class="wp-block-code"><code>import React from &apos;react&apos;;
+import ReactDOM from &apos;react-dom&apos;;
+
+const element = &lt;div&gt;&lt;h1 className = &quot;hello&quot;&gt;Hello Geek&lt;/h1&gt;
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&lt;h2 data-sampleAttribute=&quot;sample&quot;&gt;Custom attribute&lt;/h2&gt;&lt; /div&gt;;
+ReactDOM.render(
+&#xA0;&#xA0;&#xA0;&#xA0;element,
+&#xA0;&#xA0;&#xA0;&#xA0;document.getElementById(&quot;root&quot;)
+);</code></pre>
+
+
+
+<h2>Menentukan nilai atribut</h2>
+
+
+
+<p>JSX memungkinkan kita untuk menentukan nilai atribut dengan dua cara:&#xA0;</p>
+
+
+
+<p>1.<strong>String literal</strong>: Kita dapat menentukan nilai atribut sebagai string yang dikodekan dengan menggunakan tanda kutip:&#xA0;</p>
+
+
+
+<pre class="wp-block-code"><code>const var = &lt;h1 className = &quot;firstAttribute&quot;&gt;Hello!&lt;/h1&gt;;</code></pre>
+
+
+
+<p>2. <strong>Sebagai ekspresi</strong>: Kita bisa menentukan atribut sebagai ekspresi menggunakan kurung kurawal {}:&#xA0;</p>
+
+
+
+<pre class="wp-block-code"><code>const var = &lt;h1 className = {varName}&gt;Hello!&lt;/h1&gt;;</code></pre>
+
+
+
+<h2>Membungkus elemen atau Anak di JSX</h2>
+
+
+
+<p>Maksudnya apa bang? membungkus elemen atau anak di JSX berarti menempatkan satu atau beberapa elemen JSX di dalam elemen lain sebagai child atau anaknya. Hal ini sering digunakan dalam pembuatan tampilan di React untuk mengatur struktur dan hirarki dari elemen-elemen JSX.</p>
+
+
+
+<p>Contohnya, jika kita ingin membuat komponen tombol dengan teks di dalamnya, kita dapat menggunakan sintaksis JSX untuk menempatkan elemen teks sebagai child atau anak dari elemen tombol, seperti contoh berikut:</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;button&gt;
+Klik Tombol!
+&lt;/button&gt;</code></pre>
+
+
+
+<p>Di sini, elemen teks &#x201C;Klik Tombol!&#x201D; menjadi <strong>child</strong> dari elemen tombol. Kita juga dapat menempatkan lebih dari satu elemen sebagai child di dalam elemen lain, seperti contoh berikut:</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;div&gt;
+&lt;h1&gt;Hello, world!&lt;/h1&gt;
+&#xA0;&#xA0;&lt;p&gt;Welcome to my website.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+
+
+<p>Dapat dilihat, elemen h1 dan p menjadi child dari elemen div. Dengan menggunakan teknik ini, kita dapat membuat tampilan yang lebih kompleks dengan mengatur hirarki dari elemen-elemen JSX yang berbeda.</p>
+<!--kg-card-end: html-->]]></content:encoded></item><item><title><![CDATA[Menyiapkan Lingkungan Pengembangan ReactJS | Install Node, npm dan Buat Proyek Baru]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>Untuk menjalankan aplikasi <strong>React</strong>, kita perlu menginstal <strong>Node.js</strong> di komputer kita. Node.js berfungsi sebagai platform pengembangan open-source yang menggunakan bahasa pemrograman JavaScript untuk menjalankan kode di sisi server.</p>
+
+
+
+<p>Node.js dapat dijalankan di berbagai platform seperti Windows, Mac, dan Linux, sehingga memudahkan developer untuk membuat aplikasi yang dapat</p>]]></description><link>http://localhost:2368/menyiapkan-lingkungan-pengembangan-reactjs-install-node-npm-dan-buat-proyek-baru/</link><guid isPermaLink="false">640dcb54b2a4271144649fe8</guid><category><![CDATA[javascript]]></category><category><![CDATA[nodejs]]></category><category><![CDATA[react]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Tue, 28 Feb 2023 07:04:17 GMT</pubDate><media:content url="https://lh3.googleusercontent.com/VBrfIR1RLEUJuPz0nwi7o8HHihxcfWONz3k8W6_Yc1vCkbUVMCyGtUnYRsAC03GwiZl5Ghny227nV9OWFWZT9SITsb__TZlfw5Y0PC9F1gR2hcaGiUEx7Muta4k3Fp91no9OBGiWEPpPItI7mOlK9mk" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="https://lh3.googleusercontent.com/VBrfIR1RLEUJuPz0nwi7o8HHihxcfWONz3k8W6_Yc1vCkbUVMCyGtUnYRsAC03GwiZl5Ghny227nV9OWFWZT9SITsb__TZlfw5Y0PC9F1gR2hcaGiUEx7Muta4k3Fp91no9OBGiWEPpPItI7mOlK9mk" alt="Menyiapkan Lingkungan Pengembangan ReactJS | Install Node, npm dan Buat Proyek Baru"><p>Untuk menjalankan aplikasi <strong>React</strong>, kita perlu menginstal <strong>Node.js</strong> di komputer kita. Node.js berfungsi sebagai platform pengembangan open-source yang menggunakan bahasa pemrograman JavaScript untuk menjalankan kode di sisi server.</p>
+
+
+
+<p>Node.js dapat dijalankan di berbagai platform seperti Windows, Mac, dan Linux, sehingga memudahkan developer untuk membuat aplikasi yang dapat dijalankan di berbagai sistem operasi. Selain itu, Node.js juga memiliki performa yang cepat dan efisien, sehingga banyak digunakan oleh perusahaan-perusahaan besar dalam pengembangan aplikasi web skala besar.</p>
+
+
+
+<h2>Langkah 1: Instal NodeJS.&#xA0;</h2>
+
+
+
+<p>Di langkah pertama ini, Anda bisa langsung mengunjungi website resmi Node.js <a href="https://nodejs.org/en/download/?ref=unixkuy" target="_blank" rel="noreferrer noopener">https://nodejs.org/en/download/</a> untuk menginstall Node.js dan sesuaikan dengan sistem operasi yang digunakan saat ini</p>
+
+
+
+<p>Berikut adalah contoh instalasi Node.js pada sistem operasi Debian/Ubuntu:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo apt update
+sudo apt install nodejs
+node -v</code></pre>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><img decoding="async" src="https://lh6.googleusercontent.com/j6hKXm7dj39QPHyhi9Sph4dZ2frV37B5qmn5QzS-EPd9AZlFuyu6u5N54dDq14htlg8Nc6FIyQt-zSs2d4MXzv-2GYR_IZclqcMs0fQyT4KgE9S2t6VNq4tP7vpvvATEffUN0TYNccr06VAcuJxnkzA" alt="Menyiapkan Lingkungan Pengembangan ReactJS | Install Node, npm dan Buat Proyek Baru"></figure></div>
+
+
+<h2>Langkah 2: Install npm</h2>
+
+
+
+<p>NPM atau singkatan dari (Node Package Manager) adalah sebuah tool yang digunakan untuk mengelola dan menginstal package atau library JavaScript. NPM ini berfungsi sebagai registry atau repositori untuk package yang dibuat oleh para developer, sehingga memudahkan pengguna untuk mengakses, menginstal, dan memperbarui package yang diperlukan dalam proyek pengembangan aplikasi. Lebih lengkapnya silahkan kunjungi CARA INSTALL NPM.</p>
+
+
+
+<p>Berikut adalah perintah untuk install npm di Linux Debian/Ubuntu:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo apt install npm
+npm -v</code></pre>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><img decoding="async" src="https://lh4.googleusercontent.com/okJbBkqmT-wQ96zqf3JD4fP8bdxaWsJBb1RZx0q3Lgk5rKj3NHvohD95y_PR2YIlHqP2lkFc5aBj2cGsYDNWDgz2uXtLatxphL0i6xcMb2n8Wrik2Q7POuPUiV4ps3kPJfVDAkT12OuAJQe10mTTKfE" alt="Menyiapkan Lingkungan Pengembangan ReactJS | Install Node, npm dan Buat Proyek Baru"></figure></div>
+
+
+<h2>Langkah 3: Buat Proyek Baru</h2>
+
+
+
+<p>Buat proyek react baru, contoh dengan nama <strong>proyek-nodejs-ku</strong></p>
+
+
+
+<pre class="wp-block-code"><code>npx create-react-app <strong>proyek-nodejs-ku</strong></code></pre>
+
+
+
+<p>Setelah selesai, masuk ke direktori proyek dan jalankan npm</p>
+
+
+
+<pre class="wp-block-code"><code>cd proyek-nodejs-ku
+npm start</code></pre>
+
+
+
+<p>Secara otomatis, akan terbuka tab baru dengan alamat url <strong>localhost:3000</strong></p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><img decoding="async" src="https://lh4.googleusercontent.com/tmwlU981w8RGD4_zbO9jsHn1QHdD001whHNKc2PkxVRI2B1sz6QSQnnxRPme0Ei27VAismvhFinwqsmflh4UNXPXd6ZVt7laaxpehMZnhaP2tylEd5hTXV-lhCh7xykGKZ9iLw914bUvJLXaMtLluZc" alt="Menyiapkan Lingkungan Pengembangan ReactJS | Install Node, npm dan Buat Proyek Baru"></figure></div>
+
+
+<p>Sampai disini kita sudah berhasil menginstall Node.js, npm dan membuat proyek react pertama.&#xA0;</p>
+
+
+
+<p>Selanjutnya kita akan belajar React dasar | Pengantar JSX.</p>
+<!--kg-card-end: html-->]]></content:encoded></item><item><title><![CDATA[Mengenal React dan Manfaatnya dalam Pengembangan Aplikasi]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>React adalah library JavaScript yang deklaratif, efisien, dan fleksibel untuk membangun user interface pada website atau aplikasi web. React dikembangkan oleh Facebook dan pertama kali dirilis pada tahun 2013. ReactJS adalah library front-end berbasis komponen yang bersifat open-source dan hanya bertanggung jawab pada lapisan antarmuka aplikasi. React digunakan untuk membuat</p>]]></description><link>http://localhost:2368/mengenal-react-dan-manfaatnya-dalam-pengembangan-aplikasi/</link><guid isPermaLink="false">640dcb54b2a4271144649fe6</guid><category><![CDATA[react]]></category><category><![CDATA[tutorial]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Tue, 28 Feb 2023 02:10:48 GMT</pubDate><media:content url="https://lh3.googleusercontent.com/sTO-XG9h-Iq-iXsqmSU55KVfnjSOLcQxNX3eSNKBm09XUwdz7mvBuQMf4QlNS1S7wOMlY9x1j-L5ZAUMJqLJHd50OeqyuoCdjEojVLEBkbg-ZyhfMsA7fTUtTNh70qp0NJFxpkljoumh5R5VtJw-p9g" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="https://lh3.googleusercontent.com/sTO-XG9h-Iq-iXsqmSU55KVfnjSOLcQxNX3eSNKBm09XUwdz7mvBuQMf4QlNS1S7wOMlY9x1j-L5ZAUMJqLJHd50OeqyuoCdjEojVLEBkbg-ZyhfMsA7fTUtTNh70qp0NJFxpkljoumh5R5VtJw-p9g" alt="Mengenal React dan Manfaatnya dalam Pengembangan Aplikasi"><p>React adalah library JavaScript yang deklaratif, efisien, dan fleksibel untuk membangun user interface pada website atau aplikasi web. React dikembangkan oleh Facebook dan pertama kali dirilis pada tahun 2013. ReactJS adalah library front-end berbasis komponen yang bersifat open-source dan hanya bertanggung jawab pada lapisan antarmuka aplikasi. React digunakan untuk membuat antarmuka pengguna yang modular. React mendukung pengembangan komponen UI yang dapat digunakan kembali yang menampilkan data secara dinamis.&#xA0;</p>
+
+
+
+<p>Di artikel ini kita akan mengenal lebih jauh apa itu react dan manfaatnya dalam pengembangan aplikasi.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter is-resized"><img decoding="async" loading="lazy" src="https://lh5.googleusercontent.com/BdmrS0IoflZBDjZBDFK9iTRyY5CaNeXXmrVvsh1lE2KvhaANmrRp06ldn0cSWEYv-aZ_k9-eK9769v9CNsHeQv1cB6OlKl25vIPH0Y-zVJY0b_ADK_k3Dvc_UbbPmvRCtIFepi5HE29llTyhjC76Klc" alt="Mengenal React dan Manfaatnya dalam Pengembangan Aplikasi" width="313" height="286"></figure></div>
+
+
+<p>React menggunakan paradigma deklaratif, aplikasi react bertujuan untuk menjadi efisien dan fleksibel. Tampilan React di desain sederhana untuk setiap state dalam aplikasi dan React akan secara efisien memperbarui serta merender komponen yang tepat ketika data pengguna berubah. Tampilan deklaratif ini membuat kode program lebih mudah diprediksi dan lebih mudah untuk di-debug. Aplikasi React dibuat dari beberapa komponen, masing-masing komponen bertanggung jawab untuk merender bagian kecil dari HTML yang dapat digunakan kembali. Komponen dapat bersarang di dalam komponen lain untuk memungkinkan aplikasi yang kompleks dibangun dari blok yang sederhana. Sebuah komponen juga dapat menyimpan status internal, misalnya, komponen TabList dapat menyimpan variabel yang berhubungan dengan tab yang sedang terbuka.</p>
+
+
+
+<p>Mari kita pahami hal ini dengan sebuah contoh praktis:</p>
+
+
+
+<p>Katakanlah salah satu teman Anda memposting foto di Facebook. Anda pun secara sengaja atau tidak sengaja menekan tombol like dan kemudian Anda mulai membaca isi komentar-komentarnya juga. Di saat Anda menelusuri komentar, Anda melihat bahwa jumlah like telah bertambah sebesar 100, karena Anda menyukai gambar tersebut, bahkan hal ini terjadi tanpa proses reload. Perubahan jumlah yang dinamis ini terjadi karena ReactJS.</p>
+
+
+
+<p><strong>Catatan</strong>: Perlu dipahami bahwa React bukanlah sebuah framework. React hanyalah sebuah library yang dikembangkan oleh Facebook untuk menyelesaikan beberapa masalah yang mereka hadapi sebelumnya.</p>
+
+
+
+<p><strong>Prasyarat</strong>: Syarat utama belajar React adalah menginstall Node atau NodeJS. Silahkan baca artikel berikut untuk Cara Install Node JS di Linux.</p>
+
+
+
+<h2>Membuat Proyek React</h2>
+
+
+
+<p>Setelah menginstall NodeJS, kita coba untuk membuat sebuah proyek baru, buka terminal dan jalankan perintah berikut ini:</p>
+
+
+
+<pre class="wp-block-code"><code>npx create-react-app aplikasi-react</code></pre>
+
+
+
+<p>Tunggu sampai proses selesai, perintah diatas akan membuat sebuah folder aplikasi React yang bernama aplikasi-react, lengkap dengan semua dependensi yang kita butuhkan.</p>
+
+
+
+<p>Setelah semua proses selesai, coba masuk ke dalam direktori aplikasi-react yang barusan kita buat, lalu coba jalankan perintah npm start.</p>
+
+
+
+<pre class="wp-block-code"><code>cd aplikasi-react</code></pre>
+
+
+
+<pre class="wp-block-code"><code>npm start</code></pre>
+
+
+
+<p>npm start adalah perintah yang berfungsi untuk mengaktifkan server node, biasanya secara otomatis akan membuka browser dengan alamat localhost:3000</p>
+
+
+
+<p>Setelah itu, coba Anda edit kode pada file app.js</p>
+
+
+
+<p>Edit pada bagian return ( edit bagian ini)</p>
+
+
+
+<p>Atau paste kode berikut:</p>
+
+
+
+<pre class="wp-block-code"><code>import &quot;./App.css&quot;;
+function App() {
+&#xA0;&#xA0;return (
+&#xA0;&#xA0;&#xA0;&#xA0;&lt;div className=&quot;App&quot;&gt;
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&lt;h1&gt;Hello react&lt;/h1&gt;
+&#xA0;&#xA0;&#xA0;&#xA0;&lt;/div&gt;
+&#xA0;&#xA0;);
+}
+export default App;</code></pre>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh3.googleusercontent.com/ataGGTrtubqOenpEZU9m4IONNHMEz7xROqaifR0IW6lMDm71NmLSDyhFgYjtXusZQKeULKkJV7MZrNUQI-w3GMh6XsmDqmdlKugYwK-PmhleLaOKqTbmqmSCxVpHSka_-NqB9Mu8lXviOvcJBS1InfQ" alt="Mengenal React dan Manfaatnya dalam Pengembangan Aplikasi"></figure>
+
+
+
+<p>Bisa dilihat, setelah kita melakukan saving atau menyimpan perubahan kode, secara dinamis website akan menyesuaikan, hal ini disebut dengan Virtual DOM</p>
+
+
+
+<p>Virtual DOM merupakan representasi virtual dari DOM (Document Object Model) pada browser. Virtual DOM memungkinkan React untuk melakukan perubahan pada user interface dengan efisien dan tanpa perlu merender seluruh halaman web.</p>
+
+
+
+<p>Selanjutnya kita akan belajar <a href="https://unixkuy.com/menyiapkan-lingkungan-pengembangan-reactjs-install-node-npm-dan-buat-proyek-baru/?ref=unixkuy" data-type="post" data-id="1810">Menyiapkan Lingkungan Pengembangan ReactJS | Install Node, npm dan Buat Proyek Baru</a>.</p>
+<!--kg-card-end: html-->]]></content:encoded></item><item><title><![CDATA[Apa Itu Linux? Sejarah, Kelebihan dan Kekurangan]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>Waktu pertama kali mendengar kata Linux, yang terlintas dipikiran sebagian orang menganggap bahwa Linux adalah sistem operasi yang sulit untuk digunakan, sering digunakan oleh hacker dan lain-lain. Tetapi apakah semua itu benar? tentu saja tidak, biar lebih jelas, kita bahas aja di artikel ini!</p>
+
+
+
+<h1>Pengertian Linux</h1>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="http://localhost:2368/content/images/wordpress/2023/02/ada-penguin-bukan-itu-linux.jpg" alt class="wp-image-1796" width="375" height="225" srcset="http://localhost:2368/content/images/wordpress/2023/02/ada-penguin-bukan-itu-linux.jpg 500w, http://localhost:2368/content/images/wordpress/2023/02/ada-penguin-bukan-itu-linux-300x180.jpg 300w" sizes="(max-width: 375px) 100vw, 375px"></figure></div>
+
+
+<p>Linux adalah sistem operasi</p>]]></description><link>http://localhost:2368/apa-itu-linux-sejarah-kelebihan-dan-kekurangan/</link><guid isPermaLink="false">640dcb54b2a4271144649fe5</guid><category><![CDATA[linux]]></category><category><![CDATA[sistem operasi]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Mon, 27 Feb 2023 14:23:53 GMT</pubDate><media:content url="https://lh5.googleusercontent.com/NTG2XQv81Vzj7Tnv7eISm6J1Zz7VgMbfnNxmQPBIcFudOh-SjxnZripWLSiG37bluZ1QyQALeR1jylYsTj74iArqoITgrdEIPfh91Dij0F197OwToL5GVJfeKtmEQMfEVp7haJ44Almnl9U7DHNRbCk" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="https://lh5.googleusercontent.com/NTG2XQv81Vzj7Tnv7eISm6J1Zz7VgMbfnNxmQPBIcFudOh-SjxnZripWLSiG37bluZ1QyQALeR1jylYsTj74iArqoITgrdEIPfh91Dij0F197OwToL5GVJfeKtmEQMfEVp7haJ44Almnl9U7DHNRbCk" alt="Apa Itu Linux? Sejarah, Kelebihan dan Kekurangan"><p>Waktu pertama kali mendengar kata Linux, yang terlintas dipikiran sebagian orang menganggap bahwa Linux adalah sistem operasi yang sulit untuk digunakan, sering digunakan oleh hacker dan lain-lain. Tetapi apakah semua itu benar? tentu saja tidak, biar lebih jelas, kita bahas aja di artikel ini!</p>
+
+
+
+<h1>Pengertian Linux</h1>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="http://localhost:2368/content/images/wordpress/2023/02/ada-penguin-bukan-itu-linux.jpg" alt="Apa Itu Linux? Sejarah, Kelebihan dan Kekurangan" class="wp-image-1796" width="375" height="225" srcset="http://localhost:2368/content/images/wordpress/2023/02/ada-penguin-bukan-itu-linux.jpg 500w, http://localhost:2368/content/images/wordpress/2023/02/ada-penguin-bukan-itu-linux-300x180.jpg 300w" sizes="(max-width: 375px) 100vw, 375px"></figure></div>
+
+
+<p>Linux adalah sistem operasi yang juga termasuk kedalam keluarga Unix. Linux merupakan sistem operasi yang bersifat open source, artinya kode sumbernya bisa dilihat dan dimodifikasi oleh siapapun.</p>
+
+
+
+<h1>Sejarah Linux</h1>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="http://localhost:2368/content/images/wordpress/2023/02/seajarah-linux.jpg" alt="Apa Itu Linux? Sejarah, Kelebihan dan Kekurangan" class="wp-image-1797" width="375" height="225" srcset="http://localhost:2368/content/images/wordpress/2023/02/seajarah-linux.jpg 500w, http://localhost:2368/content/images/wordpress/2023/02/seajarah-linux-300x180.jpg 300w" sizes="(max-width: 375px) 100vw, 375px"></figure></div>
+
+
+<p>Sejarah sistem operasi Linux dimulai pada tahun 1991, ketika seorang mahasiswa Finlandia bernama Linus Torvalds yang kini kita kenal sebagai bapaknya Linux, Linus ini mengembangkan sistem operasi yang kemudian dikenal dengan nama Linux, mirip dengan namanya sendiri. Pada awalnya, Linus Torvalds hanya ingin membuat sistem operasi yang sederhana untuk digunakan pada komputer pribadi nya. Namun, kemudian ia memutuskan untuk membagikan kode sumbernya secara gratis kepada orang lain melalui internet, sehingga orang lain juga dapat ikut berkontribusi dalam pengembangan Linux.</p>
+
+
+
+<p>Dari sini, Linux mulai dikembangkan oleh banyak orang di seluruh dunia dan banyak distribusi atau juga disebut versi, kalau bahasa gaulnya itu distro, maknanya sama aja, yaitu versi Linux yang dikembangkan oleh berbagai perusahaan dan komunitas. Linux kini menjadi sistem operasi populer karena dapat diinstall pada berbagai macam perangkat, memiliki keamanan yang tinggi dan juga bersifat open source, sehingga kode sumbernya bisa dimodifikasi oleh siapapun.</p>
+
+
+
+<p>Linux saat ini telah menjadi salah satu sistem operasi yang paling banyak digunakan di seluruh dunia, terutama pada server, superkomputer, dan sistem embedded (perangkat yang terintegrasi dengan sistem operasi).</p>
+
+
+
+<h1>Kelebihan Sistem Operasi Linux</h1>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="http://localhost:2368/content/images/wordpress/2023/02/linux-is-the-best.jpg" alt="Apa Itu Linux? Sejarah, Kelebihan dan Kekurangan" class="wp-image-1798" width="375" height="225" srcset="http://localhost:2368/content/images/wordpress/2023/02/linux-is-the-best.jpg 500w, http://localhost:2368/content/images/wordpress/2023/02/linux-is-the-best-300x180.jpg 300w" sizes="(max-width: 375px) 100vw, 375px"></figure></div>
+
+
+<p>Selanjutnya kita akan bahas, apa aja sih kelebihan sistem operasi Linux ini.</p>
+
+
+
+<p>Berikut ini adalah beberapa kelebihan sistem operasi Linux:</p>
+
+
+
+<ul>
+<li>Gratis dan open source: Kita bisa mendapatkan Linux secara cuma-cuma dan bisa melihat, mengubah, dan membagikan kode sumbernya.</li>
+
+
+
+<li>Performa yang baik: Linux banyak digunakan pada server karena performanya yang baik. Sistem operasi ini juga bisa berjalan dengan baik pada perangkat keras yang spesifikasinya rendah. Ini jadi salah satu alasan, kenapa senang menggunakan Linux.</li>
+
+
+
+<li>Kemudahan instalasi: Proses instalasi Linux biasanya lebih mudah dibandingkan dengan sistem operasi lainnya. Kita bisa menginstal Linux dengan mudah pada berbagai macam perangkat.</li>
+
+
+
+<li>Kustomisasi yang mudah: Kita bisa mengubah tampilan dan fitur Linux sesuai dengan kebutuhan  da dan juga bisa memasang aplikasi tambahan yang tidak tersedia di dalam repositori resmi.</li>
+
+
+
+<li>Keamanan yang tinggi: Linux memiliki keamanan yang tinggi karena tidak banyak terkena serangan virus dan malware. Selain itu, Linux juga memiliki fitur yang memungkinkan pengguna untuk membatasi akses pengguna ke sistem.</li>
+
+
+
+<li>Dukungan komunitas yang luas: Linux memiliki komunitas pengguna yang sangat luas sehingga pengguna yang masih awam bisa mendapatkan bantuan dan dukungan dari para pengguna lainnya jika mengalami masalah.</li>
+</ul>
+
+
+
+<h1>Kekurangan Sistem Operasi Linux</h1>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full is-resized"><img decoding="async" loading="lazy" src="http://localhost:2368/content/images/wordpress/2023/02/kekurangan-linux.jpg" alt="Apa Itu Linux? Sejarah, Kelebihan dan Kekurangan" class="wp-image-1799" width="375" height="225" srcset="http://localhost:2368/content/images/wordpress/2023/02/kekurangan-linux.jpg 500w, http://localhost:2368/content/images/wordpress/2023/02/kekurangan-linux-300x180.jpg 300w" sizes="(max-width: 375px) 100vw, 375px"></figure></div>
+
+
+<p>Kesempurnaan hanya milik Tuhan, sistem operasi Linux juga buatan manusia dan tentu ada kekurangannya.</p>
+
+
+
+<p>Berikut adalah beberapa kekurangan sistem operasi Linux:</p>
+
+
+
+<ul>
+<li>Kurangnya dukungan aplikasi komersial: Beberapa aplikasi populer hanya tersedia untuk sistem operasi Windows, sehingga pengguna Linux mungkin harus mencari alternatif atau menggunakan aplikasi yang tidak sepenuhnya sesuai dengan kebutuhan mereka.</li>
+
+
+
+<li>Kurangnya kemudahan penggunaan: Bagi pengguna yang tidak terbiasa dengan sistem operasi Linux, mungkin akan mengalami kesulitan dalam menggunakan dan mengatur sistem operasi ini.</li>
+
+
+
+<li>Kurangnya dukungan hardware: Beberapa jenis hardware mungkin tidak didukung oleh Linux atau hanya didukung secara terbatas.</li>
+
+
+
+<li>Kurangnya dokumentasi: Beberapa distribusi Linux mungkin memiliki dokumentasi yang kurang lengkap dibandingkan dengan sistem operasi lainnya.</li>
+
+
+
+<li>Kurangnya dukungan teknis: Dukungan teknis untuk Linux mungkin tidak seluas dukungan untuk sistem operasi lain, terutama bagi pengguna yang tidak membeli lisensi dari perusahaan pengembang Linux.</li>
+</ul>
+<!--kg-card-end: html-->]]></content:encoded></item><item><title><![CDATA[5 Cara Bersihkan Baris Teks di Terminal Linux]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>Membersihkan baris teks sebenarnya lebih ke opsional ya, biar bersih dan enak di liat aja. Membersihkan terminal Linux juga tidak akan mempengaruhi kinerja komputer kita.</p>
+
+
+
+<p>Oke langsung saja kita masuk ke tutorial 5 Cara Bersihkan Baris Teks di Terminal Linux.</p>
+
+
+
+<h3>Clear</h3>
+
+
+
+<p>Clear adalah perintah yang umum digunakan oleh user Linux</p>]]></description><link>http://localhost:2368/5-cara-bersihkan-baris-teks-di-terminal-linux/</link><guid isPermaLink="false">640dcb54b2a4271144649fe3</guid><category><![CDATA[linux]]></category><category><![CDATA[terminal]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Mon, 20 Feb 2023 13:21:29 GMT</pubDate><media:content url="http://localhost:2368/content/images/wordpress/2023/02/5-Cara-Bersihkan-Baris-Teks-di-Terminal-Linux.jpg" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="http://localhost:2368/content/images/wordpress/2023/02/5-Cara-Bersihkan-Baris-Teks-di-Terminal-Linux.jpg" alt="5 Cara Bersihkan Baris Teks di Terminal Linux"><p>Membersihkan baris teks sebenarnya lebih ke opsional ya, biar bersih dan enak di liat aja. Membersihkan terminal Linux juga tidak akan mempengaruhi kinerja komputer kita.</p>
+
+
+
+<p>Oke langsung saja kita masuk ke tutorial 5 Cara Bersihkan Baris Teks di Terminal Linux.</p>
+
+
+
+<h3>Clear</h3>
+
+
+
+<p>Clear adalah perintah yang umum digunakan oleh user Linux untuk membersihkan terminal Linux, cara menggunakannya cukup dengan menuliskan perintah clear.</p>
+
+
+
+<pre class="wp-block-code"><code>clear</code></pre>
+
+
+
+<h3>CTRL+L</h3>
+
+
+
+<p>CTRL+L adalah shortcut yang berfungsi sama seperti perintah clear, cara menggunakannya cukup dengan menekan CTRL lalu L pada keyboard.</p>
+
+
+
+<p><span style="text-decoration: underline;">&#x201C;CTRL + L&#x201D;</span></p>
+
+
+
+<h3>Reset</h3>
+
+
+
+<p>Fungsi perintah <strong>reset</strong> sama seperti <strong>clear</strong>, hanya saja perintah <strong>reset</strong> agak lama memproses dibanding perintah <strong>clear</strong>, ini terjadi karena perintah reset perlu&#xA0; waktu untuk menginisialisasi terminal.</p>
+
+
+
+<pre class="wp-block-code"><code>reset</code></pre>
+
+
+
+<h3>printf &#x201C;\ec&#x201D;</h3>
+
+
+
+<p>Cara ke empat mungkin jarang dilakukan oleh user Linux, perintah printf &#x201C;\ec&#x201D; juga berfungsi sama seperti perintah clear.</p>
+
+
+
+<h3>Exit</h3>
+
+
+
+<p>Cara terakhir sebenarnya tidak membersihkan terminal Linux, sesuai artinya, perintah exit akan menutup tab terminal Linux saat ini dan ketika Anda buka terminal Linux lagi maka tampilannya akan bersih/clean.</p>
+
+
+
+<pre class="wp-block-code"><code>exit</code></pre>
+<!--kg-card-end: html-->]]></content:encoded></item><item><title><![CDATA[Cara Install Mono (Microsoft .NET Framework) di Ubuntu/Debian]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>Sebelum masuk ke tutorial, kita kenalan dulu sama si <strong>Mono</strong>, <strong>Mono</strong> ini adalah sebuah implementasi dari platform .NET (dibaca dot net) milik Microsoft yang dapat digunakan di sistem operasi Linux. Dengan Mono, pengembang dapat menulis dan menjalankan aplikasi .NET pada lingkungan Linux, Mac OS, atau platform Unix lainnya.</p>
+
+
+
+<p>Berikut adalah</p>]]></description><link>http://localhost:2368/cara-install-mono-microsoft-net-framework-di-ubuntu-debian/</link><guid isPermaLink="false">640dcb54b2a4271144649fe2</guid><category><![CDATA[debian]]></category><category><![CDATA[linux]]></category><category><![CDATA[mono]]></category><category><![CDATA[ubuntu]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Fri, 17 Feb 2023 12:56:47 GMT</pubDate><media:content url="http://localhost:2368/content/images/wordpress/2023/02/cara-install-mono-di-ubuntu.jpg" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="http://localhost:2368/content/images/wordpress/2023/02/cara-install-mono-di-ubuntu.jpg" alt="Cara Install Mono (Microsoft .NET Framework) di Ubuntu/Debian"><p>Sebelum masuk ke tutorial, kita kenalan dulu sama si <strong>Mono</strong>, <strong>Mono</strong> ini adalah sebuah implementasi dari platform .NET (dibaca dot net) milik Microsoft yang dapat digunakan di sistem operasi Linux. Dengan Mono, pengembang dapat menulis dan menjalankan aplikasi .NET pada lingkungan Linux, Mac OS, atau platform Unix lainnya.</p>
+
+
+
+<p>Berikut adalah tutorial Cara Install Mono (Microsoft .NET Framework) di Ubuntu/Debian.</p>
+
+
+
+<h2>Langkah Install Mono di Ubuntu/Debian</h2>
+
+
+
+<h3>1.Install Dependensi</h3>
+
+
+
+<pre class="wp-block-code"><code>sudo apt update</code></pre>
+
+
+
+<pre class="wp-block-code"><code>sudo apt install dirmngr gnupg apt-transport-https ca-certificates software-properties-common</code></pre>
+
+
+
+<h3>2.Import key GPG repository</h3>
+
+
+
+<pre class="wp-block-code"><code>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF</code></pre>
+
+
+
+<h3>3.Tambahkan repository Mono ke system sources&#x2019; list:</h3>
+
+
+
+<pre class="wp-block-code"><code>sudo apt-add-repository &apos;deb https://download.mono-project.com/repo/ubuntu stable-focal main&apos;</code></pre>
+
+
+
+<h3>4.Install Mono</h3>
+
+
+
+<pre class="wp-block-code"><code>sudo apt install mono-complete</code></pre>
+
+
+
+<h3>5.Verifikasi Mono</h3>
+
+
+
+<pre class="wp-block-code"><code>mono --version</code></pre>
+
+
+
+<h2>Mulai Menggunakan Mono</h2>
+
+
+
+<p>Untuk memastikan semuanya berjalan lancar, kita bisa coba membuat satu program simpel yaitu &#x201C;Hello World&#x201D;. Langkah yang perlu dilakukan cukup membuat file baru dengan nama hello.cs dan tambahkan code program berikut ini:</p>
+
+
+
+<pre class="wp-block-code"><code>using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine (&quot;Hello World!&quot;);
+    }
+}</code></pre>
+
+
+
+<p>Setelah itu gunakan compiler csc untuk mengeksekusi program:</p>
+
+
+
+<pre class="wp-block-code"><code>csc hello.cs</code></pre>
+
+
+
+<p>Ketika perintah diatas dieksekusi, maka compiler akan menghasilkan file baru yang bernama hello.exe, ekstensi yang biasa ditemukan di Windows.</p>
+
+
+
+<p>Selanjutnya kita bisa eksekusi file hello.exe tersebut, dengan perintah:</p>
+
+
+
+<pre class="wp-block-code"><code>mono hello.exe</code></pre>
+
+
+
+<p>output yang dihasilkan</p>
+
+
+
+<pre class="wp-block-code"><code>Hello, World</code></pre>
+
+
+
+<p>Selain itu, kita juga bisa mengeksekusi file ekstensi exe tanpa menggunakan perintah mono, dengan cara mengubah izin eksekusi file:</p>
+
+
+
+<pre class="wp-block-code"><code>chmod +x hello.exe</code></pre>
+
+
+
+<p>Setelah itu eksekusi file dengan sintaks ./nama-file.exe</p>
+
+
+
+<pre class="wp-block-code"><code>./hello.exe</code></pre>
+
+
+
+<h2>Kesimpulan</h2>
+
+
+
+<p>Dengan menginstall Mono, kita dapat dengan mudah mengimplementasikan framework .NET di sistem operasi Linux atau lintas platform. Proses menginstall Mono di Ubuntu/Debian cukup mudah dan hanya menghabiskan waktu beberapa menit.</p>
+<!--kg-card-end: html-->]]></content:encoded></item><item><title><![CDATA[Cara Modifikasi Variable Linux Kernel Menggunakan Perintah sysctl]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>Kernel Linux adalah inti dari sistem operasi Linux yang mengatur tugas-tugas sistem dan memberikan akses ke sumber daya hardware. procfs adalah bagian dari kernel Linux yang bertanggung jawab untuk menyediakan informasi tentang proses dan sistem yang sedang berjalan. Ia menyediakan antarmuka yang memungkinkan aplikasi untuk membaca informasi tentang proses, memori,</p>]]></description><link>http://localhost:2368/cara-modifikasi-variable-linux-kernel-menggunakan-perintah-sysctl/</link><guid isPermaLink="false">640dcb54b2a4271144649fe1</guid><category><![CDATA[kernel]]></category><category><![CDATA[sysctl]]></category><category><![CDATA[variable]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Fri, 10 Feb 2023 11:02:42 GMT</pubDate><media:content url="http://localhost:2368/content/images/wordpress/2023/02/cara-modifikasi-variable-linux-kernel-sysctl.jpg" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="http://localhost:2368/content/images/wordpress/2023/02/cara-modifikasi-variable-linux-kernel-sysctl.jpg" alt="Cara Modifikasi Variable Linux Kernel Menggunakan Perintah sysctl"><p>Kernel Linux adalah inti dari sistem operasi Linux yang mengatur tugas-tugas sistem dan memberikan akses ke sumber daya hardware. procfs adalah bagian dari kernel Linux yang bertanggung jawab untuk menyediakan informasi tentang proses dan sistem yang sedang berjalan. Ia menyediakan antarmuka yang memungkinkan aplikasi untuk membaca informasi tentang proses, memori, dan sumber daya sistem lainnya.</p>
+
+
+
+<p>sysctl adalah perintah yang sering digunakan untuk memodifikasi atau mengkonfigurasi parameter kernel Linux saat runtime (proses sedang berjalan).&#xA0;</p>
+
+
+
+<p>Path parameter kernel Linux biasanya terdapat di /proc/sys/.</p>
+
+
+
+<p>Berikut ini adalah Cara Modifikasi Variable Linux Kernel Menggunakan Perintah sysctl yang dapat Anda gunakan untuk mengelola sistem Linux yang sedang berjalan. Pastikan bahwa Anda menggunakan akses <em>root</em> untuk menjalankan perintah sysctl dengan menambahkan perintah <em>sudo</em>.</p>
+
+
+
+<h2>1. Menampilkan daftar parameter kernel Linux</h2>
+
+
+
+<p>Perintah berikut digunakan untuk menampilkan semua daftar parameter kernel linux dengan menambahkan opsi -a atau &#x2013;all</p>
+
+
+
+<pre class="wp-block-code"><code>sudo sysctl --all</code></pre>
+
+
+
+<h2>2. Menampilkan semua nama variable kernel</h2>
+
+
+
+<p>Perintah berikut akan menampilkan semua daftar nama variable kernel dengan menambahkan opsi -N</p>
+
+
+
+<pre class="wp-block-code"><code>sudo sysctl -a -N</code></pre>
+
+
+
+<h2>3. Menampilkan nama spesifik variable kernel</h2>
+
+
+
+<p>Dengan menambahkan opsi grep, kita dapat menampilkan nama spesifik yang diinginkan, misal disini kita ingin mencari variable kernel linux yang bernama memory, maka ini perintah yang dapat digunakan:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo sysctl -a | grep memory</code></pre>
+
+
+
+<h2>4. Menampilkan semua variable kernel dengan opsi deprecated</h2>
+
+
+
+<p>Deprecated adalah opsi yang sudah tidak direkomendasikan untuk digunakan lagi. Mungkin karena sudah tidak dipakai lagi atau sudah ditinggalkan oleh pengembang, atau mungkin karena ada alternatif yang lebih baik dan lebih aman.</p>
+
+
+
+<pre class="wp-block-code"><code>sudo sysctl -a --deprecated</code></pre>
+
+
+
+<h2>5. Menampilkan variable kernel beserta value</h2>
+
+
+
+<p>Perintah berikut akan menampilkan variable yang dicari beserta nilai yang terdapat pada variable tersebut.</p>
+
+
+
+<pre class="wp-block-code"><code>sudo sysctl kernel.ostype</code></pre>
+
+
+
+<h2>6. Menulis variable kernel sementara</h2>
+
+
+
+<p>Perlu diketahui format penulisan variabe kernel Linux adalah sebagai berikut:</p>
+
+
+
+<pre class="wp-block-code"><code>&lt;nama&gt;=&lt;value&gt;</code></pre>
+
+
+
+<p>Berikut adalah contoh penulisan variable kernel sementara (temporarily).</p>
+
+
+
+<pre class="wp-block-code"><code>sudo sysctl net.ipv4.tcp_fin_timeout=60</code></pre>
+
+
+
+<h2>7. Menulis variable kernel permanen</h2>
+
+
+
+<p>Jika Anda ingin membuat perubahan secara permanen, Anda harus menambahkan entri yang sama ke file konfigurasi sysctl, misalnya /etc/sysctl.conf.</p>
+
+
+
+<p>atau dengan menambahkan opsi -w dan operator &gt;&gt; (append).</p>
+
+
+
+<pre class="wp-block-code"><code>sudo sysctl -w net.ipv4.tcp_fin_timeout=60 &gt;&gt; /etc/sysctl.conf</code></pre>
+
+
+
+<h2>8. Menonaktifkan variable kernel</h2>
+
+
+
+<p>Anda juga dapat menonaktifkan variable kernel dengan menset value=0</p>
+
+
+
+<pre class="wp-block-code"><code>sysctl -w net.ipv4.tcp_fin_timeout=0</code></pre>
+
+
+
+<h2>9. Mengatur swap variable kernel</h2>
+
+
+
+<p>Perintah berikut dapat digunakan jika Anda ingin menetapkan ukuran swap area pada variable kernel, misal jika Anda ingin mengatur swap pada variable vm.</p>
+
+
+
+<pre class="wp-block-code"><code>sysctl -w vm.swappiness=10</code></pre>
+
+
+
+<h2>10. Reload sysctl.conf variable</h2>
+
+
+
+<p>Di Linux kita dapat mereload variable yang baru di modifikasi tanpa mereload perangkat dengan opsi &#x2013;system</p>
+
+
+
+<pre class="wp-block-code"><code>sudo sysctl&#xA0; --system</code></pre>
+<!--kg-card-end: html-->]]></content:encoded></item><item><title><![CDATA[Cara Install Emulator PCSX2 di Ubuntu / Linux]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>PCSX2 adalah emulator PlayStation 2 yang memungkinkan pengguna untuk memainkan game PlayStation 2 di komputer. Emulator ini meniru sistem hardware dan software PlayStation 2 sehingga dapat dimainkan pada komputer. PCSX2 adalah proyek open source dan dapat digunakan secara gratis. Hal ini memberikan kontrol yang lebih baik dan fleksibilitas dibandingkan dengan</p>]]></description><link>http://localhost:2368/cara-install-emulator-pcsx2-di-ubuntu-linux/</link><guid isPermaLink="false">640dcb54b2a4271144649fe0</guid><category><![CDATA[emulator]]></category><category><![CDATA[iso]]></category><category><![CDATA[pcsx2]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Thu, 09 Feb 2023 10:58:37 GMT</pubDate><media:content url="http://localhost:2368/content/images/wordpress/2023/02/cara-install-emulator-pcsx2-di-ubuntu.jpg" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="http://localhost:2368/content/images/wordpress/2023/02/cara-install-emulator-pcsx2-di-ubuntu.jpg" alt="Cara Install Emulator PCSX2 di Ubuntu / Linux"><p>PCSX2 adalah emulator PlayStation 2 yang memungkinkan pengguna untuk memainkan game PlayStation 2 di komputer. Emulator ini meniru sistem hardware dan software PlayStation 2 sehingga dapat dimainkan pada komputer. PCSX2 adalah proyek open source dan dapat digunakan secara gratis. Hal ini memberikan kontrol yang lebih baik dan fleksibilitas dibandingkan dengan memainkan game PlayStation 2 pada konsol asli, dan juga memungkinkan pengguna untuk memainkan game pada resolusi yang lebih tinggi dan dengan kualitas grafis yang lebih baik.</p>
+
+
+
+<p>Berikut adalah tutorial Cara Install Emulator PCSX2 di Ubuntu / Linux.</p>
+
+
+
+<h2>Ubuntu/Debian</h2>
+
+
+
+<p><strong>Install via apt</strong></p>
+
+
+
+<p>Tambahkan Repository PPA</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#282A36"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="sudo add-apt-repository ppa:gregory-hainaut/pcsx2.official.ppa" style="color:#f6f6f4;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki dracula-soft" style="background-color: #282A36"><code><span class="line"><span style="color: #F6F6F4">sudo </span><span style="color: #E7EE98">add-apt-repository</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">ppa:gregory-hainaut/pcsx2.official.ppa</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#282a36;color:#ebebe6;font-size:12px;line-height:1;position:relative">ShellScript</span></div>
+
+
+
+<p>Update Repository</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#282A36"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="sudo apt update" style="color:#f6f6f4;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki dracula-soft" style="background-color: #282A36"><code><span class="line"><span style="color: #F6F6F4">sudo </span><span style="color: #E7EE98">apt</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">update</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#282a36;color:#ebebe6;font-size:12px;line-height:1;position:relative">ShellScript</span></div>
+
+
+
+<p>Install pcsx2</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#282A36"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="sudo apt install pcsx2 -y" style="color:#f6f6f4;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki dracula-soft" style="background-color: #282A36"><code><span class="line"><span style="color: #F6F6F4">sudo </span><span style="color: #E7EE98">apt</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">install</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">pcsx2</span><span style="color: #F6F6F4"> </span><span style="color: #BF9EEE">-y</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#282a36;color:#ebebe6;font-size:12px;line-height:1;position:relative">ShellScript</span></div>
+
+
+
+<p><strong>Install via snap</strong></p>
+
+
+
+<p>Install snapd</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#282A36"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="sudo apt update;sudo apt install snapd -y" style="color:#f6f6f4;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki dracula-soft" style="background-color: #282A36"><code><span class="line"><span style="color: #F6F6F4">sudo </span><span style="color: #E7EE98">apt</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">update</span><span style="color: #F6F6F4">;sudo </span><span style="color: #E7EE98">apt</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">install</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">snapd</span><span style="color: #F6F6F4"> </span><span style="color: #BF9EEE">-y</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#282a36;color:#ebebe6;font-size:12px;line-height:1;position:relative">ShellScript</span></div>
+
+
+
+<p>Install pcsx2 via snapd</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#282A36"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="sudo snap install pcsx2-tabetai --edge" style="color:#f6f6f4;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki dracula-soft" style="background-color: #282A36"><code><span class="line"><span style="color: #F6F6F4">sudo </span><span style="color: #E7EE98">snap</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">install</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">pcsx2-tabetai</span><span style="color: #F6F6F4"> </span><span style="color: #BF9EEE">--edge</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#282a36;color:#ebebe6;font-size:12px;line-height:1;position:relative">ShellScript</span></div>
+
+
+
+<h2>Fedora</h2>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#282A36"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="sudo sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm" style="color:#f6f6f4;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki dracula-soft" style="background-color: #282A36"><code><span class="line"><span style="color: #F6F6F4">sudo </span><span style="color: #E7EE98">sudo</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">dnf</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">install</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm </span><span style="color: #BF9EEE">-E</span><span style="color: #E7EE98"> %fedora).noarch.rpm</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm </span><span style="color: #BF9EEE">-E</span><span style="color: #E7EE98"> %fedora).noarch.rpm</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#282a36;color:#ebebe6;font-size:12px;line-height:1;position:relative">ShellScript</span></div>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#282A36"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="sudo dnf install pcsx2" style="color:#f6f6f4;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki dracula-soft" style="background-color: #282A36"><code><span class="line"><span style="color: #F6F6F4">sudo </span><span style="color: #E7EE98">dnf</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">install</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">pcsx2</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#282a36;color:#ebebe6;font-size:12px;line-height:1;position:relative">ShellScript</span></div>
+
+
+
+<h2>Arch Linux</h2>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#282A36"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="sudo pacman -S pcsx2" style="color:#f6f6f4;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki dracula-soft" style="background-color: #282A36"><code><span class="line"><span style="color: #F6F6F4">sudo </span><span style="color: #E7EE98">pacman</span><span style="color: #F6F6F4"> </span><span style="color: #BF9EEE">-S</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">pcsx2</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#282a36;color:#ebebe6;font-size:12px;line-height:1;position:relative">ShellScript</span></div>
+
+
+
+<h2>OpenSUSE</h2>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#282A36"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="sudo zypper in pcsx2" style="color:#f6f6f4;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki dracula-soft" style="background-color: #282A36"><code><span class="line"><span style="color: #F6F6F4">sudo </span><span style="color: #E7EE98">zypper</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">in</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">pcsx2</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#282a36;color:#ebebe6;font-size:12px;line-height:1;position:relative">ShellScript</span></div>
+
+
+
+<h2>Konfigurasi PCSX2</h2>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><img decoding="async" src="https://lh5.googleusercontent.com/GLIWK1rvXzPeY0WECrPTfPOKQPITUf6LejUctbU_eOFvRKifyj8DI5L-hWdEVQ3XBguR4vAWbTN1sU9u_wLJ0WQMRz9HrNnQLJ1tDP4lQzXQGqaX0FNECs9LDthSzgWxScmb2GZzqrkIfGTAcxmOeIg" alt="Cara Install Emulator PCSX2 di Ubuntu / Linux"><figcaption class="wp-element-caption">pada bagian ini, cukup klik next saja.</figcaption></figure></div>
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh4.googleusercontent.com/0hAIpieR2eMU58utiGFyDf3trBMEU0WC-pPdFPEpVCA5NSZH374lrz9Te7rDDvzY9fAroJpfB9r_fxmemL2IubUaJffCJNc53-LArPNbd7TyfS3-MCAcHNaP0SSi63wZhbYqnYQkhpW0yprUPX1onpo" alt="Cara Install Emulator PCSX2 di Ubuntu / Linux"><figcaption class="wp-element-caption">Pilih opsi Use default setting lalu klik Next</figcaption></figure>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh5.googleusercontent.com/Tg6j-79sA8wMLYUmWhze-tDlDaLmFHQ-BL2IWli-x3ax8ZzI85IpiTJrz0m1DbHDZHteUXJowBMEo8LteopzHI7ac7LnJ2E--h5Du_urKN8Nkpm9ALDIDpDRL-bHGloh3htiAzd-ycxlpgVZUnQOLtw" alt="Cara Install Emulator PCSX2 di Ubuntu / Linux"><figcaption class="wp-element-caption">Untuk BIOS rom, direkomendasikan menggunakan USA.</figcaption></figure>
+
+
+
+<p>Dan untuk file bios nya, Anda bisa download <a href="http://localhost:2368/content/images/wordpress/2023/02/bios.zip" data-type="URL" data-id="/content/images/wordpress/2023/02/bios.zip" target="_blank" rel="noreferrer noopener">disini</a>, setelah di download jangan lupa untuk di <strong>ekstrak</strong>.</p>
+
+
+
+<p>Cara memasukkan file BIOS, <strong>hapus</strong> centang Use default setting lalu klik <strong>Browse</strong> dan arahkan ke folder BIOS yang sudah di download.</p>
+
+
+
+<h2>Selesai</h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh6.googleusercontent.com/geEnpBWdTpklpcp_ZQ_yQd7KrL1xjSX4ySfyZrBzsqm5VVBHhAvNXws0S443o5BbETvdRZDmMHzXLcmnkmqjEeOR6aU33huj2X3sVnGdBv95U8nQvewFxYwRbk83ynYtLxx45tWsTvkkaSxdY08bOwI" alt="Cara Install Emulator PCSX2 di Ubuntu / Linux"></figure>
+
+
+
+<p>Sampai disini sudah selesai konfigurasi pcsx2 pada sistem operasi Ubuntu, file ISO untuk memainkan game bisa Anda download dari salah satu website dibawah ini:</p>
+
+
+
+<ul>
+<li><a href="https://coolrom.com.au/roms/ps2/?ref=unixkuy">Coolrom</a></li>
+
+
+
+<li><a href="https://www.romsgames.net/roms/playstation-2/?ref=unixkuy">romsgames</a></li>
+
+
+
+<li><a href="https://www.emulatorgames.net/roms/playstation-2/?ref=unixkuy">emulatorgames</a></li>
+</ul>
+
+
+
+<h2>Hasil Konfigurasi</h2>
+
+
+
+<p>Disini admin coba memainkan game Black dengan menggunakan OS Ubuntu, gamepad dan hasilnya cukup memuaskan.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter is-resized"><img decoding="async" loading="lazy" src="https://lh6.googleusercontent.com/Y5xMM0bITLdO1RGTwNrLlkgy3gVi2ooWCEy8X9X5rwVDIEe6v9hKiCyUjWPvZMHAQwbQ-veKBlosTNAovVyzaD3htG5p1r-vgKFfV9QKxLGueO5W5NY2QdpO2KKbBspy0JpHkBmn9MdjQiL_0InuLuY" alt="Cara Install Emulator PCSX2 di Ubuntu / Linux" width="350" height="379"></figure></div>
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh6.googleusercontent.com/DWSDv3-nFI3q_oHiVaycn3CTOV5q9OAb45kaSE7Wlq9VFK_3xkaxv0RQ4Jfb9x64BnmZLcfY1zCfwWc0S2r62_uAKx0BJkxqLWmMqYn4vftSoYP07ob01zooMR72ENNCrlzBFtIviTaZJ1opVUU8A9Q" alt="Cara Install Emulator PCSX2 di Ubuntu / Linux"></figure>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh3.googleusercontent.com/4nk2wDaheemrXJrA1AKIh7j_fcYbGvjn9ZY7AYh8FyKlFE1B0cPcIdvVNhl-9-CFnPym6j81wnuTu16xfqdE1gZvlmyCcdICFMKI3bx2IyyjHLEDUNEn3ISAeoc3dczmUe94rX6CQ6DcFF86FH1NC-A" alt="Cara Install Emulator PCSX2 di Ubuntu / Linux"></figure>
+<!--kg-card-end: html-->]]></content:encoded></item><item><title><![CDATA[5 Rekomendasi Distro Linux untuk Pemula]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>Buat kalian yang masih awam dengan distro Linux tidak perlu khawatir, di Artikel ini sudah saya buat 5 Rekomendasi distro Linux untuk pemula berdasarkan aspek user friendly.</p>
+
+
+
+<p>Berikut adalah 5 Rekomendasi Distro Linux untuk Pemula</p>
+
+
+
+<h2>Ubuntu</h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh4.googleusercontent.com/AeOUYyC_hy25FqwKnYMghH-7YtZ1Q30-3UYuzhlRTgdYPGtIDqCgbwIqhcSSrxk33J07H4n20Ki5E03cIv-4qgcIjxflklGpspY7j3buTE5PSXP8ccdtrHReYLzN1HnKu5a5Yte3f601fyhx774X4Hk" alt></figure>
+
+
+
+<p>Ubuntu &#x2013; Distro Linux paling populer dan mudah dipahami bagi pemula, dengan banyak fitur</p>]]></description><link>http://localhost:2368/5-rekomendasi-distro-linux-untuk-pemula/</link><guid isPermaLink="false">640dcb54b2a4271144649fdf</guid><category><![CDATA[distro]]></category><category><![CDATA[linux]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Thu, 09 Feb 2023 10:13:42 GMT</pubDate><media:content url="http://localhost:2368/content/images/wordpress/2023/02/5-rekomendasi-distro-linux-untuk-pemula.jpg" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="http://localhost:2368/content/images/wordpress/2023/02/5-rekomendasi-distro-linux-untuk-pemula.jpg" alt="5 Rekomendasi Distro Linux untuk Pemula"><p>Buat kalian yang masih awam dengan distro Linux tidak perlu khawatir, di Artikel ini sudah saya buat 5 Rekomendasi distro Linux untuk pemula berdasarkan aspek user friendly.</p>
+
+
+
+<p>Berikut adalah 5 Rekomendasi Distro Linux untuk Pemula</p>
+
+
+
+<h2>Ubuntu</h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh4.googleusercontent.com/AeOUYyC_hy25FqwKnYMghH-7YtZ1Q30-3UYuzhlRTgdYPGtIDqCgbwIqhcSSrxk33J07H4n20Ki5E03cIv-4qgcIjxflklGpspY7j3buTE5PSXP8ccdtrHReYLzN1HnKu5a5Yte3f601fyhx774X4Hk" alt="5 Rekomendasi Distro Linux untuk Pemula"></figure>
+
+
+
+<p>Ubuntu &#x2013; Distro Linux paling populer dan mudah dipahami bagi pemula, dengan banyak fitur yang mempermudah penggunaan. Ubuntu kebanyakan digunakan oleh mereka yang baru pindah dari os windows.</p>
+
+
+
+<p><a href="https://ubuntu.com/download?ref=unixkuy" target="_blank" rel="noreferrer noopener">Download Ubuntu Desktop</a></p>
+
+
+
+<h2>Linux Mint</h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh4.googleusercontent.com/e2AE9JtRWzge3x8DhLYBtzJ89dSpP3GqHIxD41eQB_Tu_p9tuY8ADk9ZH_aiuE6H8A86_9raffvFb2g9iTZkt69FhayryCjyozLmoli_Y0jxs9JrnN6wj29XHFcbYr42ZdujlQmg1toLLWbIJ5mvwX0" alt="5 Rekomendasi Distro Linux untuk Pemula"></figure>
+
+
+
+<p>Linux Mint &#x2013; linux mint adalah Distro Linux yang ringan dan mudah dipahami bagi pemula, terutama bagi mereka yang baru memasuki dunia Linux. Linux Mint menawarkan interface yang mudah digunakan dan banyak pilihan aplikasi yang bisa digunakan untuk berbagai keperluan.</p>
+
+
+
+<p><a href="https://www.linuxmint.com/download.php?ref=unixkuy" target="_blank" data-type="URL" data-id="https://www.linuxmint.com/download.php" rel="noreferrer noopener">Download Linux Mint Desktop</a></p>
+
+
+
+<h2>MX Linux</h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh4.googleusercontent.com/XS0DW0WxBVo52RgFEwX5fXoy-wqJF6GCf8c1SMBTqDO13QwXnSxZVN1lD5qYlaS17gSIFwkh_KTiG-Mqbpkf0xotdBVGhxO2LFLecTSfH7ksldr3MGDBeN8pixyqpHZw75B6VLo67oUdo-bPdyBTBFA" alt="5 Rekomendasi Distro Linux untuk Pemula"></figure>
+
+
+
+<p>MX Linux &#x2013; MX Linux mengkombinasikan antarmuka desktop Xfce dengan teknologi dan fitur-fitur dari distribusi Debian untuk membuat sebuah sistem operasi yang mudah digunakan dan cepat.</p>
+
+
+
+<p><a href="https://mxlinux.org/download-links/?ref=unixkuy" target="_blank" data-type="URL" data-id="https://mxlinux.org/download-links/" rel="noreferrer noopener">Download Linux Mint Desktop</a></p>
+
+
+
+<h2>Manjaro</h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh4.googleusercontent.com/R3dbVDKDwreCi1an_RiM8D_wMB0oE144RGJR38sgg_qDP-IlRWbCtTiEl5fhOsmSelcomVHvkxfoma6wEMravnguaS1zkAQgi48jwGcpol4xQHA4AKYazwKXpVvqU3o7EzD9vs-F4Rgga221Ckwp3Mw" alt="5 Rekomendasi Distro Linux untuk Pemula"></figure>
+
+
+
+<p>Manjaro &#x2013;&#xA0; manjaro adalah distro linux berbasis ARch dan memiliki antarmuka pengguna yang mudah digunakan serta banyak paket aplikasi yang sudah terinstal. Cocok untuk kalian yang ingin terjun ke based Arch.</p>
+
+
+
+<p><a href="https://manjaro.org/download/?ref=unixkuy" target="_blank" data-type="URL" data-id="https://manjaro.org/download/" rel="noreferrer noopener">Download Manjaro Desktop</a></p>
+
+
+
+<h2>Debian</h2>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh4.googleusercontent.com/ZSR1bPYChKOnycO8mZp7ptNMKjSdfy9vidZWZWqS1BQGNflQ-juu1SGKURt8VRV5qBo5wJHB21IK9NhSTQUjXIPmBGEP65L-JglHmlJZ8D6Ui6RR45M2U-aMi3K99NsSb0cle8O2yo_DHBgmJP0FblE" alt="5 Rekomendasi Distro Linux untuk Pemula"></figure>
+
+
+
+<p>Debian &#x2013; debian ini Distro Linux yang stabil dan mudah dipahami bagi pemula. Debian memfokuskan pada stabilitas dan keamanan serta menyediakan paket-paket perangkat lunak yang luas dan dapat dipasang dengan mudah.</p>
+
+
+
+<p><a href="https://www.debian.org/CD/http-ftp/?ref=unixkuy" target="_blank" data-type="URL" data-id="https://www.debian.org/CD/http-ftp/" rel="noreferrer noopener">Download Debian Desktop</a></p>
+
+
+
+<p><strong>Saran</strong></p>
+
+
+
+<p>Buat kalian yang baru banget dengan sistem operasi Linux, sangat di sarankan menggunakan distro Ubuntu.</p>
+<!--kg-card-end: html-->]]></content:encoded></item><item><title><![CDATA[Cara Mengetahui Riwayat Aplikasi yang Pernah di Instal di Linux]]></title><description><![CDATA[<!--kg-card-begin: html-->
+<p>Apakah Anda ingin mengetahui riwayat aplikasi yang pernah diinstal di sistem operasi Linux? Berikut adalah panduan sederhana yang akan membantu Anda melacak riwayat instalasi aplikasi di Linux.</p>
+
+
+
+<p>Perintah yang digunakan untuk mengetahui riwayat aplikasi apa saja yang pernah diinstal adalah dengan memanfaatkan perintah history.</p>
+
+
+
+<p>Perintah <strong>history</strong> pada Linux adalah perintah</p>]]></description><link>http://localhost:2368/cara-mengetahui-riwayat-aplikasi-yang-pernah-di-instal-di-linux/</link><guid isPermaLink="false">640dcb54b2a4271144649fde</guid><category><![CDATA[linux]]></category><category><![CDATA[tutorial]]></category><dc:creator><![CDATA[Ferry Ananda Febian]]></dc:creator><pubDate>Tue, 31 Jan 2023 04:59:18 GMT</pubDate><media:content url="http://localhost:2368/content/images/wordpress/2023/01/cara-mengetahui-riwayat-aplikasi-yang-pernah-di-install-di-linux.jpg" medium="image"/><content:encoded><![CDATA[<!--kg-card-begin: html-->
+<img src="http://localhost:2368/content/images/wordpress/2023/01/cara-mengetahui-riwayat-aplikasi-yang-pernah-di-install-di-linux.jpg" alt="Cara Mengetahui Riwayat Aplikasi yang Pernah di Instal di Linux"><p>Apakah Anda ingin mengetahui riwayat aplikasi yang pernah diinstal di sistem operasi Linux? Berikut adalah panduan sederhana yang akan membantu Anda melacak riwayat instalasi aplikasi di Linux.</p>
+
+
+
+<p>Perintah yang digunakan untuk mengetahui riwayat aplikasi apa saja yang pernah diinstal adalah dengan memanfaatkan perintah history.</p>
+
+
+
+<p>Perintah <strong>history</strong> pada Linux adalah perintah bawaan yang menampilkan daftar perintah yang pernah dijalankan dalam sesi terminal saat ini.</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><img decoding="async" src="https://lh5.googleusercontent.com/u7Gy79RtC15JyLxQ7k2eqj4k55iMT8vKVASr_VeWoMsFPZKH8aYtoEyZnpr3MDJw-CGjWvFxhttpGhm_0FgDuAkzGx4FPMa65YXVRpmCX3FLcrlPMAe0Ffhk6TvVcmBU1satfos9gp2oiIAvEMniuq4" alt="Cara Mengetahui Riwayat Aplikasi yang Pernah di Instal di Linux"><figcaption class="wp-element-caption">history</figcaption></figure></div>
+
+
+<p>Untuk menampilkan daftar aplikasi apa saja yang pernah diinstal pada output history yaitu dengan menambahkan perintah grep dan dilanjut dengan &#x201C;nilai string&#x201D;. Pada kasus ini, kita bisa menggunakan perintah berikut ini:</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#282A36"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="history | grep &#x201C;sudo apt install&#x201D;" style="color:#f6f6f4;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki dracula-soft" style="background-color: #282A36"><code><span class="line"><span style="color: #97E1F1">history</span><span style="color: #F6F6F4"> </span><span style="color: #F286C4">|</span><span style="color: #F6F6F4"> grep </span><span style="color: #E7EE98">&#x201C;sudo</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">apt</span><span style="color: #F6F6F4"> </span><span style="color: #E7EE98">install&#x201D;</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#282a36;color:#ebebe6;font-size:12px;line-height:1;position:relative">ShellScript</span></div>
+
+
+
+<p>Berikut adalah contoh penerapannya:</p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter"><img decoding="async" src="https://lh5.googleusercontent.com/RTGwWLGDFTkMH4xlTc70vqZ4lsiuSxyg40DyKjJbma7vdsCCKhEbCRTL0stTLIIB0fUxmDm8CMV3jBHcjkO9zQgegBHKhGaHjdJlDBD27VMuWgQqOB9zJMlN0o6kqqlgk_q29lGXlRIYcsBT9NOHbgQ" alt="Cara Mengetahui Riwayat Aplikasi yang Pernah di Instal di Linux"><figcaption class="wp-element-caption">history | grep</figcaption></figure></div>
+
+
+<p><strong>Penjelasan perintah diatas</strong></p>
+
+
+
+<ul>
+<li>history digunakan untuk menampilkan daftar perintah yang pernah dijalankan</li>
+
+
+
+<li>| adalah tanda untuk menggabungkan perintah grep dengan perintah history</li>
+
+
+
+<li>grep digunakan untuk mencari nilai string atau teks dari sebuah output</li>
+
+
+
+<li>&#x201C;sudo apt install&#x201D; adalah nilai string yang ditetapkan</li>
+</ul>
+<!--kg-card-end: html-->]]></content:encoded></item></channel></rss>

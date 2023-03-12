@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Mengenal Variabel dan Tipe Data di Golang</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=146492131e" />
+
+    <link rel="canonical" href="http://localhost:2368/mengenal-variabel-dan-tipe-data-di-golang/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="unixkuy" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Mengenal Variabel dan Tipe Data di Golang" />
+    <meta property="og:description" content="Di sesi ini, kita akan mengenal variabel dan tipe data di Golang
+
+
+
+
+
+
+Apa Itu Variabel
+
+
+
+
+
+Variabel adalah tempat yang digunakan untuk menyimpan nilai-nilai di dalam suatu program. Dalam Go, Anda perlu mendeklarasikan variabel sebelum dapat menggunakannya dalam program Anda. Anda dapat mendeklarasikan variabel dengan menggunakan kata kunci “var” atau dengan" />
+    <meta property="og:url" content="http://localhost:2368/mengenal-variabel-dan-tipe-data-di-golang/" />
+    <meta property="og:image" content="http://localhost:2368/content/images/wordpress/2023/01/Mengenal-Variabel-dan-Tipe-Data-di-Golang.jpg" />
+    <meta property="article:published_time" content="2023-01-09T14:47:38.000Z" />
+    <meta property="article:modified_time" content="2023-01-11T08:58:33.000Z" />
+    <meta property="article:tag" content="pemrograman" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mengenal Variabel dan Tipe Data di Golang" />
+    <meta name="twitter:description" content="Di sesi ini, kita akan mengenal variabel dan tipe data di Golang
+
+
+
+
+
+
+Apa Itu Variabel
+
+
+
+
+
+Variabel adalah tempat yang digunakan untuk menyimpan nilai-nilai di dalam suatu program. Dalam Go, Anda perlu mendeklarasikan variabel sebelum dapat menggunakannya dalam program Anda. Anda dapat mendeklarasikan variabel dengan menggunakan kata kunci “var” atau dengan" />
+    <meta name="twitter:url" content="http://localhost:2368/mengenal-variabel-dan-tipe-data-di-golang/" />
+    <meta name="twitter:image" content="http://localhost:2368/content/images/wordpress/2023/01/Mengenal-Variabel-dan-Tipe-Data-di-Golang.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Ferry Ananda Febian" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="pemrograman" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="300" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "unixkuy",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ferry Ananda Febian",
+        "url": "http://localhost:2368/author/ferry/",
+        "sameAs": []
+    },
+    "headline": "Mengenal Variabel dan Tipe Data di Golang",
+    "url": "http://localhost:2368/mengenal-variabel-dan-tipe-data-di-golang/",
+    "datePublished": "2023-01-09T14:47:38.000Z",
+    "dateModified": "2023-01-11T08:58:33.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:2368/content/images/wordpress/2023/01/Mengenal-Variabel-dan-Tipe-Data-di-Golang.jpg",
+        "width": 500,
+        "height": 300
+    },
+    "keywords": "pemrograman",
+    "description": "\n\n\nDi sesi ini, kita akan mengenal variabel dan tipe data di Golang\n\n\n\n\n\n\nApa Itu Variabel\n\n\n\n\n\nVariabel adalah tempat yang digunakan untuk menyimpan nilai-nilai di dalam suatu program. Dalam Go, Anda perlu mendeklarasikan variabel sebelum dapat menggunakannya dalam program Anda. Anda dapat mendeklarasikan variabel dengan menggunakan kata kunci “var” atau dengan menggunakan nilai default yang diberikan oleh Go. Contohnya:\n\n\n\n\n\n// mendeklarasikan variabel dengan menggunakan kata kunci &quot;var&quot;\nvar a",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.38" />
+    <link rel="alternate" type="application/rss+xml" title="unixkuy" href="http://localhost:2368/rss/" />
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.25/umd/portal.min.js" data-ghost="http://localhost:2368/" data-key="15ceee4aa109bb38c146da1571" data-api="http://localhost:2368/ghost/api/content/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="15ceee4aa109bb38c146da1571" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
+    <link href="http://localhost:2368/webmentions/receive/" rel="webmention" />
+    <script defer src="/public/cards.min.js?v=146492131e"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=146492131e">
+    <script defer src="/public/member-attribution.min.js?v=146492131e"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+</head>
+<body class="post-template tag-pemrograman tag-hash-wordpress tag-hash-import-2023-03-12-12-53 is-head-left-logo has-cover">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head outer">
+        <div class="gh-head-inner inner">
+            <div class="gh-head-brand">
+                <a class="gh-head-logo no-image" href="http://localhost:2368">
+                        unixkuy
+                </a>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="http://localhost:2368/">Home</a></li>
+    <li class="nav-about"><a href="http://localhost:2368/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                    <button class="gh-search gh-icon-btn" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                    <div class="gh-head-members">
+                                <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
+                                <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+
+
+
+<main id="site-main" class="site-main">
+<article class="article post tag-pemrograman tag-hash-wordpress tag-hash-import-2023-03-12-12-53 ">
+
+    <header class="article-header gh-canvas">
+
+        <div class="article-tag post-card-tags">
+                <span class="post-card-primary-tag">
+                    <a href="/tag/pemrograman/">pemrograman</a>
+                </span>
+        </div>
+
+        <h1 class="article-title">Mengenal Variabel dan Tipe Data di Golang</h1>
+
+
+        <div class="article-byline">
+        <section class="article-byline-content">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="/author/ferry/" class="author-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+                </li>
+            </ul>
+
+            <div class="article-byline-meta">
+                <h4 class="author-name"><a href="/author/ferry/">Ferry Ananda Febian</a></h4>
+                <div class="byline-meta-content">
+                    <time class="byline-meta-date" datetime="2023-01-09">Jan 9, 2023</time>
+                        <span class="byline-reading-time"><span class="bull">&bull;</span> 3 min read</span>
+                </div>
+            </div>
+
+        </section>
+        </div>
+
+            <figure class="article-image">
+                <img
+                    srcset="/content/images/size/w300/wordpress/2023/01/Mengenal-Variabel-dan-Tipe-Data-di-Golang.jpg 300w,
+                            /content/images/size/w600/wordpress/2023/01/Mengenal-Variabel-dan-Tipe-Data-di-Golang.jpg 600w,
+                            /content/images/size/w1000/wordpress/2023/01/Mengenal-Variabel-dan-Tipe-Data-di-Golang.jpg 1000w,
+                            /content/images/size/w2000/wordpress/2023/01/Mengenal-Variabel-dan-Tipe-Data-di-Golang.jpg 2000w"
+                    sizes="(min-width: 1400px) 1400px, 92vw"
+                    src="/content/images/size/w2000/wordpress/2023/01/Mengenal-Variabel-dan-Tipe-Data-di-Golang.jpg"
+                    alt="Mengenal Variabel dan Tipe Data di Golang"
+                />
+            </figure>
+
+    </header>
+
+    <section class="gh-content gh-canvas">
+        <!--kg-card-begin: html-->
+<p>Di sesi ini, kita akan mengenal variabel dan tipe data di Golang</p>
+
+
+
+<h2>Apa Itu Variabel</h2>
+
+
+
+<p>Variabel adalah tempat yang digunakan untuk menyimpan nilai-nilai di dalam suatu program. Dalam Go, Anda perlu mendeklarasikan variabel sebelum dapat menggunakannya dalam program Anda. Anda dapat mendeklarasikan variabel dengan menggunakan kata kunci &#8220;var&#8221; atau dengan menggunakan nilai default yang diberikan oleh Go. Contohnya:</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="// mendeklarasikan variabel dengan menggunakan kata kunci &quot;var&quot;
+var a int = 10
+var b string = &quot;hello&quot;
+
+// mendeklarasikan variabel dengan menggunakan nilai default yang diberikan oleh Go
+var c = 20
+var d = &quot;world&quot;" style="color:#d8dee9ff;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki nord" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #616E88">// mendeklarasikan variabel dengan menggunakan kata kunci &quot;var&quot;</span></span>
+<span class="line"><span style="color: #81A1C1">var</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">a</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">int</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">10</span></span>
+<span class="line"><span style="color: #81A1C1">var</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">b</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">string</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">&quot;</span><span style="color: #A3BE8C">hello</span><span style="color: #ECEFF4">&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #616E88">// mendeklarasikan variabel dengan menggunakan nilai default yang diberikan oleh Go</span></span>
+<span class="line"><span style="color: #81A1C1">var</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">c</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">20</span></span>
+<span class="line"><span style="color: #81A1C1">var</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">d</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">&quot;</span><span style="color: #A3BE8C">world</span><span style="color: #ECEFF4">&quot;</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#2e3440;color:#c8d0e0;font-size:12px;line-height:1;position:relative">Go</span></div>
+
+
+
+<p>Selain itu Variabel, Go memiliki beberapa tipe data built-in seperti integer, float, boolean, dan string. Anda juga dapat membuat tipe data sendiri dengan menggunakan tipe struct atau menggunakan tipe interface untuk membuat tipe data yang lebih abstrak.</p>
+
+
+
+<h2>Tipe Data Integer</h2>
+
+
+
+<p>Tipe data integer di Go adalah tipe data yang digunakan untuk menyimpan bilangan bulat. Ada beberapa tipe integer built-in yang tersedia di Go, yaitu:</p>
+
+
+
+<ul>
+<li>int: tipe integer dengan panjang yang sesuai dengan arsitektur komputer yang sedang digunakan (32-bit atau 64-bit)</li>
+
+
+
+<li>int8: tipe integer dengan panjang 8-bit</li>
+
+
+
+<li>int16: tipe integer dengan panjang 16-bit</li>
+
+
+
+<li>int32: tipe integer dengan panjang 32-bit</li>
+
+
+
+<li>int64: tipe integer dengan panjang 64-bit</li>
+</ul>
+
+
+
+<p>Anda dapat mendeklarasikan variabel dengan tipe integer dengan cara seperti ini:</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="var a int = 10
+var b int8 = 100
+var c int16 = 1000
+var d int32 = 10000
+var e int64 = 100000" style="color:#d8dee9ff;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki nord" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #81A1C1">var</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">a</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">int</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">10</span></span>
+<span class="line"><span style="color: #81A1C1">var</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">b</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">int8</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">100</span></span>
+<span class="line"><span style="color: #81A1C1">var</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">c</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">int16</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">1000</span></span>
+<span class="line"><span style="color: #81A1C1">var</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">d</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">int32</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">10000</span></span>
+<span class="line"><span style="color: #81A1C1">var</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">e</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">int64</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">100000</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#2e3440;color:#c8d0e0;font-size:12px;line-height:1;position:relative">Go</span></div>
+
+
+
+<p>Anda juga dapat menggunakan notasi shorthand untuk mendeklarasikan variabel dengan tipe integer seperti ini:</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="a := 10
+b := int8(100)
+c := int16(1000)
+d := int32(10000)
+e := int64(100000)" style="color:#d8dee9ff;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki nord" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #D8DEE9">a</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">:=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">10</span></span>
+<span class="line"><span style="color: #D8DEE9">b</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">:=</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">int8</span><span style="color: #ECEFF4">(</span><span style="color: #B48EAD">100</span><span style="color: #ECEFF4">)</span></span>
+<span class="line"><span style="color: #D8DEE9">c</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">:=</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">int16</span><span style="color: #ECEFF4">(</span><span style="color: #B48EAD">1000</span><span style="color: #ECEFF4">)</span></span>
+<span class="line"><span style="color: #D8DEE9">d</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">:=</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">int32</span><span style="color: #ECEFF4">(</span><span style="color: #B48EAD">10000</span><span style="color: #ECEFF4">)</span></span>
+<span class="line"><span style="color: #D8DEE9">e</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">:=</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">int64</span><span style="color: #ECEFF4">(</span><span style="color: #B48EAD">100000</span><span style="color: #ECEFF4">)</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#2e3440;color:#c8d0e0;font-size:12px;line-height:1;position:relative">Go</span></div>
+
+
+
+<h2>Tipe Data Float</h2>
+
+
+
+<p>Tipe data float adalah tipe data yang digunakan untuk menyimpan nilai-nilai desimal atau bilangan koma flotan. Dalam Go, tipe data float terbagi menjadi dua yaitu float32 dan float64. Tipe data float32 memiliki presisi sebanyak 32 bit, sedangkan tipe data float64 memiliki presisi sebanyak 64 bit.</p>
+
+
+
+<p>Contoh penggunaan tipe data float dalam Go:</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="var a float32 = 3.14
+var b float64 = 3.14159265359" style="color:#d8dee9ff;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki nord" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #81A1C1">var</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">a</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">float32</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">3.14</span></span>
+<span class="line"><span style="color: #81A1C1">var</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">b</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">float64</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">3.14159265359</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#2e3440;color:#c8d0e0;font-size:12px;line-height:1;position:relative">Go</span></div>
+
+
+
+<p>Perbedaan utama antara tipe data float32 dan float64 adalah tingkat presisinya. Tipe data float32 memiliki presisi yang lebih rendah dibandingkan dengan tipe data float64, sehingga biasanya lebih cocok digunakan untuk aplikasi yang membutuhkan kinerja yang lebih tinggi. Namun, tipe data float64 lebih cocok untuk aplikasi yang membutuhkan presisi yang lebih tinggi, meskipun mungkin akan mengorbankan kinerja sedikit.</p>
+
+
+
+<h2>Tipe Data Boolean</h2>
+
+
+
+<p>Tipe data boolean di Go adalah tipe data yang digunakan untuk menyimpan nilai true atau false. Tipe data boolean biasanya digunakan dalam pernyataan kondisi untuk menentukan apakah suatu kondisi terpenuhi atau tidak. Contohnya:</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="// mendeklarasikan variabel boolean
+var a bool = true
+var b bool = false
+
+if a {
+    fmt.Println(&quot;a is true&quot;)
+}
+
+if !b {
+    fmt.Println(&quot;b is false&quot;)
+}" style="color:#d8dee9ff;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki nord" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #616E88">// mendeklarasikan variabel boolean</span></span>
+<span class="line"><span style="color: #81A1C1">var</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">a</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">bool</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">true</span></span>
+<span class="line"><span style="color: #81A1C1">var</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">b</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">bool</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">false</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #81A1C1">if</span><span style="color: #D8DEE9FF"> a </span><span style="color: #ECEFF4">{</span></span>
+<span class="line"><span style="color: #D8DEE9FF">    fmt</span><span style="color: #ECEFF4">.</span><span style="color: #88C0D0">Println</span><span style="color: #ECEFF4">(</span><span style="color: #ECEFF4">&quot;</span><span style="color: #A3BE8C">a is true</span><span style="color: #ECEFF4">&quot;</span><span style="color: #ECEFF4">)</span></span>
+<span class="line"><span style="color: #ECEFF4">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #81A1C1">if</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">!</span><span style="color: #D8DEE9FF">b </span><span style="color: #ECEFF4">{</span></span>
+<span class="line"><span style="color: #D8DEE9FF">    fmt</span><span style="color: #ECEFF4">.</span><span style="color: #88C0D0">Println</span><span style="color: #ECEFF4">(</span><span style="color: #ECEFF4">&quot;</span><span style="color: #A3BE8C">b is false</span><span style="color: #ECEFF4">&quot;</span><span style="color: #ECEFF4">)</span></span>
+<span class="line"><span style="color: #ECEFF4">}</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#2e3440;color:#c8d0e0;font-size:12px;line-height:1;position:relative">Go</span></div>
+
+
+
+<p>Dalam contoh diatas, variabel a akan dianggap sebagai benar karena memiliki nilai true, sedangkan variabel b akan dianggap sebagai salah karena memiliki nilai false.</p>
+
+
+
+<h2>Tipe Data String</h2>
+
+
+
+<p>Di bahasa pemrograman Go, tipe data string adalah sebuah tipe data yang menyimpan sekumpulan karakter. String merupakan tipe data yang bersifat immutable, artinya setelah sebuah string dibuat, tidak dapat diubah atau dimodifikasi lagi. Anda dapat membuat sebuah string dengan menggunakan tanda petik ganda (&#8221; &#8220;) atau tanda petik satu (&#8216; &#8216;).</p>
+
+
+
+<p>Contoh:</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="package main
+
+import &quot;fmt&quot;
+
+func main() {
+
+// Menggunakan tanda petik ganda
+s1 := &quot;Hello, world!&quot;
+
+// Menggunakan tanda petik satu
+s2 := 'Hello, world!' // akan menyebabkan error karena tanda petik satu hanya bisa digunakan untuk menyimpan satu karakter saja
+
+}" style="color:#d8dee9ff;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki nord" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #81A1C1">package</span><span style="color: #D8DEE9FF"> main</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #81A1C1">import</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">&quot;</span><span style="color: #A3BE8C">fmt</span><span style="color: #ECEFF4">&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #81A1C1">func</span><span style="color: #D8DEE9FF"> </span><span style="color: #88C0D0">main</span><span style="color: #ECEFF4">()</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">{</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #616E88">// Menggunakan tanda petik ganda</span></span>
+<span class="line"><span style="color: #D8DEE9">s1</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">:=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">&quot;</span><span style="color: #A3BE8C">Hello, world!</span><span style="color: #ECEFF4">&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #616E88">// Menggunakan tanda petik satu</span></span>
+<span class="line"><span style="color: #D8DEE9">s2</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">:=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">&#39;</span><span style="color: #D8DEE9">Hello, world!</span><span style="color: #ECEFF4">&#39;</span><span style="color: #D8DEE9FF"> </span><span style="color: #616E88">// akan menyebabkan error karena tanda petik satu hanya bisa digunakan untuk menyimpan satu karakter saja</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #ECEFF4">}</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#2e3440;color:#c8d0e0;font-size:12px;line-height:1;position:relative">Go</span></div>
+
+
+
+<h2>Tipe Data Struct</h2>
+
+
+
+<p>Tipe data struct di Golang adalah tipe data yang memungkinkan pengguna untuk membuat struktur data dengan mengkombinasikan tipe data lainnya menjadi satu unit. Struct bisa terdiri dari tipe data seperti integer, string, boolean, dan lain-lain. Struktur data ini bisa digunakan untuk menyimpan data yang terkait dengan satu entitas, seperti data pelanggan, data barang, dan lain-lain. Struktur data juga bisa digunakan untuk menyimpan data yang memiliki relasi dengan tipe data lainnya, seperti menyimpan data pelanggan bersama dengan data pemesanan yang dilakukan oleh pelanggan tersebut.</p>
+
+
+
+<p>contoh:</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="// tipe data struct
+type Point struct {
+
+    x int
+    y int
+
+}
+
+var p Point = Point{1, 2}" style="color:#d8dee9ff;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki nord" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #616E88">// tipe data struct</span></span>
+<span class="line"><span style="color: #81A1C1">type</span><span style="color: #D8DEE9FF"> Point </span><span style="color: #81A1C1">struct</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">{</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D8DEE9FF">    x </span><span style="color: #81A1C1">int</span></span>
+<span class="line"><span style="color: #D8DEE9FF">    y </span><span style="color: #81A1C1">int</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #ECEFF4">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #81A1C1">var</span><span style="color: #D8DEE9FF"> </span><span style="color: #D8DEE9">p</span><span style="color: #D8DEE9FF"> Point </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> Point</span><span style="color: #ECEFF4">{</span><span style="color: #B48EAD">1</span><span style="color: #ECEFF4">,</span><span style="color: #D8DEE9FF"> </span><span style="color: #B48EAD">2</span><span style="color: #ECEFF4">}</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#2e3440;color:#c8d0e0;font-size:12px;line-height:1;position:relative">Go</span></div>
+
+
+
+<h2>Tipe Data Interface</h2>
+
+
+
+<p>Tipe data interface di Golang adalah tipe data yang menggambarkan set atau kumpulan method (fungsi) yang harus diimplementasikan oleh tipe data lain. Tipe data interface tidak memiliki implementasi methodnya sendiri, tetapi menyatakan bahwa tipe data lain harus memiliki method yang sesuai dengan tipe data interface tersebut untuk dapat menggunakannya. Contoh penggunaan tipe data interface adalah ketika kita ingin membuat sebuah tipe data yang harus memiliki method read dan write, maka kita dapat membuat tipe data interface dengan nama &#8220;ReaderWriter&#8221; yang menyatakan bahwa tipe data lain harus memiliki method Read() dan Write() untuk dapat mengimplementasikan tipe data interface tersebut.</p>
+
+
+
+<p>Contoh:</p>
+
+
+
+<div class="wp-block-kevinbatdorf-code-block-pro padding-bottom-disabled" style="font-size:.875rem;line-height:1.25rem"><span style="display:block;padding:16px 0 0 16px;margin-bottom:-1px;width:100%;text-align:left;background-color:#2e3440ff"><svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewbox="0 0 54 14"><g fill="none" fill-rule="evenodd" transform="translate(1 1)"><circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"/><circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"/><circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"/></g></svg></span><span role="button" tabindex="0" data-code="// tipe data interface
+type Shape interface {
+
+    area() float64
+
+}" style="color:#d8dee9ff;display:none" aria-label="Copy" class="code-block-pro-copy-button"><svg xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px" fill="none" viewbox="0 0 24 24" stroke="currentColor" stroke-width="2"><path class="with-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/><path class="without-check" stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><pre class="shiki nord" style="background-color: #2e3440ff"><code><span class="line"><span style="color: #616E88">// tipe data interface</span></span>
+<span class="line"><span style="color: #81A1C1">type</span><span style="color: #D8DEE9FF"> Shape </span><span style="color: #81A1C1">interface</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">{</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D8DEE9FF">    </span><span style="color: #88C0D0">area</span><span style="color: #ECEFF4">()</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">float64</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #ECEFF4">}</span></span></code></pre><span style="display:flex;align-items:flex-end;padding:10px;width:100%;justify-content:flex-end;background-color:#2e3440;color:#c8d0e0;font-size:12px;line-height:1;position:relative">Go</span></div>
+
+
+<figure class="wp-block-post-featured-image"><img width="500" height="300" src="http://localhost:2368/content/images/wordpress/2023/01/Mengenal-Variabel-dan-Tipe-Data-di-Golang.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt decoding="async" loading="lazy" srcset="http://localhost:2368/content/images/wordpress/2023/01/Mengenal-Variabel-dan-Tipe-Data-di-Golang.jpg 500w, http://localhost:2368/content/images/wordpress/2023/01/Mengenal-Variabel-dan-Tipe-Data-di-Golang-300x180.jpg 300w" sizes="(max-width: 500px) 100vw, 500px"></figure><!--kg-card-end: html-->
+    </section>
+
+
+</article>
+</main>
+
+    <section class="footer-cta outer">
+        <div class="inner">
+            <h2 class="footer-cta-title">Sign up for more like this.</h2>
+            <a class="footer-cta-button" href="#/portal" data-portal>
+                <div class="footer-cta-input">Enter your email</div>
+                <span>Subscribe</span>
+            </a>
+        </div>
+    </section>
+
+
+
+            <aside class="read-more-wrap outer">
+                <div class="read-more inner">
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-list/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/image.png 300w,
+                    /content/images/size/w600/wordpress/2023/03/image.png 600w,
+                    /content/images/size/w1000/wordpress/2023/03/image.png 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/image.png 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/image.png"
+            alt="Belajar React Dasar | List"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-list/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | List
+                </h2>
+            </header>
+                <div class="post-card-excerpt">List sangat penting dalam hal mengembangkan UI situs web. Terutama sering digunakan untuk menampilkan menu di situs web, misalnya menu navbar. Pada JavaScript biasa, kita dapat menggunakan array untuk membuat list. Kita dapat membuat list di React dengan cara yang sama seperti yang dilakukan pada javascript biasa.
+
+
+
+
+
+Selanjutnya artikel ini</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-07">Mar 7, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+
+        <img class="post-card-image"
+            srcset="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 300w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 600w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 1000w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE"
+            alt="Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Oke gan, mungkin hampir semua orang sudah pernah mengalami atau ingin tau, siapa aja sih orang yang tidak memfollback akun instagram kita. Apapun alasan kalian mengunjungi artikel ini, saya hanya akan share bagaimana cara mengetahui orang yang tidak memfollback dan mengunfollow akun tersebut secara grup.
+
+
+
+
+
+
+Syarat
+
+
+
+
+
+Sebelum masuk ke tutorial,</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-06">Mar 6, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-reactdom/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/REACT-DOM.jpg 300w,
+                    /content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg 600w,
+                    /content/images/size/w1000/wordpress/2023/03/REACT-DOM.jpg 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/REACT-DOM.jpg 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg"
+            alt="Belajar React Dasar | ReactDOM"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-reactdom/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | ReactDOM
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Di artikel sebelumnya yaitu Pengantar JSX, kita sudah mempelajari bahwa developer bisa menggunakan JSX untuk menyimpan markup HTML di dalam variabel Javascript. Karena, ReactJS adalah sebuah library untuk membangun Antarmuka Pengguna yang aktif sehingga rendering adalah salah satu bagian yang tidak terpisahkan dari ReactJS. React menyediakan sebuah paket yang bernama</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-05">Mar 5, 2023</time>
+                <span class="post-card-meta-length">3 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                </div>
+            </aside>
+
+
+
+    </div>
+
+    <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="http://localhost:2368">unixkuy</a> &copy; 2023</section>
+            <nav class="site-footer-nav">
+                <ul class="nav">
+    <li class="nav-sign-up"><a href="#/portal/">Sign up</a></li>
+</ul>
+
+            </nav>
+            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+</script>
+<script src="/assets/built/casper.js?v=146492131e"></script>
+<script>
+$(document).ready(function () {
+    // Mobile Menu Trigger
+    $('.gh-burger').click(function () {
+        $('body').toggleClass('gh-head-open');
+    });
+    // FitVids - Makes video embeds responsive
+    $(".gh-content").fitVids();
+});
+</script>
+
+
+
+</body>
+</html>

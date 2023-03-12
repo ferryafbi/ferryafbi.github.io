@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Cara Menghapus Images, Containers dan Volumes di Docker</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=146492131e" />
+
+    <link rel="canonical" href="http://localhost:2368/cara-menghapus-images-containers-dan-volumes-di-docker/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="unixkuy" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Cara Menghapus Images, Containers dan Volumes di Docker" />
+    <meta property="og:description" content="Docker dapat membuat aplikasi dan layanan terisolasi sehingga memudahkan pengguna untuk menjalankannya dimana saja. Saat menggunakan Docker, banyak nya image yang di unduh, containers dan Volumes data yang tidak terpakai tentu hanya akan memenuhi ruang penyimpanan.
+
+
+
+
+
+Artikel ini akan membahas cara menghapus images, containers dan volume yang tidak digunakan di" />
+    <meta property="og:url" content="http://localhost:2368/cara-menghapus-images-containers-dan-volumes-di-docker/" />
+    <meta property="og:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg" />
+    <meta property="article:published_time" content="2022-11-23T09:18:33.000Z" />
+    <meta property="article:modified_time" content="2022-11-23T09:18:33.000Z" />
+    <meta property="article:tag" content="debian" />
+    <meta property="article:tag" content="docker" />
+    <meta property="article:tag" content="linux" />
+    <meta property="article:tag" content="ubuntu" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cara Menghapus Images, Containers dan Volumes di Docker" />
+    <meta name="twitter:description" content="Docker dapat membuat aplikasi dan layanan terisolasi sehingga memudahkan pengguna untuk menjalankannya dimana saja. Saat menggunakan Docker, banyak nya image yang di unduh, containers dan Volumes data yang tidak terpakai tentu hanya akan memenuhi ruang penyimpanan.
+
+
+
+
+
+Artikel ini akan membahas cara menghapus images, containers dan volume yang tidak digunakan di" />
+    <meta name="twitter:url" content="http://localhost:2368/cara-menghapus-images-containers-dan-volumes-di-docker/" />
+    <meta name="twitter:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Ferry Ananda Febian" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="debian, docker, linux, ubuntu" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta property="og:image:width" content="5000" />
+    <meta property="og:image:height" content="3500" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "unixkuy",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ferry Ananda Febian",
+        "url": "http://localhost:2368/author/ferry/",
+        "sameAs": []
+    },
+    "headline": "Cara Menghapus Images, Containers dan Volumes di Docker",
+    "url": "http://localhost:2368/cara-menghapus-images-containers-dan-volumes-di-docker/",
+    "datePublished": "2022-11-23T09:18:33.000Z",
+    "dateModified": "2022-11-23T09:18:33.000Z",
+    "keywords": "debian, docker, linux, ubuntu",
+    "description": "\n\n\nDocker dapat membuat aplikasi dan layanan terisolasi sehingga memudahkan pengguna untuk menjalankannya dimana saja. Saat menggunakan Docker, banyak nya image yang di unduh, containers dan Volumes data yang tidak terpakai tentu hanya akan memenuhi ruang penyimpanan.\n\n\n\n\n\nArtikel ini akan membahas cara menghapus images, containers dan volume yang tidak digunakan di Docker.\n\n\n\n\n\n\nCara Menghapus Images, Containers dan Volumes di Docker\n\n\n\n\n\nDocker menyediakan satu perintah yang akan membersihkan ",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.38" />
+    <link rel="alternate" type="application/rss+xml" title="unixkuy" href="http://localhost:2368/rss/" />
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.25/umd/portal.min.js" data-ghost="http://localhost:2368/" data-key="15ceee4aa109bb38c146da1571" data-api="http://localhost:2368/ghost/api/content/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="15ceee4aa109bb38c146da1571" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
+    <link href="http://localhost:2368/webmentions/receive/" rel="webmention" />
+    <script defer src="/public/cards.min.js?v=146492131e"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=146492131e">
+    <script defer src="/public/member-attribution.min.js?v=146492131e"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+</head>
+<body class="post-template tag-debian tag-docker tag-linux tag-ubuntu tag-hash-wordpress tag-hash-import-2023-03-12-12-53 is-head-left-logo has-cover">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head outer">
+        <div class="gh-head-inner inner">
+            <div class="gh-head-brand">
+                <a class="gh-head-logo no-image" href="http://localhost:2368">
+                        unixkuy
+                </a>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="http://localhost:2368/">Home</a></li>
+    <li class="nav-about"><a href="http://localhost:2368/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                    <button class="gh-search gh-icon-btn" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                    <div class="gh-head-members">
+                                <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
+                                <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+
+
+
+<main id="site-main" class="site-main">
+<article class="article post tag-debian tag-docker tag-linux tag-ubuntu tag-hash-wordpress tag-hash-import-2023-03-12-12-53 no-image ">
+
+    <header class="article-header gh-canvas">
+
+        <div class="article-tag post-card-tags">
+                <span class="post-card-primary-tag">
+                    <a href="/tag/debian/">debian</a>
+                </span>
+        </div>
+
+        <h1 class="article-title">Cara Menghapus Images, Containers dan Volumes di Docker</h1>
+
+
+        <div class="article-byline">
+        <section class="article-byline-content">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="/author/ferry/" class="author-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+                </li>
+            </ul>
+
+            <div class="article-byline-meta">
+                <h4 class="author-name"><a href="/author/ferry/">Ferry Ananda Febian</a></h4>
+                <div class="byline-meta-content">
+                    <time class="byline-meta-date" datetime="2022-11-23">Nov 23, 2022</time>
+                        <span class="byline-reading-time"><span class="bull">&bull;</span> 4 min read</span>
+                </div>
+            </div>
+
+        </section>
+        </div>
+
+
+    </header>
+
+    <section class="gh-content gh-canvas">
+        <!--kg-card-begin: html-->
+<p>Docker dapat membuat aplikasi dan layanan terisolasi sehingga memudahkan pengguna untuk menjalankannya dimana saja. Saat menggunakan Docker, banyak nya image yang di unduh, containers dan Volumes data yang tidak terpakai tentu hanya akan memenuhi ruang penyimpanan.</p>
+
+
+
+<p>Artikel ini akan membahas cara menghapus images, containers dan volume yang tidak digunakan di Docker.</p>
+
+
+
+<h2><strong>Cara Menghapus Images, Containers dan Volumes di Docker</strong></h2>
+
+
+
+<p>Docker menyediakan satu perintah yang akan membersihkan sumber daya apapun seperti images, containers, volume dan jaringan yang tidak terpakai (tidak diberi tag atau tidak dikaitkan dengan containers):</p>
+
+
+
+<pre class="wp-block-code"><code>docker system prune</code></pre>
+
+
+
+<p>Untuk menghapus lebih lanjut containers yang dihentikan dan semua gambar yang tidak digunakan (bukan hanya image yang tidak digunakan), tambahkan opsi <strong>-a</strong> ke perintah:</p>
+
+
+
+<pre class="wp-block-code"><code>docker system prune -a</code></pre>
+
+
+
+<h2><strong>Menghapus Docker Images</strong></h2>
+
+
+
+<h3><strong>Hapus satu atau lebih images yang spesifik</strong></h3>
+
+
+
+<p>Gunakan perintah docker images dengan tambahan opsi <strong>-a</strong> untuk menemukan ID images yang ingin Anda hapus. Opsi ini akan menampilkan semua daftar images yang diunduh. Saat Anda menemukan images yang ingin dihapus, Anda dapat meneruskan ID atau tagnya ke docker rmi:</p>
+
+
+
+<p>List:</p>
+
+
+
+<pre class="wp-block-code"><code>docker images -a</code></pre>
+
+
+
+<p>Hapus:</p>
+
+
+
+<pre class="wp-block-code"><code>docker rmi Image Image</code></pre>
+
+
+
+<h3><strong>Hapus Images Dangling/Menggantung</strong></h3>
+
+
+
+<p>Images Docker terdiri dari beberapa lapisan. Images yang menggantung/dangling adalah lapisan yang tidak memiliki hubungan dengan images yang diberi tag.&nbsp;</p>
+
+
+
+<p>Images tersebut tidak digunakan dan hanya akan memenuhi ruang penyimpanan. Images menggantung dapat ditemukan dengan opsi filter <strong>-f </strong>dengan nilai <strong>dangling=true</strong> setelah perintah <strong>docker images</strong>, setelah itu gunakan perintah <strong>docker image prune</strong> untuk menghapus.</p>
+
+
+
+<p>Catatan: Jika Anda membuat images tanpa tag, image tersebut akan muncul di daftar images menggantung karena tidak ada hubungannya dengan images yang diberi tag. Sangat direkomendasikan menambahkan tag saat membuat images, selain itu Anda tetap dapat menambahkan tag di images Docker dengan perintah <strong>docker tag</strong>.</p>
+
+
+
+<p>List:</p>
+
+
+
+<pre class="wp-block-code"><code>docker images -f dangling=true</code></pre>
+
+
+
+<p>Remove:</p>
+
+
+
+<pre class="wp-block-code"><code>docker image prune</code></pre>
+
+
+
+<h3><strong>Hapus Images Sesuai Pola</strong></h3>
+
+
+
+<p>Anda dapat menemukan semua images yang cocok dengan pola menggunakan kombinasi docker images dan grep. Setelah itu Anda dapat menghapusnya dengan menggunakan awk lalu ID images akan diteruskan ke docker rmi. Perhatikan bahwa perintah ini tidak disediakan oleh Docker dan belum tentu tersedia di semua sistem:</p>
+
+
+
+<p>List:</p>
+
+
+
+<pre class="wp-block-code"><code>docker images -a |&nbsp; grep "pattern"</code></pre>
+
+
+
+<p>Hapus:</p>
+
+
+
+<pre class="wp-block-code"><code>docker images -a | grep "pattern" | awk '{print $3}' | xargs docker rmi</code></pre>
+
+
+
+<h3><strong>Hapus Semua Images</strong></h3>
+
+
+
+<p>Semua image Docker pada sistem dapat dicantumkan dengan menambahkan opsi <strong>-a</strong> ke perintah docker images. Setelah itu, Anda dapat menambahkan opsi <strong>-q</strong> untuk meneruskan ID gambar ke docker rmi:</p>
+
+
+
+<p>List:</p>
+
+
+
+<pre class="wp-block-code"><code>docker images -a</code></pre>
+
+
+
+<p>Hapus:</p>
+
+
+
+<pre class="wp-block-code"><code>docker rmi $(docker images -a -q)</code></pre>
+
+
+
+<h2><strong>Menghapus Containers</strong></h2>
+
+
+
+<h3><strong>Hapus satu atau lebih Containers yang spesifik</strong></h3>
+
+
+
+<p>Gunakan perintah <strong>docker ps</strong> dengan menambahkan opsi <strong>-a</strong> untuk menampilkan semua daftar containers, setelah itu gunakan perintah <strong>rm</strong> dengan menyebutkan <strong>ID</strong> atau <strong>nama containers</strong></p>
+
+
+
+<p>List:</p>
+
+
+
+<pre class="wp-block-code"><code>docker ps -a</code></pre>
+
+
+
+<p>Hapus:</p>
+
+
+
+<pre class="wp-block-code"><code>docker rm ID_or_Name ID_or_Name</code></pre>
+
+
+
+<h3><strong>Hapus Containers Saat Keluar</strong></h3>
+
+
+
+<p>Anda dapat membuat dan menjalankan containers hanya satu kali, artinya ketika selesai digunakan, containers tersebut akan terhapus secara otomatis ketika keluar:</p>
+
+
+
+<p>Jalankan dan hapus:</p>
+
+
+
+<pre class="wp-block-code"><code>docker run --rm image_name</code></pre>
+
+
+
+<h3><strong>Hapus Semua Containers yang Keluar</strong></h3>
+
+
+
+<p>Anda dapat melihat daftar containers dengan perintah <strong>docker ps -a</strong> dan memfilternya berdasarkan status: <em>created, restarting, running, paused, atau exited</em>. Untuk meninjau daftar containers yang exit/keluar, tambahkan opsi <strong>-f</strong> untuk memfilter berdasarkan status. Gunakan opsi -q untuk memverifikasi containers yang dihapus lalu ID akan diteruskan ke perintah docker rm:</p>
+
+
+
+<p>List:</p>
+
+
+
+<pre class="wp-block-code"><code>docker ps -a -f status=exited</code></pre>
+
+
+
+<p>Hapus:</p>
+
+
+
+<pre class="wp-block-code"><code>docker rm $(docker ps -a -f status=exited -q)</code></pre>
+
+
+
+<h3><strong>Hapus Containers Menggunakan Lebih Dari Satu Filter</strong></h3>
+
+
+
+<p>Filter Docker dapat digabungkan dengan menambahkan lebih dari satu filter. Cara ini akan memproses daftar containers yang memenuhi kedua kondisi tersebut. Misalnya, Anda ingin menghapus semua containers yang ditandai dengan created (keadaan ini dapat terjadi saat Anda menjalankan Containers dengan perintah yang tidak valid) atau exited, Anda dapat menggunakan dua filter:</p>
+
+
+
+<p>List:</p>
+
+
+
+<pre class="wp-block-code"><code>docker ps -a -f status=exited -f status=created</code></pre>
+
+
+
+<p>Hapus:</p>
+
+
+
+<pre class="wp-block-code"><code>docker rm $(docker ps -a -f status=exited -f status=created -q)</code></pre>
+
+
+
+<h3><strong>Hapus Containers Sesuai Pola</strong></h3>
+
+
+
+<p>Anda dapat menampilkan semua containers yang cocok dengan pola menggunakan kombinasi <strong>docker ps</strong> dan <strong>grep</strong>. Setelah itu Anda dapat menggunakan <strong>awk</strong> dan <strong>xargs</strong> untuk meneruskan ID ke <strong>docker rm</strong>. Perhatikan bahwa tools ini tidak disediakan oleh Docker dan belum tentu tersedia di semua sistem:</p>
+
+
+
+<p>List:</p>
+
+
+
+<pre class="wp-block-code"><code>docker ps -a |&nbsp; grep "pattern”</code></pre>
+
+
+
+<p>Hapus:</p>
+
+
+
+<pre class="wp-block-code"><code>docker ps -a | grep "pattern" | awk '{print $1}' | xargs docker rm</code></pre>
+
+
+
+<h3>Stop dan Hapus Semua Containers</h3>
+
+
+
+<p>Anda dapat melihat daftar container yang berjalan dengan perintah <strong>docker ps</strong>. Tambahkan opsi <strong>-a</strong> untuk menampilkan semua daftar containers. Setelah itu Anda dapat menambahkan opsi <strong>-q</strong> untuk meneruskan ID ke perintah <strong>docker stop</strong> dan <strong>docker rm</strong>:</p>
+
+
+
+<p>List:</p>
+
+
+
+<pre class="wp-block-code"><code>docker ps -a</code></pre>
+
+
+
+<p>Hapus:</p>
+
+
+
+<pre class="wp-block-code"><code>docker stop $(docker ps -a -q)</code></pre>
+
+
+
+<pre class="wp-block-code"><code>docker rm $(docker ps -a -q)</code></pre>
+
+
+
+<h2>Hapus Volumes</h2>
+
+
+
+<h3>Hapus satu atau lebih volume tertentu di Docker versi 1.9 dan terbaru</h3>
+
+
+
+<p>Gunakan perintah docker volume ls untuk menemukan nama volume yang ingin Anda hapus. Kemudian hapus dengan perintah docker volume rm :</p>
+
+
+
+<p>List:</p>
+
+
+
+<pre class="wp-block-code"><code>docker volume ls</code></pre>
+
+
+
+<p>Hapus:</p>
+
+
+
+<pre class="wp-block-code"><code>docker volume rm volume_name volume_name</code></pre>
+
+
+
+<h3>Hapus volume Dangling/Menggantung Docker versi 1.9 dan terbaru.</h3>
+
+
+
+<p>Karena volume harus berdiri sendiri dari containers, ketika containers dipindahkan, volume tidak secara otomatis dipindahkan secara bersamaan. Ketika ada volume dan tidak lagi terhubung ke container manapun, itu disebut volume yang menggantung/dangling. Untuk menemukannya serta mengkonfirmasi untuk dihapus, Anda dapat menggunakan perintah <strong>docker volume ls</strong> dengan <strong>filter</strong> untuk membatasi hasil pada volume yang menggantung/dangling. Setelah itu Anda dapat menghapus semuanya dengan <strong>docker volume prune</strong>:</p>
+
+
+
+<p>List:</p>
+
+
+
+<pre class="wp-block-code"><code>docker volume ls -f dangling=true</code></pre>
+
+
+
+<p>Hapus:</p>
+
+
+
+<pre class="wp-block-code"><code>docker volume prune</code></pre>
+
+
+
+<h3>Keluarkan Containers dan Volumenya</h3>
+
+
+
+<p>Jika Anda membuat volume tanpa nama, maka dapat dihapus bersamaan dengan containers dan menambahkan opsi <strong>-v</strong>. Perlu <strong>diingat</strong> bahwa ini hanya berfungsi dengan volume yang tidak diberikan nama. Ketika containers berhasil dihapus, ID-nya akan ditampilkan. Perhatikan bahwa tidak ada referensi yang dibuat untuk menghilangkan volume. Jika tidak disebutkan namanya, maka proses ini akan dihapus secara tersembunyi dari sistem. Jika diberi nama, maka volume tersebut tetap ada secara tersembunyi.</p>
+
+
+
+<p>Hapus:</p>
+
+
+
+<pre class="wp-block-code"><code>docker rm -v container_name</code></pre>
+
+
+
+<h2>Kesimpulan</h2>
+
+
+
+<p>Artikel ini membahas beberapa perintah umum yang digunakan untuk menghapus image, containers, dan volume di Docker. Ada banyak kombinasi dan opsi lain yang dapat digunakan di setiap kasus. Untuk panduan lebih lengkapnya Anda mungkin dapat melihat dokumentasi resminya di website Docker untuk docker system prune, docker rmi, docker rm, dan docker volume rm di sini docker (base command)</p>
+
+
+
+<p>Demikian artikel tentang Cara Menghapus Images, Containers dan Volumes di Docker</p>
+
+
+
+<p>Referens : https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes</p>
+
+
+<!--kg-card-end: html-->
+    </section>
+
+
+</article>
+</main>
+
+    <section class="footer-cta outer">
+        <div class="inner">
+            <h2 class="footer-cta-title">Sign up for more like this.</h2>
+            <a class="footer-cta-button" href="#/portal" data-portal>
+                <div class="footer-cta-input">Enter your email</div>
+                <span>Subscribe</span>
+            </a>
+        </div>
+    </section>
+
+
+
+            <aside class="read-more-wrap outer">
+                <div class="read-more inner">
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-list/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/image.png 300w,
+                    /content/images/size/w600/wordpress/2023/03/image.png 600w,
+                    /content/images/size/w1000/wordpress/2023/03/image.png 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/image.png 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/image.png"
+            alt="Belajar React Dasar | List"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-list/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | List
+                </h2>
+            </header>
+                <div class="post-card-excerpt">List sangat penting dalam hal mengembangkan UI situs web. Terutama sering digunakan untuk menampilkan menu di situs web, misalnya menu navbar. Pada JavaScript biasa, kita dapat menggunakan array untuk membuat list. Kita dapat membuat list di React dengan cara yang sama seperti yang dilakukan pada javascript biasa.
+
+
+
+
+
+Selanjutnya artikel ini</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-07">Mar 7, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+
+        <img class="post-card-image"
+            srcset="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 300w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 600w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 1000w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE"
+            alt="Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Oke gan, mungkin hampir semua orang sudah pernah mengalami atau ingin tau, siapa aja sih orang yang tidak memfollback akun instagram kita. Apapun alasan kalian mengunjungi artikel ini, saya hanya akan share bagaimana cara mengetahui orang yang tidak memfollback dan mengunfollow akun tersebut secara grup.
+
+
+
+
+
+
+Syarat
+
+
+
+
+
+Sebelum masuk ke tutorial,</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-06">Mar 6, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-reactdom/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/REACT-DOM.jpg 300w,
+                    /content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg 600w,
+                    /content/images/size/w1000/wordpress/2023/03/REACT-DOM.jpg 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/REACT-DOM.jpg 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg"
+            alt="Belajar React Dasar | ReactDOM"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-reactdom/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | ReactDOM
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Di artikel sebelumnya yaitu Pengantar JSX, kita sudah mempelajari bahwa developer bisa menggunakan JSX untuk menyimpan markup HTML di dalam variabel Javascript. Karena, ReactJS adalah sebuah library untuk membangun Antarmuka Pengguna yang aktif sehingga rendering adalah salah satu bagian yang tidak terpisahkan dari ReactJS. React menyediakan sebuah paket yang bernama</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-05">Mar 5, 2023</time>
+                <span class="post-card-meta-length">3 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                </div>
+            </aside>
+
+
+
+    </div>
+
+    <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="http://localhost:2368">unixkuy</a> &copy; 2023</section>
+            <nav class="site-footer-nav">
+                <ul class="nav">
+    <li class="nav-sign-up"><a href="#/portal/">Sign up</a></li>
+</ul>
+
+            </nav>
+            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+</script>
+<script src="/assets/built/casper.js?v=146492131e"></script>
+<script>
+$(document).ready(function () {
+    // Mobile Menu Trigger
+    $('.gh-burger').click(function () {
+        $('body').toggleClass('gh-head-open');
+    });
+    // FitVids - Makes video embeds responsive
+    $(".gh-content").fitVids();
+});
+</script>
+
+
+
+</body>
+</html>

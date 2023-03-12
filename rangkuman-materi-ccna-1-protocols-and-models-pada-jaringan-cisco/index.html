@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Rangkuman Materi CCNA-1: Protocols and Models Pada Jaringan Cisco</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=146492131e" />
+
+    <link rel="canonical" href="http://localhost:2368/rangkuman-materi-ccna-1-protocols-and-models-pada-jaringan-cisco/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="unixkuy" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Rangkuman Materi CCNA-1: Protocols and Models Pada Jaringan Cisco" />
+    <meta property="og:description" content="Protocols and Models
+
+
+
+
+
+Protocols dan Models adalah konsep yang sangat penting dalam dunia jaringan komputer, terutama jika Anda bekerja dengan perangkat Cisco. Protocols merujuk pada aturan atau standar yang ditetapkan untuk berkomunikasi antar perangkat dalam suatu jaringan. Misalnya, protokol TCP/IP adalah protokol yang sering digunakan untuk berkomunikasi antar perangkat" />
+    <meta property="og:url" content="http://localhost:2368/rangkuman-materi-ccna-1-protocols-and-models-pada-jaringan-cisco/" />
+    <meta property="og:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg" />
+    <meta property="article:published_time" content="2023-01-04T02:23:35.000Z" />
+    <meta property="article:modified_time" content="2023-01-04T02:24:28.000Z" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rangkuman Materi CCNA-1: Protocols and Models Pada Jaringan Cisco" />
+    <meta name="twitter:description" content="Protocols and Models
+
+
+
+
+
+Protocols dan Models adalah konsep yang sangat penting dalam dunia jaringan komputer, terutama jika Anda bekerja dengan perangkat Cisco. Protocols merujuk pada aturan atau standar yang ditetapkan untuk berkomunikasi antar perangkat dalam suatu jaringan. Misalnya, protokol TCP/IP adalah protokol yang sering digunakan untuk berkomunikasi antar perangkat" />
+    <meta name="twitter:url" content="http://localhost:2368/rangkuman-materi-ccna-1-protocols-and-models-pada-jaringan-cisco/" />
+    <meta name="twitter:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Ferry Ananda Febian" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta property="og:image:width" content="5000" />
+    <meta property="og:image:height" content="3500" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "unixkuy",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ferry Ananda Febian",
+        "url": "http://localhost:2368/author/ferry/",
+        "sameAs": []
+    },
+    "headline": "Rangkuman Materi CCNA-1: Protocols and Models Pada Jaringan Cisco",
+    "url": "http://localhost:2368/rangkuman-materi-ccna-1-protocols-and-models-pada-jaringan-cisco/",
+    "datePublished": "2023-01-04T02:23:35.000Z",
+    "dateModified": "2023-01-04T02:24:28.000Z",
+    "description": "\n\n\n\nProtocols and Models\n\n\n\n\n\nProtocols dan Models adalah konsep yang sangat penting dalam dunia jaringan komputer, terutama jika Anda bekerja dengan perangkat Cisco. Protocols merujuk pada aturan atau standar yang ditetapkan untuk berkomunikasi antar perangkat dalam suatu jaringan. Misalnya, protokol TCP/IP adalah protokol yang sering digunakan untuk berkomunikasi antar perangkat dalam jaringan internet.\n\n\n\n\n\nModels yang dimaksud adalah kalimat yang merujuk pada cara sebuah jaringan dibangun at",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.38" />
+    <link rel="alternate" type="application/rss+xml" title="unixkuy" href="http://localhost:2368/rss/" />
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.25/umd/portal.min.js" data-ghost="http://localhost:2368/" data-key="15ceee4aa109bb38c146da1571" data-api="http://localhost:2368/ghost/api/content/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="15ceee4aa109bb38c146da1571" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
+    <link href="http://localhost:2368/webmentions/receive/" rel="webmention" />
+    <script defer src="/public/cards.min.js?v=146492131e"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=146492131e">
+    <script defer src="/public/member-attribution.min.js?v=146492131e"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+</head>
+<body class="post-template tag-hash-wordpress tag-hash-import-2023-03-12-12-53 is-head-left-logo has-cover">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head outer">
+        <div class="gh-head-inner inner">
+            <div class="gh-head-brand">
+                <a class="gh-head-logo no-image" href="http://localhost:2368">
+                        unixkuy
+                </a>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="http://localhost:2368/">Home</a></li>
+    <li class="nav-about"><a href="http://localhost:2368/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                    <button class="gh-search gh-icon-btn" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                    <div class="gh-head-members">
+                                <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
+                                <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+
+
+
+<main id="site-main" class="site-main">
+<article class="article post tag-hash-wordpress tag-hash-import-2023-03-12-12-53 no-image ">
+
+    <header class="article-header gh-canvas">
+
+        <div class="article-tag post-card-tags">
+        </div>
+
+        <h1 class="article-title">Rangkuman Materi CCNA-1: Protocols and Models Pada Jaringan Cisco</h1>
+
+
+        <div class="article-byline">
+        <section class="article-byline-content">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="/author/ferry/" class="author-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+                </li>
+            </ul>
+
+            <div class="article-byline-meta">
+                <h4 class="author-name"><a href="/author/ferry/">Ferry Ananda Febian</a></h4>
+                <div class="byline-meta-content">
+                    <time class="byline-meta-date" datetime="2023-01-04">Jan 4, 2023</time>
+                        <span class="byline-reading-time"><span class="bull">&bull;</span> 6 min read</span>
+                </div>
+            </div>
+
+        </section>
+        </div>
+
+
+    </header>
+
+    <section class="gh-content gh-canvas">
+        <!--kg-card-begin: html-->
+<h2>Protocols and Models</h2>
+
+
+
+<p>Protocols dan Models adalah konsep yang sangat penting dalam dunia jaringan komputer, terutama jika Anda bekerja dengan perangkat Cisco. Protocols merujuk pada aturan atau standar yang ditetapkan untuk berkomunikasi antar perangkat dalam suatu jaringan. Misalnya, protokol TCP/IP adalah protokol yang sering digunakan untuk berkomunikasi antar perangkat dalam jaringan internet.</p>
+
+
+
+<p>Models yang dimaksud adalah kalimat yang merujuk pada cara sebuah jaringan dibangun atau diatur. Misalnya, model OSI (Open Systems Interconnection) adalah model standar yang menjelaskan bagaimana data dapat dikirimkan antar perangkat jaringan melalui lapisan-lapisan yang berbeda. Model Cisco yang terkenal salah staunya adalah model Hierarchical Network Design, yang menggunakan pendekatan terstruktur untuk merancang jaringan komputer.</p>
+
+
+
+<p>Protocols dan models sangat penting dalam dunia jaringan komputer karena mereka memungkinkan perangkat yang berbeda untuk berkomunikasi dan bekerja sama dengan baik. Tanpa standar yang jelas, jaringan akan menjadi tidak terorganisir dan sulit untuk diatur.</p>
+
+
+
+<h2>The Rules</h2>
+
+
+
+<p>Berikut adalah beberapa aturan yang harus diikuti dalam protokol dan model jaringan Cisco:</p>
+
+
+
+<ul>
+<li>Menggunakan model OSI (Open Systems Interconnection) sebagai acuan untuk mengimplementasikan protokol jaringan. Model OSI membagi jaringan komputer menjadi 7 lapisan yang saling terkait, dan menentukan bagaimana setiap lapisan harus berkomunikasi dengan lapisan lainnya.</li>
+
+
+
+<li>Menggunakan protokol TCP/IP (Transmission Control Protocol/Internet Protocol) sebagai protokol standar untuk pertukaran data di jaringan. TCP/IP merupakan protokol yang paling umum digunakan di Internet dan jaringan lokal.</li>
+
+
+
+<li>Menggunakan perangkat keras jaringan yang sesuai dengan standar industri, seperti switch, router, dan bridge. Perangkat ini digunakan untuk menghubungkan dan mengatur lalu lintas jaringan.</li>
+
+
+
+<li>Menggunakan protokol routing yang sesuai untuk menentukan jalur terbaik bagi paket data untuk sampai ke tujuannya. Protokol routing seperti OSPF (Open Shortest Path First) dan BGP (Border Gateway Protocol) digunakan untuk menentukan jalur terbaik bagi paket data yang akan dikirimkan di jaringan.</li>
+
+
+
+<li>Menggunakan protokol keamanan jaringan seperti SSH (Secure Shell) dan SSL (Secure Sockets Layer) untuk menjaga keamanan data yang dikirimkan di jaringan. Protokol ini digunakan untuk mengenkripsi data sehingga hanya orang yang memiliki kunci enkripsi yang dapat membaca datanya.</li>
+</ul>
+
+
+
+<h2>Protocols</h2>
+
+
+
+<p>Protokol adalah aturan yang mengatur cara berkomunikasi antar perangkat dalam suatu jaringan. Dalam jaringan Cisco, terdapat banyak protokol yang digunakan, di antaranya adalah:</p>
+
+
+
+<ul>
+<li>Internet Protocol (IP): protokol ini digunakan untuk mengirimkan paket data dari satu perangkat ke perangkat lain dalam jaringan.</li>
+
+
+
+<li>Transmission Control Protocol (TCP): protokol ini menjamin bahwa paket data yang dikirimkan diterima oleh perangkat tujuan dengan benar. Jika terjadi kesalahan saat pengiriman, TCP akan mengirimkan pesan kesalahan kembali ke perangkat pengirim agar paket data tersebut dikirim ulang.</li>
+
+
+
+<li>User Datagram Protocol (UDP): protokol ini juga digunakan untuk mengirimkan paket data dari satu perangkat ke perangkat lain dalam jaringan. Namun, berbeda dengan TCP, UDP tidak menjamin bahwa paket data yang dikirimkan akan diterima dengan benar oleh perangkat tujuan.</li>
+
+
+
+<li>Dynamic Host Configuration Protocol (DHCP): protokol ini digunakan untuk memberikan alamat IP dinamis kepada perangkat-perangkat dalam jaringan.</li>
+
+
+
+<li>Domain Name System (DNS): protokol ini digunakan untuk mengkonversi nama domain ke alamat IP.</li>
+
+
+
+<li>Simple Network Management Protocol (SNMP): protokol ini digunakan untuk mengelola dan memonitor perangkat-perangkat dalam jaringan.</li>
+
+
+
+<li>Network Time Protocol (NTP): protokol ini digunakan untuk menyinkronkan waktu pada perangkat-perangkat dalam jaringan.</li>
+
+
+
+<li>Secure Shell (SSH): protokol ini digunakan untuk menjalankan perintah pada perangkat jaringan secara aman melalui jaringan.</li>
+
+
+
+<li>File Transfer Protocol (FTP): protokol ini digunakan untuk mengirim dan menerima file melalui jaringan.</li>
+
+
+
+<li>Hypertext Transfer Protocol (HTTP): protokol ini digunakan untuk mengirimkan halaman web dari server ke browser.</li>
+</ul>
+
+
+
+<h2>Protocol Suites</h2>
+
+
+
+<p>Protokol suite adalah sekumpulan protokol yang digunakan untuk berkomunikasi di dalam jaringan komputer. Pada jaringan Cisco, protokol suite yang paling umum digunakan adalah protokol TCP/IP (Transmission Control Protocol/Internet Protocol). TCP/IP adalah protokol yang digunakan oleh jaringan internet dan banyak jaringan lokal untuk bertukar informasi melalui jaringan. Protokol TCP/IP terdiri dari beberapa protokol yang saling terkait, termasuk IP (Internet Protocol), TCP (Transmission Control Protocol), dan UDP (User Datagram Protocol).</p>
+
+
+
+<p>Berikut adalah beberapa contoh protokol TCP/IP:</p>
+
+
+
+<ul>
+<li>HTTP (Hypertext Transfer Protocol) adalah protokol yang digunakan untuk mentransfer data (terutama halaman web) melalui internet. HTTP menggunakan TCP untuk mentransfer data secara terjamin dari server ke klien.</li>
+
+
+
+<li>HTTPS (Hypertext Transfer Protocol Secure) adalah versi yang lebih aman dari HTTP. HTTPS menggunakan enkripsi untuk memastikan bahwa data yang dikirimkan tidak dapat diintip oleh pihak yang tidak memiliki otorisasi.</li>
+
+
+
+<li>FTP (File Transfer Protocol) adalah protokol yang digunakan untuk mentransfer file antar host di dalam jaringan. FTP menggunakan TCP untuk mentransfer file secara terjamin dan terkontrol.</li>
+
+
+
+<li>SMTP (Simple Mail Transfer Protocol) adalah protokol yang digunakan untuk mentransfer email antar server. SMTP menggunakan TCP untuk mentransfer email secara terjamin dan terkontrol.</li>
+
+
+
+<li>Telnet adalah protokol yang digunakan untuk mengakses server jarak jauh melalui jaringan. Telnet menggunakan TCP untuk mentransfer data antar host.</li>
+</ul>
+
+
+
+<h2>Standards Organizations</h2>
+
+
+
+<p>Standards Organizations adalah lembaga atau organisasi yang bertanggung jawab untuk mengembangkan dan mengelola standar teknis di bidang teknologi informasi dan komunikasi. Mereka bertugas untuk menetapkan standar yang akan digunakan oleh perusahaan dan industri dalam pengembangan dan implementasi teknologi.</p>
+
+
+
+<p>Standards Organizations memiliki peran yang sangat penting dalam menjaga agar teknologi tetap terintegrasi dan kompatibel satu sama lain. Tanpa standar yang jelas, teknologi mungkin tidak akan dapat bekerja sama dengan baik, atau bahkan tidak dapat bekerja sama sama sekali.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh4.googleusercontent.com/kQHpNfH_1-xYIvJ8ljMDlOqqKWpBJ-aGAaURaL6GguUsR__0UPVDLUAVliegtlRrxeQxmjiverpkc5Uk7u3GqNxeMT2U27XJ9l08lBFVMMSLmVk9VMWj0bWsK_1QYpMyLxRNeddYoSUq_5mFZpS_pLdTLpHzGL6gUVO9Jn0eU3oeTq8YfBzpKd3eQ8umyw" alt></figure>
+
+
+
+<p>Beberapa contoh Standards Organizations yang terkenal di bidang teknologi informasi dan komunikasi adalah Institute of Electrical and Electronics Engineers (IEEE), International Organization for Standardization (ISO), dan Internet Engineering Task Force (IETF). Mereka bertanggung jawab untuk mengembangkan standar di bidang jaringan komputer, sistem operasi, dan teknologi internet.</p>
+
+
+
+<h2>Reference Models</h2>
+
+
+
+<p>Reference models adalah model-model yang digunakan sebagai acuan dalam mengembangkan suatu jaringan. Di Cisco, terdapat beberapa reference models yang sering digunakan, yaitu:</p>
+
+
+
+<ul>
+<li>OSI (Open Systems Interconnection) Reference Model: Model ini menjelaskan bagaimana suatu jaringan komputer dapat terhubung dengan jaringan lainnya secara terstruktur. OSI Reference Model terdiri dari 7 lapisan, yaitu lapisan fisik, lapisan data link, lapisan jaringan, lapisan transportasi, lapisan sesi, lapisan presentasi, dan lapisan aplikasi.</li>
+
+
+
+<li>TCP/IP (Transmission Control Protocol/Internet Protocol) Reference Model: Model ini merupakan model yang paling umum digunakan saat ini, terutama dalam jaringan Internet. TCP/IP Reference Model terdiri dari 4 lapisan, yaitu lapisan aplikasi, lapisan transportasi, lapisan jaringan, dan lapisan fisik.</li>
+
+
+
+<li>Cisco Hierarchical Network Design Model: Model ini merupakan model yang dikembangkan oleh Cisco untuk membantu dalam merancang jaringan yang efisien dan dapat diandalkan. Model ini terdiri dari 3 lapisan, yaitu lapisan access, lapisan distribution, dan lapisan core.</li>
+</ul>
+
+
+
+<p>Model-model reference tersebut dapat digunakan sebagai acuan dalam merancang, mengimplementasikan, dan mengelola suatu jaringan Cisco.</p>
+
+
+
+<h2>Data Encapsulation</h2>
+
+
+
+<p>Data encapsulation adalah proses mengemas suatu data dalam format yang sesuai dengan standar yang telah ditentukan, sehingga data tersebut dapat dikirimkan melalui suatu jaringan. Pada jaringan Cisco, data encapsulation terjadi pada setiap lapisan OSI Reference Model.</p>
+
+
+
+<figure class="wp-block-image"><img decoding="async" src="https://lh5.googleusercontent.com/QjvSeC0tnGC8DHMGNPutttPBhBh-qgqgxj2LtKPWHcQHm9Uab_qTfEkuKBk_agatfb0hl5pU-BAKIqm1haPeB0FcCeONUHH8eQuR_aVqDtX73ueZ4-aBoxUgdu2tzBCRMoYtG_eucCPhBZb5xZfEajAh2AkbDrjnGw-hjRfGZbLSBk-7sz-mPn0K1JwPEA" alt></figure>
+
+
+
+<p>Pada lapisan fisik (layer 1), data dikemas dalam bentuk sinyal elektromagnetik yang dikirimkan melalui kabel atau media nirkabel.</p>
+
+
+
+<p>Pada lapisan data link (layer 2), data dikemas dalam bentuk paket yang disebut frame. Frame ini berisi informasi yang diperlukan untuk mengirim data dari satu perangkat ke perangkat lainnya, seperti alamat MAC (Media Access Control).</p>
+
+
+
+<p>Pada lapisan jaringan (layer 3), data dikemas dalam bentuk paket yang disebut datagram. Datagram ini berisi informasi yang diperlukan untuk mengirim data dari satu jaringan ke jaringan lain, seperti alamat IP (Internet Protocol).</p>
+
+
+
+<p>Pada lapisan transportasi (layer 4), data dikemas dalam bentuk segmen yang disebut segment. Segment ini berisi informasi yang diperlukan untuk mengirim data dari satu host ke host lain, seperti nomor port.</p>
+
+
+
+<p>Pada lapisan sesi (layer 5), data dikemas dalam bentuk sesi yang disebut session. Session ini berisi informasi yang diperlukan untuk mengatur komunikasi antara dua host.</p>
+
+
+
+<p>Pada lapisan presentasi (layer 6), data dikemas dalam bentuk presentasi yang disebut presentation. Presentation ini berisi informasi yang diperlukan untuk mengubah format data agar sesuai dengan standar yang ditentukan.</p>
+
+
+
+<p>Pada lapisan aplikasi (layer 7), data dikemas dalam bentuk yang sesuai dengan aplikasi yang digunakan.</p>
+
+
+
+<p>Setiap lapisan mengemas data dengan menambahkan header dan trailer yang berisi informasi yang diperlukan untuk mengirim data tersebut ke lapisan yang lebih tinggi atau lapisan yang lebih rendah. Proses ini disebut data encapsulation.</p>
+
+
+
+<h2>Data Access</h2>
+
+
+
+<p>Data access merupakan lapisan pertama dalam Cisco Hierarchical Network Design Model. Lapisan ini bertanggung jawab untuk menghubungkan perangkat-perangkat akhir (end devices) seperti komputer, printer, atau smartphone ke jaringan.</p>
+
+
+
+<p>Perangkat yang biasa digunakan di lapisan ini antara lain:</p>
+
+
+
+<ul>
+<li>Switch: Digunakan untuk menghubungkan perangkat-perangkat akhir ke jaringan. Switch menerima paket data dari perangkat-perangkat akhir dan mengirimkannya ke perangkat-perangkat lainnya di jaringan.</li>
+
+
+
+<li>Router: Digunakan untuk menghubungkan jaringan-jaringan lokal (LAN) ke jaringan-jaringan yang lebih besar (seperti Internet). Router menerima paket data dari perangkat-perangkat akhir dan mengirimkannya ke jaringan yang lebih besar sesuai dengan alamat tujuan yang terdapat pada paket data tersebut.</li>
+
+
+
+<li>Access point: Digunakan untuk menghubungkan perangkat-perangkat akhir ke jaringan melalui wireless (nirkabel). Access point menerima sinyal wireless dari perangkat-perangkat akhir dan mengirimkannya ke jaringan yang lebih besar.</li>
+
+
+
+<li>Perangkat-perangkat di lapisan data access ini biasanya berada di dekat perangkat-perangkat akhir dan memiliki kecepatan transfer data yang tinggi. Tujuan dari lapisan ini adalah untuk menyediakan akses yang cepat dan handal bagi perangkat-perangkat akhir ke jaringan.</li>
+</ul>
+<!--kg-card-end: html-->
+    </section>
+
+
+</article>
+</main>
+
+    <section class="footer-cta outer">
+        <div class="inner">
+            <h2 class="footer-cta-title">Sign up for more like this.</h2>
+            <a class="footer-cta-button" href="#/portal" data-portal>
+                <div class="footer-cta-input">Enter your email</div>
+                <span>Subscribe</span>
+            </a>
+        </div>
+    </section>
+
+
+
+            <aside class="read-more-wrap outer">
+                <div class="read-more inner">
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-list/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/image.png 300w,
+                    /content/images/size/w600/wordpress/2023/03/image.png 600w,
+                    /content/images/size/w1000/wordpress/2023/03/image.png 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/image.png 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/image.png"
+            alt="Belajar React Dasar | List"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-list/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | List
+                </h2>
+            </header>
+                <div class="post-card-excerpt">List sangat penting dalam hal mengembangkan UI situs web. Terutama sering digunakan untuk menampilkan menu di situs web, misalnya menu navbar. Pada JavaScript biasa, kita dapat menggunakan array untuk membuat list. Kita dapat membuat list di React dengan cara yang sama seperti yang dilakukan pada javascript biasa.
+
+
+
+
+
+Selanjutnya artikel ini</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-07">Mar 7, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+
+        <img class="post-card-image"
+            srcset="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 300w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 600w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 1000w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE"
+            alt="Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Oke gan, mungkin hampir semua orang sudah pernah mengalami atau ingin tau, siapa aja sih orang yang tidak memfollback akun instagram kita. Apapun alasan kalian mengunjungi artikel ini, saya hanya akan share bagaimana cara mengetahui orang yang tidak memfollback dan mengunfollow akun tersebut secara grup.
+
+
+
+
+
+
+Syarat
+
+
+
+
+
+Sebelum masuk ke tutorial,</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-06">Mar 6, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-reactdom/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/REACT-DOM.jpg 300w,
+                    /content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg 600w,
+                    /content/images/size/w1000/wordpress/2023/03/REACT-DOM.jpg 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/REACT-DOM.jpg 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg"
+            alt="Belajar React Dasar | ReactDOM"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-reactdom/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | ReactDOM
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Di artikel sebelumnya yaitu Pengantar JSX, kita sudah mempelajari bahwa developer bisa menggunakan JSX untuk menyimpan markup HTML di dalam variabel Javascript. Karena, ReactJS adalah sebuah library untuk membangun Antarmuka Pengguna yang aktif sehingga rendering adalah salah satu bagian yang tidak terpisahkan dari ReactJS. React menyediakan sebuah paket yang bernama</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-05">Mar 5, 2023</time>
+                <span class="post-card-meta-length">3 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                </div>
+            </aside>
+
+
+
+    </div>
+
+    <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="http://localhost:2368">unixkuy</a> &copy; 2023</section>
+            <nav class="site-footer-nav">
+                <ul class="nav">
+    <li class="nav-sign-up"><a href="#/portal/">Sign up</a></li>
+</ul>
+
+            </nav>
+            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+</script>
+<script src="/assets/built/casper.js?v=146492131e"></script>
+<script>
+$(document).ready(function () {
+    // Mobile Menu Trigger
+    $('.gh-burger').click(function () {
+        $('body').toggleClass('gh-head-open');
+    });
+    // FitVids - Makes video embeds responsive
+    $(".gh-content").fitVids();
+});
+</script>
+
+
+
+</body>
+</html>

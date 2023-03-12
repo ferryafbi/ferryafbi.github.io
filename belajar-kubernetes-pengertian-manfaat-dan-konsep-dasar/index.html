@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Belajar Kubernetes: Pengertian, Manfaat dan Konsep Dasar</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=146492131e" />
+
+    <link rel="canonical" href="http://localhost:2368/belajar-kubernetes-pengertian-manfaat-dan-konsep-dasar/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="unixkuy" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Belajar Kubernetes: Pengertian, Manfaat dan Konsep Dasar" />
+    <meta property="og:description" content="Kubernetes adalah sistem open-source yang sangat powerfull, dikembangkan pertama kali oleh Google untuk mengelola aplikasi dalam container di lingkungan cluster. Kubernetes bertujuan untuk menyediakan cara yang praktis dalam mengelola komponen dan layanan yang terdistribusi di berbagai infrastruktur.
+
+
+
+
+
+Artikel ini akan membahas beberapa konsep dasar Kubernetes, seperti arsitektur sistem, masalah yang" />
+    <meta property="og:url" content="http://localhost:2368/belajar-kubernetes-pengertian-manfaat-dan-konsep-dasar/" />
+    <meta property="og:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg" />
+    <meta property="article:published_time" content="2022-11-29T12:32:49.000Z" />
+    <meta property="article:modified_time" content="2022-11-29T12:32:49.000Z" />
+    <meta property="article:tag" content="docker" />
+    <meta property="article:tag" content="kubernetes" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Belajar Kubernetes: Pengertian, Manfaat dan Konsep Dasar" />
+    <meta name="twitter:description" content="Kubernetes adalah sistem open-source yang sangat powerfull, dikembangkan pertama kali oleh Google untuk mengelola aplikasi dalam container di lingkungan cluster. Kubernetes bertujuan untuk menyediakan cara yang praktis dalam mengelola komponen dan layanan yang terdistribusi di berbagai infrastruktur.
+
+
+
+
+
+Artikel ini akan membahas beberapa konsep dasar Kubernetes, seperti arsitektur sistem, masalah yang" />
+    <meta name="twitter:url" content="http://localhost:2368/belajar-kubernetes-pengertian-manfaat-dan-konsep-dasar/" />
+    <meta name="twitter:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Ferry Ananda Febian" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="docker, kubernetes" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta property="og:image:width" content="5000" />
+    <meta property="og:image:height" content="3500" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "unixkuy",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ferry Ananda Febian",
+        "url": "http://localhost:2368/author/ferry/",
+        "sameAs": []
+    },
+    "headline": "Belajar Kubernetes: Pengertian, Manfaat dan Konsep Dasar",
+    "url": "http://localhost:2368/belajar-kubernetes-pengertian-manfaat-dan-konsep-dasar/",
+    "datePublished": "2022-11-29T12:32:49.000Z",
+    "dateModified": "2022-11-29T12:32:49.000Z",
+    "keywords": "docker, kubernetes",
+    "description": "\n\n\nKubernetes adalah sistem open-source yang sangat powerfull, dikembangkan pertama kali oleh Google untuk mengelola aplikasi dalam container di lingkungan cluster. Kubernetes bertujuan untuk menyediakan cara yang praktis dalam mengelola komponen dan layanan yang terdistribusi di berbagai infrastruktur.\n\n\n\n\n\nArtikel ini akan membahas beberapa konsep dasar Kubernetes, seperti arsitektur sistem, masalah yang dapat dipecahkan, dan model yang digunakan untuk menangani penerapan dan penskalaan dalam ",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.38" />
+    <link rel="alternate" type="application/rss+xml" title="unixkuy" href="http://localhost:2368/rss/" />
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.25/umd/portal.min.js" data-ghost="http://localhost:2368/" data-key="15ceee4aa109bb38c146da1571" data-api="http://localhost:2368/ghost/api/content/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="15ceee4aa109bb38c146da1571" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
+    <link href="http://localhost:2368/webmentions/receive/" rel="webmention" />
+    <script defer src="/public/cards.min.js?v=146492131e"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=146492131e">
+    <script defer src="/public/member-attribution.min.js?v=146492131e"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+</head>
+<body class="post-template tag-docker tag-kubernetes tag-hash-wordpress tag-hash-import-2023-03-12-12-53 is-head-left-logo has-cover">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head outer">
+        <div class="gh-head-inner inner">
+            <div class="gh-head-brand">
+                <a class="gh-head-logo no-image" href="http://localhost:2368">
+                        unixkuy
+                </a>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="http://localhost:2368/">Home</a></li>
+    <li class="nav-about"><a href="http://localhost:2368/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                    <button class="gh-search gh-icon-btn" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                    <div class="gh-head-members">
+                                <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
+                                <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+
+
+
+<main id="site-main" class="site-main">
+<article class="article post tag-docker tag-kubernetes tag-hash-wordpress tag-hash-import-2023-03-12-12-53 no-image ">
+
+    <header class="article-header gh-canvas">
+
+        <div class="article-tag post-card-tags">
+                <span class="post-card-primary-tag">
+                    <a href="/tag/docker/">docker</a>
+                </span>
+        </div>
+
+        <h1 class="article-title">Belajar Kubernetes: Pengertian, Manfaat dan Konsep Dasar</h1>
+
+
+        <div class="article-byline">
+        <section class="article-byline-content">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="/author/ferry/" class="author-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+                </li>
+            </ul>
+
+            <div class="article-byline-meta">
+                <h4 class="author-name"><a href="/author/ferry/">Ferry Ananda Febian</a></h4>
+                <div class="byline-meta-content">
+                    <time class="byline-meta-date" datetime="2022-11-29">Nov 29, 2022</time>
+                        <span class="byline-reading-time"><span class="bull">&bull;</span> 13 min read</span>
+                </div>
+            </div>
+
+        </section>
+        </div>
+
+
+    </header>
+
+    <section class="gh-content gh-canvas">
+        <!--kg-card-begin: html-->
+<p>Kubernetes adalah sistem open-source yang sangat powerfull, dikembangkan pertama kali oleh Google untuk mengelola aplikasi dalam container di lingkungan cluster. Kubernetes bertujuan untuk menyediakan cara yang praktis dalam mengelola komponen dan layanan yang terdistribusi di berbagai infrastruktur.</p>
+
+
+
+<p>Artikel ini akan membahas beberapa konsep dasar Kubernetes, seperti arsitektur sistem, masalah yang dapat dipecahkan, dan model yang digunakan untuk menangani penerapan dan penskalaan dalam container.</p>
+
+
+
+<h2><strong>Pengertian Kubernetes</strong></h2>
+
+
+
+<p>Kubernetes pada dasarnya adalah sistem untuk menjalankan dan mengkoordinasikan aplikasi containerized di seluruh cluster mesin. Kubernetes adalah platform yang dirancang untuk sepenuhnya mengelola siklus hidup aplikasi dan layanan yang ter-containerisasi menggunakan metode yang memberikan prediktabilitas, skalabilitas, dan ketersediaan yang tinggi.</p>
+
+
+
+<p>Sebagai pengguna Kubernetes, Anda dapat menentukan bagaimana aplikasi harus berjalan dan bagaimana aplikasi tersebut dapat berinteraksi dengan aplikasi lain atau dunia luar. Anda dapat menskalakan layanan Anda ke atas atau ke bawah, melakukan pembaruan secara berkelanjutan, dan mengalihkan lalu lintas di antara berbagai versi aplikasi untuk menguji fitur atau mengembalikan penerapan yang bermasalah. Kubernetes menyediakan antarmuka dan primitif platform yang dapat disusun dan memungkinkan Anda untuk mendefinisikan serta mengelola aplikasi dengan tingkat fleksibilitas, kekuatan, dan keandalan yang tinggi.</p>
+
+
+
+<h2><strong>Arsitektur Kubernetes</strong></h2>
+
+
+
+<p>Untuk memahami bagaimana Kubernetes mampu memberikan layanan yang powerfull, akan sangat membantu untuk terlebih dahulu memahami bagaimana Kubernetes dirancang dan diatur pada skala tinggi. Kubernetes dapat divisualisasikan sebagai sistem yang dibangun berlapis-lapis, dengan setiap lapisan yang lebih tinggi mengabstraksikan kompleksitas yang ditemukan di tingkat yang lebih rendah.</p>
+
+
+
+<p>Pada dasarnya, Kubernetes menyatukan mesin-mesin fisik atau virtual ke dalam sebuah cluster menggunakan jaringan bersama untuk berkomunikasi di antara setiap server. Cluster ini adalah platform fisik tempat semua komponen, kemampuan, dan beban kerja Kubernetes dikonfigurasikan.</p>
+
+
+
+<p>Masing-masing mesin dalam cluster diberi peran dalam ekosistem Kubernetes. Satu server (atau sekelompok kecil dalam penerapan) berfungsi sebagai server master. Server ini bertindak sebagai gateway dan otak untuk cluster dengan mengekspos API untuk pengguna dan klien, memeriksa kesehatan server lain, memutuskan cara terbaik untuk membagi dan menugaskan pekerjaan (yang dikenal sebagai &#8220;scheduling&#8221;), dan mengatur komunikasi antara komponen lain. Server master bertindak sebagai titik kontak utama dengan cluster dan bertanggung jawab atas sebagian besar logika terpusat yang disediakan Kubernetes.</p>
+
+
+
+<p>Mesin-mesin lain dalam cluster ditetapkan sebagai <strong>node</strong>: yaitu server yang bertanggung jawab untuk menerima dan menjalankan beban kerja menggunakan sumber daya lokal dan eksternal. Untuk membantu isolasi, manajemen, dan fleksibilitas, Kubernetes menjalankan aplikasi dan layanan dalam container, sehingga setiap node perlu dilengkapi dengan runtime container (seperti Docker atau rkt). Node menerima instruksi dari server master dan membuat atau menghentikan container yang sesuai, menyesuaikan aturan jaringan untuk merutekan dan meneruskan lalu lintas dengan tepat.</p>
+
+
+
+<p>Seperti yang disebutkan di atas, aplikasi dan layanan itu sendiri dijalankan pada klaster di dalam container. Komponen-komponen yang mendasari memastikan bahwa keadaan aplikasi yang diinginkan sesuai dengan keadaan sebenarnya dari klaster. Pengguna berinteraksi dengan klaster dengan cara berkomunikasi ke server API utama baik secara langsung atau dengan klien dan library. Untuk memulai aplikasi atau layanan, rencana deklaratif dikirimkan dalam JSON atau YAML yang mendefinisikan apa yang harus dibuat dan bagaimana pengelolaannya. Server master kemudian mengambil rencana dan mencari tahu bagaimana menjalankannya di infrastruktur dengan memeriksa persyaratan dan keadaan sistem saat ini. Kelompok aplikasi yang ditentukan pengguna yang berjalan sesuai dengan rencana yang ditentukan merupakan lapisan akhir Kubernetes.</p>
+
+
+
+<h2><strong>Komponen Master Server</strong></h2>
+
+
+
+<p>Seperti yang sudah dijelaskan di atas, server master bertindak sebagai bidang kontrol utama untuk cluster Kubernetes. Server master berfungsi sebagai titik kontak utama untuk administrator dan pengguna, dan juga menyediakan banyak sistem cluster-wide untuk node pekerja yang relatif. Secara keseluruhan, komponen-komponen pada master server bekerja sama untuk menerima permintaan pengguna, menentukan cara terbaik untuk menjadwalkan beban kerja container, mengautentikasi klien dan node, menyesuaikan jaringan di seluruh klaster, dan mengelola tanggung jawab penskalaan dan pemeriksaan kesehatan.</p>
+
+
+
+<p>Komponen-komponen ini dapat diinstal pada satu mesin atau didistribusikan di beberapa server. Berikut masing-masing komponen individu yang terkait dengan server master di bagian ini.</p>
+
+
+
+<p>Translated with www.DeepL.com/Translator (free version)</p>
+
+
+
+<h3><strong>etcd</strong></h3>
+
+
+
+<p>Salah satu komponen utama yang dibutuhkan Kubernetes untuk berfungsi adalah penyimpanan konfigurasi yang tersedia secara global. Proyek etcd, yang dikembangkan oleh tim di CoreOS, adalah key-value store yang ringan dan terdistribusi yang dapat dikonfigurasi untuk menjangkau beberapa node.</p>
+
+
+
+<p>Kubernetes menggunakan etcd untuk menyimpan data konfigurasi yang dapat diakses oleh masing-masing node dalam cluster. Etcd dapat digunakan untuk mencari layanan dan membantu komponen mengkonfigurasi layanan sesuai dengan informasi terbaru. Hal ini juga membantu mempertahankan keadaan cluster dengan fitur-fitur seperti pemilihan pemimpin dan penguncian terdistribusi. Dengan menyediakan HTTP/JSON API sederhana, antarmuka untuk mengatur atau mengambil nilai jadi lebih mudah.</p>
+
+
+
+<p>Seperti kebanyakan komponen lain di bidang kontrol, etcd dapat dikonfigurasi pada server master tunggal atau dalam skenario produksi, didistribusikan di antara sejumlah mesin. Syarat utama ETCD adalah dapat diakses dari jaringan ke setiap mesin Kubernetes.</p>
+
+
+
+<h3><strong>kube-apiserver</strong></h3>
+
+
+
+<p>API server merupakan manajemen utama dari seluruh cluster karena memungkinkan pengguna untuk mengkonfigurasi beban kerja dan unit organisasi Kubernetes. API server juga bertanggung jawab untuk memastikan bahwa penyimpanan etcd dan detail layanan dari container yang di-deploy telah sesuai. Server API bertindak sebagai jembatan antara berbagai komponen untuk menjaga kesehatan cluster dan menyebarkan informasi dan juga perintah.</p>
+
+
+
+<p>Server API mengimplementasikan antarmuka RESTful, yang berarti bahwa banyak alat dan pustaka yang berbeda dapat dengan mudah diintegrasikan. Klien yang disebut <strong>kubectl</strong> tersedia sebagai metode default untuk berinteraksi dengan cluster Kubernetes dari komputer lokal.</p>
+
+
+
+<h3><strong>kube-controller-manager</strong></h3>
+
+
+
+<p>Merupakan layanan umum yang memiliki banyak tanggung jawab. Terutama mengelola pengontrol yang berbeda dengan keadaan cluster, mengelola siklus hidup beban kerja, dan melakukan tugas-tugas rutin. Misalnya, pengontrol replikasi memastikan bahwa jumlah replika (salinan identik) yang didefinisikan untuk pod sesuai dengan jumlah yang saat ini digunakan pada cluster. Rincian operasi ini ditulis ke etcd, di mana manajer pengontrol mengawasi perubahan melalui server API.</p>
+
+
+
+<p>Ketika perubahan terlihat, controller membaca informasi baru dan mengimplementasikan prosedur yang memenuhi keadaan yang diinginkan. Ini dapat melibatkan penskalaan aplikasi ke atas atau ke bawah, menyesuaikan titik akhir, dll.</p>
+
+
+
+<h3>kube-scheduler</h3>
+
+
+
+<p>Merupakan layanan yang menugaskan beban kerja ke node tertentu dalam cluster. Layanan ini membaca persyaratan operasi beban kerja, menganalisis lingkungan infrastruktur terkini, dan menempatkan pekerjaan pada node atau node yang dapat diterima.</p>
+
+
+
+<p>scheduler bertanggung jawab untuk melacak kapasitas yang tersedia pada setiap host untuk memastikan bahwa beban kerja tidak dijadwalkan melebihi sumber daya yang tersedia. Penjadwal harus mengetahui kapasitas total serta sumber daya yang sudah dialokasikan untuk beban kerja yang ada di setiap server.</p>
+
+
+
+<h3>cloud-controller-manager</h3>
+
+
+
+<p>Kubernetes dapat diterapkan di berbagai lingkungan yang berbeda dan dapat berinteraksi dengan berbagai penyedia infrastruktur untuk memahami serta mengelola status sumber daya dalam cluster. Meskipun Kubernetes bekerja dengan representasi generik dari sumber daya seperti penyimpanan yang dapat dilampirkan dan menyeimbangkan beban, Kubernetes membutuhkan cara untuk memetakannya ke sumber daya aktual yang disediakan oleh penyedia cloud non-homogen.</p>
+
+
+
+<p>Cloud controller manager bertindak sebagai perekat yang memungkinkan Kubernetes untuk berinteraksi ke penyedia dengan kemampuan, fitur, dan API yang berbeda sambil mempertahankan konstruksi yang relatif generik secara internal. Hal ini memungkinkan Kubernetes untuk memperbarui informasi keadaannya sesuai dengan informasi yang dikumpulkan dari penyedia cloud, menyesuaikan sumber daya cloud saat perubahan diperlukan dalam sistem, dan membuat serta menggunakan layanan cloud tambahan untuk memenuhi persyaratan kerja yang diajukan ke cluster.</p>
+
+
+
+<h2>Komponen Node Server</h2>
+
+
+
+<p>Di Kubernetes, server yang bertugas untuk menjalankan container dikenal sebagai node. Server node memiliki beberapa persyaratan yang diperlukan untuk berkomunikasi dengan komponen master, mengkonfigurasi jaringan container, dan menjalankan beban kerja aktual yang ditugaskan.</p>
+
+
+
+<h3>Runtime Container</h3>
+
+
+
+<p>Komponen pertama yang harus dimiliki setiap node adalah container runtime. Biasanya, persyaratan ini dipenuhi dengan menginstal dan menjalankan Docker, tetapi juga disediakan alternatif lain seperti rkt dan runc.</p>
+
+
+
+<p>Container runtime bertanggung jawab untuk memulai dan mengelola container, aplikasi yang dikemas dalam lingkungan operasi yang relatif terisolasi tetapi ringan. Setiap unit kerja pada cluster, pada tingkat dasarnya, diimplementasikan sebagai salah satu atau lebih container yang harus digunakan. Container runtime pada setiap node adalah komponen yang akhirnya menjalankan container yang didefinisikan dalam beban kerja yang dikirimkan ke cluster.</p>
+
+
+
+<h3><strong>kubelet</strong></h3>
+
+
+
+<p>Titik kontak utama untuk setiap node dengan grup cluster adalah layanan kecil yang disebut kubelet. Layanan ini bertanggung jawab untuk menyampaikan informasi ke/dari layanan control plane, serta berinteraksi dengan etcd store untuk membaca detail konfigurasi atau menulis value baru.</p>
+
+
+
+<p>Layanan kubelet berkomunikasi dengan komponen master untuk mengotentikasi ke cluster dan menerima perintah dan job. Job diterima dalam bentuk manifes yang mendefinisikan beban kerja dan parameter operasi. Proses kubelet kemudian bertanggung jawab untuk mempertahankan keadaan job di server node. Hal ini akan mengontrol runtime container untuk meluncurkan atau menghentikan container sesuai kebutuhan.</p>
+
+
+
+<h3>kube-proxy</h3>
+
+
+
+<p>Untuk mengelola subnetting host individu dan membuat layanan tersedia untuk komponen lain, layanan proxy kecil yang disebut kube-proxy dijalankan pada setiap server node. Proses ini meneruskan permintaan ke container yang tervalidasi, dapat melakukan penyeimbangan beban primitif, dan secara umum bertanggung jawab untuk memastikan lingkungan jaringan dapat diprediksi dan dapat diakses, atau tetap dalam bentuk terisolasi jika diperlukan.</p>
+
+
+
+<h2>Kubernetes Objects dan Workloads</h2>
+
+
+
+<p>Meskipun container adalah mekanisme dasar yang digunakan untuk menyebarkan aplikasi, Kubernetes menggunakan lapisan abstraksi tambahan di atas antarmuka container untuk menyediakan fitur penskalaan, ketahanan, dan manajemen siklus hidup. Dibandingkan mengelola container secara langsung, pengguna&nbsp; dapatmendefinisikan dan berinteraksi dengan instance yang terdiri dari berbagai primitif yang disediakan oleh model objek Kubernetes. Selanjutnya akan dibahas berbagai jenis objek yang dapat digunakan untuk mendefinisikan beban kerja.</p>
+
+
+
+<h3><strong>Pods</strong></h3>
+
+
+
+<p>Pod adalah unit paling dasar yang ditangani Kubernetes. Container itu sendiri tidak ditugaskan ke host. Sebaliknya, satu atau lebih container yang digabungkan dengan erat dikemas dalam objek yang disebut pod.</p>
+
+
+
+<p>Pod umumnya mewakili satu atau lebih container yang harus dikontrol sebagai satu aplikasi. Pod terdiri dari container yang beroperasi bersama, berbagi siklus hidup, dan harus selalu dijadwalkan pada node yang sama. Mereka dikelola sepenuhnya sebagai satu unit dan berbagi lingkungan, volume, dan ruang IP. Terlepas dari implementasi containernya, Anda umumnya harus menganggap pod sebagai aplikasi monolitik tunggal untuk mengkonseptualisasikan cara terbaik bagaimana cluster akan mengelola sumber daya dan penjadwalan pod.</p>
+
+
+
+<p>Biasanya, pod terdiri dari container utama yang memenuhi tujuan umum beban kerja dan secara opsional beberapa container pembantu yang memfasilitasi tugas-tugas yang terkait erat. Hal ini merupakan program-program yang mendapat manfaat dari dijalankan dan dikelola dalam container itu sendiri, tetapi terkait erat dengan aplikasi utama. Misalnya, pod mungkin memiliki satu container yang menjalankan server aplikasi utama dan container pembantu yang menarik file ke sistem file bersama ketika perubahan terdeteksi dalam repositori eksternal. Penskalaan horizontal umumnya tidak disarankan pada tingkat pod karena ada objek tingkat tinggi lainnya yang lebih cocok untuk tugas tersebut.</p>
+
+
+
+<p>Umumnya, pengguna tidak boleh mengelola pod sendiri, karena pod tidak menyediakan beberapa fitur yang biasanya diperlukan dalam aplikasi (seperti manajemen siklus hidup dan penskalaan yang canggih). Sebagai gantinya, pengguna didorong untuk bekerja dengan objek tingkat yang lebih tinggi yang menggunakan pod atau template pod sebagai komponen dasar tetapi mengimplementasikan fungsionalitas tambahan.</p>
+
+
+
+<h3>Replication Controllers dan Replication Sets</h3>
+
+
+
+<p>Saat menggunakan Kubernetes, Anda mungkin mengelola kelompok pod yang identik dan direplikasi. Hal ini dibuat dari templat pod dan dapat diskalakan secara horizontal oleh pengontrol yang dikenal sebagai Replication Controllers dan Replication Sets.</p>
+
+
+
+<p>Pengontrol replikasi adalah objek yang mendefinisikan templat pod dan parameter kontrol untuk menskalakan replika pod yang identik secara horizontal dengan menambah atau mengurangi jumlah salinan yang berjalan. Ini adalah cara mudah untuk mendistribusikan beban dan meningkatkan ketersediaan secara native di dalam Kubernetes. Pengontrol replikasi tahu cara membuat pod baru sesuai kebutuhan karena templat yang sangat mirip dengan definisi pod tertanam dalam konfigurasi pengontrol replikasi.</p>
+
+
+
+<p>Pengontrol replikasi bertanggung jawab untuk memastikan bahwa jumlah pod yang digunakan dalam cluster sesuai dengan jumlah pod dalam konfigurasinya. Jika pod atau host yang mendasarinya gagal, pengontrol akan memulai pod baru untuk mengimbanginya. Jika jumlah replikasi dalam konfigurasi pengontrol berubah, pengontrol akan memulai atau menutup container agar sesuai dengan jumlah yang diinginkan. Pengontrol replikasi juga dapat melakukan pembaruan bergulir untuk menggulung satu set pod ke versi baru satu per satu, meminimalkan dampak pada ketersediaan aplikasi.</p>
+
+
+
+<p>Set replikasi adalah iterasi pada desain pengontrol replikasi dengan fleksibilitas yang lebih besar dalam bagaimana pengontrol mengidentifikasi pod yang dimaksudkan untuk dikelola. Set replikasi mulai menggantikan pengontrol replikasi karena kemampuan pemilihan replika yang lebih besar, tetapi mereka tidak dapat melakukan pembaruan bergulir untuk memutar backend ke versi baru seperti yang dapat dilakukan pengontrol replikasi. Sebagai gantinya, set replikasi dimaksudkan untuk digunakan di dalam unit tingkat yang lebih tinggi tambahan yang menyediakan fungsionalitas itu.</p>
+
+
+
+<p>Seperti pod, baik pengontrol replikasi dan set replikasi jarang merupakan unit yang akan Anda gunakan secara langsung. Meskipun mereka membangun desain pod untuk menambahkan penskalaan horizontal dan jaminan keandalan, mereka tidak memiliki beberapa kemampuan manajemen siklus hidup berbutir halus yang ditemukan pada objek yang lebih kompleks.</p>
+
+
+
+<h3>Deployments</h3>
+
+
+
+<p>Deployment adalah salah satu beban kerja yang paling umum untuk dibuat dan dikelola secara langsung. Penerapan menggunakan set replikasi sebagai blok bangunan, menambahkan fungsionalitas manajemen siklus hidup yang fleksibel ke dalam campuran.</p>
+
+
+
+<p>Sementara penyebaran yang dibangun dengan set replikasi mungkin tampak menduplikasi fungsionalitas yang ditawarkan oleh pengontrol replikasi, penyebaran menyelesaikan banyak titik yang ada dalam implementasi pembaharuan bergulir. Saat memperbarui aplikasi dengan pengontrol replikasi, pengguna diharuskan mengirimkan rencana untuk pengontrol replikasi baru yang akan menggantikan pengontrol saat ini. Saat menggunakan pengontrol replikasi, tugas-tugas seperti melacak riwayat, pulih dari kegagalan jaringan selama pembaruan, dan memutar kembali perubahan yang buruk sulit atau dibiarkan sebagai tanggung jawab pengguna.</p>
+
+
+
+<p>Deployment adalah objek tingkat tinggi yang dirancang untuk memudahkan manajemen siklus hidup pod yang direplikasi. Deployment dapat dimodifikasi dengan mudah dengan mengubah konfigurasi dan Kubernetes akan menyesuaikan set replika, mengelola transisi antara versi aplikasi yang berbeda, dan secara opsional mempertahankan riwayat peristiwa dan kemampuan undo secara otomatis. Karena fitur-fitur ini, deployment kemungkinan akan menjadi jenis objek Kubernetes yang paling sering Anda gunakan.</p>
+
+
+
+<h3>Stateful Sets</h3>
+
+
+
+<p>Set stateful adalah pengontrol pod khusus yang menawarkan jaminan pemesanan dan keunikan. Terutama, ini digunakan untuk memiliki kontrol yang lebih baik ketika Anda memiliki persyaratan khusus yang terkait dengan pemesanan penyebaran, data persisten, atau jaringan yang stabil. Misalnya, stateful set sering dikaitkan dengan aplikasi berorientasi data, seperti database, yang membutuhkan akses ke volume yang sama bahkan jika dijadwal ulang ke node baru.</p>
+
+
+
+<p>Set stateful menyediakan pengenal jaringan yang stabil dengan membuat nama unik berbasis angka untuk setiap pod yang akan bertahan bahkan jika pod perlu dipindahkan ke node lain. Demikian juga, volume penyimpanan persisten dapat ditransfer dengan pod saat penjadwalan ulang diperlukan. Volume tetap ada bahkan setelah pod telah dihapus untuk mencegah kehilangan data yang tidak disengaja.</p>
+
+
+
+<p>Saat menyebarkan atau menyesuaikan skala, set stateful melakukan operasi sesuai dengan pengidentifikasi bernomor dalam namanya. Ini memberikan prediktabilitas dan kontrol yang lebih besar atas urutan eksekusi, yang dapat berguna dalam beberapa kasus.</p>
+
+
+
+<h3>Daemon Sets</h3>
+
+
+
+<p>Daemon set adalah bentuk khusus lain dari pengontrol pod yang menjalankan salinan pod pada setiap node di cluster (atau subset, jika ditentukan). Hal ini paling sering berguna saat menerapkan pod yang membantu melakukan pemeliharaan dan menyediakan layanan untuk node itu sendiri.</p>
+
+
+
+<p>Misalnya, mengumpulkan dan meneruskan log, mengumpulkan metrik, dan menjalankan layanan yang meningkatkan kemampuan node itu sendiri adalah kandidat populer untuk set daemon. Karena set daemon sering kali menyediakan layanan mendasar dan dibutuhkan di seluruh armada, mereka dapat melewati batasan penjadwalan pod yang mencegah pengontrol lain menugaskan pod ke host tertentu. Sebagai contoh, karena tanggung jawabnya yang unik, server master sering dikonfigurasikan agar tidak tersedia untuk penjadwalan pod normal, tetapi set daemon memiliki kemampuan untuk mengesampingkan pembatasan berdasarkan pod-by-pod untuk memastikan layanan penting berjalan.</p>
+
+
+
+<h3>Jobs and Cron Jobs</h3>
+
+
+
+<p>Beban kerja yang telah kami jelaskan sejauh ini semuanya mengasumsikan siklus hidup yang berjalan lama dan seperti layanan. Kubernetes menggunakan beban kerja yang disebut jobs untuk menyediakan alur kerja yang lebih berbasis tugas di mana container yang berjalan diharapkan keluar dengan sukses setelah beberapa waktu setelah mereka menyelesaikan pekerjaannya. Jobs berguna jika Anda perlu melakukan pemrosesan satu kali atau batch daripada menjalankan layanan berkelanjutan.</p>
+
+
+
+<p>Membangun pekerjaan adalah pekerjaan cron. Seperti halnya cron daemon konvensional di Linux dan sistem Unix-like yang mengeksekusi skrip sesuai jadwal, cron jobs di Kubernetes menyediakan antarmuka untuk menjalankan pekerjaan dengan komponen penjadwalan. Cron jobs dapat digunakan untuk menjadwalkan pekerjaan untuk dieksekusi di masa mendatang atau secara teratur dan berulang. Cron job Kubernetes pada dasarnya adalah implementasi ulang dari perilaku cron klasik, menggunakan cluster sebagai platform, bukan sistem operasi tunggal.</p>
+
+
+
+<h2>Komponen Kubernetes Lainnya</h2>
+
+
+
+<p>Di luar beban kerja yang dapat Anda jalankan di cluster, Kubernetes menyediakan sejumlah abstraksi lain yang membantu Anda mengelola aplikasi, mengontrol jaringan, dan mengaktifkan persistensi. Kita akan membahas beberapa contoh yang lebih umum di sini.</p>
+
+
+
+<h3>Services</h3>
+
+
+
+<p>Sejauh ini, kami telah menggunakan istilah &#8220;layanan&#8221; dalam pengertian konvensional, seperti Unix: untuk menunjukkan proses yang berjalan lama, sering kali terhubung dengan jaringan, yang mampu menanggapi permintaan. Namun, di Kubernetes, layanan adalah komponen yang bertindak sebagai penyeimbang beban internal dasar dan duta besar untuk pod. Sebuah layanan mengelompokkan kumpulan logis pod yang melakukan fungsi yang sama untuk menampilkannya sebagai satu entitas.</p>
+
+
+
+<p>Ini memungkinkan Anda untuk menerapkan layanan yang dapat melacak dan merutekan ke semua container backend dari jenis tertentu. Konsumen internal hanya perlu tahu tentang titik akhir stabil yang disediakan oleh layanan. Sementara itu, abstraksi layanan memungkinkan Anda untuk meningkatkan atau mengganti unit kerja backend sesuai kebutuhan. Alamat IP layanan tetap stabil terlepas dari perubahan pada pod yang dirutekannya. Dengan menerapkan layanan, Anda dengan mudah mendapatkan kemudahan untuk ditemukan dan dapat menyederhanakan desain container Anda.</p>
+
+
+
+<p>Setiap kali Anda perlu menyediakan akses ke satu atau lebih pod ke aplikasi lain atau ke konsumen eksternal, Anda harus mengkonfigurasi layanan. Misalnya, jika Anda memiliki sekumpulan pod yang menjalankan server web yang harus dapat diakses dari internet, layanan akan memberikan abstraksi yang diperlukan. Demikian juga, jika server web Anda perlu menyimpan dan mengambil data, Anda ingin mengkonfigurasi layanan internal untuk memberi mereka akses ke pod database Anda.</p>
+
+
+
+<p>Meskipun layanan, secara default, hanya tersedia menggunakan alamat IP yang dapat dirutekan secara internal, layanan tersebut dapat tersedia di luar cluster dengan memilih salah satu dari beberapa strategi. Konfigurasi Node Port bekerja dengan membuka port statis pada antarmuka jaringan eksternal setiap node. Lalu lintas ke port eksternal akan dirutekan secara otomatis ke pod yang sesuai menggunakan layanan IP klaster internal.</p>
+
+
+
+<p>Atau, jenis layanan Load Balancer membuat load balancer eksternal untuk merutekan ke layanan menggunakan integrasi load balancer Kubernetes penyedia cloud. Manajer pengontrol cloud akan membuat sumber daya yang sesuai dan mengkonfigurasinya menggunakan alamat layanan layanan internal.</p>
+
+
+
+<h3>Volumes dan Persistent Volumes</h3>
+
+
+
+<p>Berbagi data secara andal dan menjamin ketersediaannya di antara restart container merupakan tantangan di banyak lingkungan container. Container runtime sering kali menyediakan beberapa mekanisme untuk melampirkan penyimpanan ke container yang bertahan di luar masa pakai container, tetapi implementasinya biasanya kurang fleksibel.</p>
+
+
+
+<p>Untuk mengatasi hal ini, Kubernetes menggunakan abstraksi volumenya sendiri yang memungkinkan data dibagikan oleh semua container dalam sebuah pod dan tetap tersedia sampai pod dihentikan. Ini berarti bahwa pod yang digabungkan dengan erat dapat dengan mudah berbagi file tanpa mekanisme eksternal yang rumit. Kegagalan container dalam pod tidak akan memengaruhi akses ke file yang dibagikan. Setelah pod dihentikan, volume bersama dihancurkan, jadi ini bukan solusi yang baik untuk data yang benar-benar persisten.</p>
+
+
+
+<p>Volume persisten adalah mekanisme untuk mengabstraksikan penyimpanan yang lebih kuat yang tidak terikat dengan siklus hidup pod. Sebaliknya, mereka memungkinkan administrator untuk mengkonfigurasi sumber daya penyimpanan untuk cluster yang dapat diminta dan diklaim pengguna untuk pod yang mereka jalankan. Setelah pod selesai dengan volume persisten, kebijakan reklamasi volume menentukan apakah volume disimpan sampai dihapus secara manual atau segera dihapus bersama dengan data. Data persisten dapat digunakan untuk menjaga terhadap kegagalan berbasis node dan untuk mengalokasikan jumlah penyimpanan yang lebih besar daripada yang tersedia secara lokal.</p>
+
+
+
+<h3>Labels dan Annotations</h3>
+
+
+
+<p>Abstraksi organisasi Kubernetes yang terkait dengan, tetapi di luar konsep lainnya, adalah pelabelan. Label di Kubernetes adalah tag semantik yang dapat dilampirkan ke objek Kubernetes untuk menandainya sebagai bagian dari grup. Ini kemudian dapat dipilih ketika menargetkan instance yang berbeda untuk manajemen atau routing. Misalnya, setiap objek berbasis controller menggunakan label untuk mengidentifikasi pod yang harus mereka operasikan. Layanan menggunakan label untuk memahami pod backend yang harus mereka rutekan permintaannya.</p>
+
+
+
+<p>Label diberikan sebagai pasangan key-value sederhana. Setiap unit dapat memiliki lebih dari satu label, tetapi setiap unit hanya dapat memiliki satu entri untuk setiap kunci. Biasanya, kunci &#8220;nama&#8221; digunakan sebagai pengidentifikasi tujuan umum, tetapi Anda juga dapat mengklasifikasikan objek berdasarkan kriteria lain seperti tahap pengembangan, aksesibilitas publik, versi aplikasi, dll.</p>
+
+
+
+<p>Anotasi adalah mekanisme serupa yang memungkinkan Anda untuk melampirkan informasi nilai-kunci yang sewenang-wenang ke sebuah objek. Sementara label harus digunakan untuk informasi semantik yang berguna untuk mencocokkan pod dengan kriteria seleksi, anotasi lebih berbentuk bebas dan dapat berisi data yang kurang terstruktur. Secara umum, anotasi adalah cara menambahkan metadata yang kaya ke objek yang tidak membantu untuk tujuan seleksi.</p>
+
+
+
+<h2>Kesimpulan</h2>
+
+
+
+<p>Kubernetes adalah proyek menarik yang memungkinkan pengguna untuk menjalankan beban kerja containerized yang dapat diskalakan dan sudah tersedia pada platform yang sangat abstrak. Meskipun arsitektur dan rangkaian komponen internal Kubernetes pada awalnya tampak membingungkan, namun kekuatan, fleksibilitas, dan rangkaian fiturnya yang kuat tidak tertandingi di dunia open-source. Dengan memahami bagaimana komponen-komponen dasar tersebut cocok satu sama lain, Anda dapat mulai mendesain sistem yang sepenuhnya memanfaatkan kemampuan platform untuk menjalankan dan mengelola beban kerja aplikasi dalam skala yang besar.</p>
+
+
+
+<p>Sumber : https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes</p>
+
+
+<!--kg-card-end: html-->
+    </section>
+
+
+</article>
+</main>
+
+    <section class="footer-cta outer">
+        <div class="inner">
+            <h2 class="footer-cta-title">Sign up for more like this.</h2>
+            <a class="footer-cta-button" href="#/portal" data-portal>
+                <div class="footer-cta-input">Enter your email</div>
+                <span>Subscribe</span>
+            </a>
+        </div>
+    </section>
+
+
+
+            <aside class="read-more-wrap outer">
+                <div class="read-more inner">
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-list/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/image.png 300w,
+                    /content/images/size/w600/wordpress/2023/03/image.png 600w,
+                    /content/images/size/w1000/wordpress/2023/03/image.png 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/image.png 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/image.png"
+            alt="Belajar React Dasar | List"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-list/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | List
+                </h2>
+            </header>
+                <div class="post-card-excerpt">List sangat penting dalam hal mengembangkan UI situs web. Terutama sering digunakan untuk menampilkan menu di situs web, misalnya menu navbar. Pada JavaScript biasa, kita dapat menggunakan array untuk membuat list. Kita dapat membuat list di React dengan cara yang sama seperti yang dilakukan pada javascript biasa.
+
+
+
+
+
+Selanjutnya artikel ini</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-07">Mar 7, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+
+        <img class="post-card-image"
+            srcset="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 300w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 600w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 1000w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE"
+            alt="Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Oke gan, mungkin hampir semua orang sudah pernah mengalami atau ingin tau, siapa aja sih orang yang tidak memfollback akun instagram kita. Apapun alasan kalian mengunjungi artikel ini, saya hanya akan share bagaimana cara mengetahui orang yang tidak memfollback dan mengunfollow akun tersebut secara grup.
+
+
+
+
+
+
+Syarat
+
+
+
+
+
+Sebelum masuk ke tutorial,</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-06">Mar 6, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-reactdom/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/REACT-DOM.jpg 300w,
+                    /content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg 600w,
+                    /content/images/size/w1000/wordpress/2023/03/REACT-DOM.jpg 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/REACT-DOM.jpg 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg"
+            alt="Belajar React Dasar | ReactDOM"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-reactdom/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | ReactDOM
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Di artikel sebelumnya yaitu Pengantar JSX, kita sudah mempelajari bahwa developer bisa menggunakan JSX untuk menyimpan markup HTML di dalam variabel Javascript. Karena, ReactJS adalah sebuah library untuk membangun Antarmuka Pengguna yang aktif sehingga rendering adalah salah satu bagian yang tidak terpisahkan dari ReactJS. React menyediakan sebuah paket yang bernama</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-05">Mar 5, 2023</time>
+                <span class="post-card-meta-length">3 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                </div>
+            </aside>
+
+
+
+    </div>
+
+    <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="http://localhost:2368">unixkuy</a> &copy; 2023</section>
+            <nav class="site-footer-nav">
+                <ul class="nav">
+    <li class="nav-sign-up"><a href="#/portal/">Sign up</a></li>
+</ul>
+
+            </nav>
+            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+</script>
+<script src="/assets/built/casper.js?v=146492131e"></script>
+<script>
+$(document).ready(function () {
+    // Mobile Menu Trigger
+    $('.gh-burger').click(function () {
+        $('body').toggleClass('gh-head-open');
+    });
+    // FitVids - Makes video embeds responsive
+    $(".gh-content").fitVids();
+});
+</script>
+
+
+
+</body>
+</html>

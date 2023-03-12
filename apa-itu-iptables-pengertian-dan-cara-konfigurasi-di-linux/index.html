@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Apa Itu Iptables: Pengertian dan Cara Konfigurasi di Linux</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=146492131e" />
+
+    <link rel="canonical" href="http://localhost:2368/apa-itu-iptables-pengertian-dan-cara-konfigurasi-di-linux/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="unixkuy" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Apa Itu Iptables: Pengertian dan Cara Konfigurasi di Linux" />
+    <meta property="og:description" content="Iptables adalah firewall yang sangat populer di linux, Iptables mengizinkan pengguna untuk memonitoring jaringan yang masuk dan keluar pada sistem komputer dengan rules atau aturan.
+
+
+
+
+
+
+
+
+Iptables juga mengizinkan pengguna untuk mengkonfigurasi izin akses kontrol paket jaringan ke server pengguna. Di artikel ini kita belajar lebih banyak tentang Iptables, mulai dari" />
+    <meta property="og:url" content="http://localhost:2368/apa-itu-iptables-pengertian-dan-cara-konfigurasi-di-linux/" />
+    <meta property="og:image" content="http://localhost:2368/content/images/wordpress/2022/12/Apa-Itu-Iptables_-Pengertian-dan-Cara-Konfigurasi-di-Linux.png" />
+    <meta property="article:published_time" content="2022-11-01T07:44:00.000Z" />
+    <meta property="article:modified_time" content="2022-12-27T13:59:30.000Z" />
+    <meta property="article:tag" content="debian" />
+    <meta property="article:tag" content="linux" />
+    <meta property="article:tag" content="networking" />
+    <meta property="article:tag" content="ubuntu" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Apa Itu Iptables: Pengertian dan Cara Konfigurasi di Linux" />
+    <meta name="twitter:description" content="Iptables adalah firewall yang sangat populer di linux, Iptables mengizinkan pengguna untuk memonitoring jaringan yang masuk dan keluar pada sistem komputer dengan rules atau aturan.
+
+
+
+
+
+
+
+
+Iptables juga mengizinkan pengguna untuk mengkonfigurasi izin akses kontrol paket jaringan ke server pengguna. Di artikel ini kita belajar lebih banyak tentang Iptables, mulai dari" />
+    <meta name="twitter:url" content="http://localhost:2368/apa-itu-iptables-pengertian-dan-cara-konfigurasi-di-linux/" />
+    <meta name="twitter:image" content="http://localhost:2368/content/images/wordpress/2022/12/Apa-Itu-Iptables_-Pengertian-dan-Cara-Konfigurasi-di-Linux.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Ferry Ananda Febian" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="debian, linux, networking, ubuntu" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="300" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "unixkuy",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ferry Ananda Febian",
+        "url": "http://localhost:2368/author/ferry/",
+        "sameAs": []
+    },
+    "headline": "Apa Itu Iptables: Pengertian dan Cara Konfigurasi di Linux",
+    "url": "http://localhost:2368/apa-itu-iptables-pengertian-dan-cara-konfigurasi-di-linux/",
+    "datePublished": "2022-11-01T07:44:00.000Z",
+    "dateModified": "2022-12-27T13:59:30.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:2368/content/images/wordpress/2022/12/Apa-Itu-Iptables_-Pengertian-dan-Cara-Konfigurasi-di-Linux.png",
+        "width": 500,
+        "height": 300
+    },
+    "keywords": "debian, linux, networking, ubuntu",
+    "description": "\n\n\nIptables adalah firewall yang sangat populer di linux, Iptables mengizinkan pengguna untuk memonitoring jaringan yang masuk dan keluar pada sistem komputer dengan rules atau aturan.\n\n\n\n\n\n\n\n\nIptables juga mengizinkan pengguna untuk mengkonfigurasi izin akses kontrol paket jaringan ke server pengguna. Di artikel ini kita belajar lebih banyak tentang Iptables, mulai dari mengkonfigurasi, mengaktifkan, menonaktifkan dan mengubah konfigurasi iptables.\n\n\n\n\n\n\nCara konfigurasi Iptables di Linux\n\n\n\n\n\n",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.38" />
+    <link rel="alternate" type="application/rss+xml" title="unixkuy" href="http://localhost:2368/rss/" />
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.25/umd/portal.min.js" data-ghost="http://localhost:2368/" data-key="15ceee4aa109bb38c146da1571" data-api="http://localhost:2368/ghost/api/content/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="15ceee4aa109bb38c146da1571" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
+    <link href="http://localhost:2368/webmentions/receive/" rel="webmention" />
+    <script defer src="/public/cards.min.js?v=146492131e"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=146492131e">
+    <script defer src="/public/member-attribution.min.js?v=146492131e"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+</head>
+<body class="post-template tag-debian tag-linux tag-networking tag-ubuntu tag-hash-wordpress tag-hash-import-2023-03-12-12-53 is-head-left-logo has-cover">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head outer">
+        <div class="gh-head-inner inner">
+            <div class="gh-head-brand">
+                <a class="gh-head-logo no-image" href="http://localhost:2368">
+                        unixkuy
+                </a>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="http://localhost:2368/">Home</a></li>
+    <li class="nav-about"><a href="http://localhost:2368/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                    <button class="gh-search gh-icon-btn" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                    <div class="gh-head-members">
+                                <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
+                                <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+
+
+
+<main id="site-main" class="site-main">
+<article class="article post tag-debian tag-linux tag-networking tag-ubuntu tag-hash-wordpress tag-hash-import-2023-03-12-12-53 ">
+
+    <header class="article-header gh-canvas">
+
+        <div class="article-tag post-card-tags">
+                <span class="post-card-primary-tag">
+                    <a href="/tag/debian/">debian</a>
+                </span>
+        </div>
+
+        <h1 class="article-title">Apa Itu Iptables: Pengertian dan Cara Konfigurasi di Linux</h1>
+
+
+        <div class="article-byline">
+        <section class="article-byline-content">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="/author/ferry/" class="author-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+                </li>
+            </ul>
+
+            <div class="article-byline-meta">
+                <h4 class="author-name"><a href="/author/ferry/">Ferry Ananda Febian</a></h4>
+                <div class="byline-meta-content">
+                    <time class="byline-meta-date" datetime="2022-11-01">Nov 1, 2022</time>
+                        <span class="byline-reading-time"><span class="bull">&bull;</span> 3 min read</span>
+                </div>
+            </div>
+
+        </section>
+        </div>
+
+            <figure class="article-image">
+                <img
+                    srcset="/content/images/size/w300/wordpress/2022/12/Apa-Itu-Iptables_-Pengertian-dan-Cara-Konfigurasi-di-Linux.png 300w,
+                            /content/images/size/w600/wordpress/2022/12/Apa-Itu-Iptables_-Pengertian-dan-Cara-Konfigurasi-di-Linux.png 600w,
+                            /content/images/size/w1000/wordpress/2022/12/Apa-Itu-Iptables_-Pengertian-dan-Cara-Konfigurasi-di-Linux.png 1000w,
+                            /content/images/size/w2000/wordpress/2022/12/Apa-Itu-Iptables_-Pengertian-dan-Cara-Konfigurasi-di-Linux.png 2000w"
+                    sizes="(min-width: 1400px) 1400px, 92vw"
+                    src="/content/images/size/w2000/wordpress/2022/12/Apa-Itu-Iptables_-Pengertian-dan-Cara-Konfigurasi-di-Linux.png"
+                    alt="Apa Itu Iptables: Pengertian dan Cara Konfigurasi di Linux"
+                />
+            </figure>
+
+    </header>
+
+    <section class="gh-content gh-canvas">
+        <!--kg-card-begin: html-->
+<p>Iptables adalah firewall yang sangat populer di linux, Iptables mengizinkan pengguna untuk memonitoring jaringan yang masuk dan keluar pada sistem komputer dengan rules atau aturan. </p>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img decoding="async" loading="lazy" width="500" height="300" src="http://localhost:2368/content/images/wordpress/2022/12/Apa-Itu-Iptables_-Pengertian-dan-Cara-Konfigurasi-di-Linux.png" alt class="wp-image-1295" srcset="http://localhost:2368/content/images/wordpress/2022/12/Apa-Itu-Iptables_-Pengertian-dan-Cara-Konfigurasi-di-Linux.png 500w, http://localhost:2368/content/images/wordpress/2022/12/Apa-Itu-Iptables_-Pengertian-dan-Cara-Konfigurasi-di-Linux-300x180.png 300w" sizes="(max-width: 500px) 100vw, 500px"></figure></div>
+
+
+<p>Iptables juga mengizinkan pengguna untuk mengkonfigurasi izin akses kontrol paket jaringan ke server pengguna. Di artikel ini kita belajar lebih banyak tentang Iptables, mulai dari mengkonfigurasi, mengaktifkan, menonaktifkan dan mengubah konfigurasi iptables.</p>
+
+
+
+<h2>Cara konfigurasi Iptables di Linux</h2>
+
+
+
+<h3>1. Install Iptables</h3>
+
+
+
+<p>Buka terminal, jalankan perintah update package dan install iptables</p>
+
+
+
+<pre class="wp-block-code"><code>sudo apt-get update;sudo apt-get install iptables</code></pre>
+
+
+
+<p>Check status iptables</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -L -v</code></pre>
+
+
+
+<p>Anda akan melihat output berupa list dari rules iptables. Secara default, iptables belum mempunyai rules apapun.</p>
+
+
+
+<pre class="wp-block-code"><code>Chain INPUT (policy ACCEPT 0 packets, 0 bytes) pkts bytes target prot opt in out source destination
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes) pkts bytes target prot opt in out source destination
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes) pkts bytes target prot opt in out source destination</code></pre>
+
+
+
+<h3>2. Konfigurasi Iptables</h3>
+
+
+
+<p>Iptables dapat memonitoring traffic dari dan ke server Anda sesuai rules yang diterapkan, aturan ini disebut CHAINS. Ketika paket sesuai dengan rule, maka akan diarahkan ke target.</p>
+
+
+
+<p>Table default di iptables terdiri dari 3 aturan:</p>
+
+
+
+<ul>
+<li>ACCEPT – menerima paket ke atau dari sumber</li>
+
+
+
+<li>DROP – tidak mengizinkan paket ke atau dari sumber</li>
+
+
+
+<li>RETURN – mengembalikan paket ke sumber sebelumnya dan stop penerusan paket</li>
+</ul>
+
+
+
+<p>Dan ini adalah aturan lain dari iptables:</p>
+
+
+
+<ul>
+<li>INPUT – untuk paket masuk</li>
+
+
+
+<li>FORWARD – meneruskan paket yang masuk</li>
+
+
+
+<li>OUTPUT – untuk paket yang keluar</li>
+</ul>
+
+
+
+<p>Ini adalah perintah utama untuk memodifikasi iptables</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -A  -i  -p  -s  --dport  -j </code></pre>
+
+
+
+<p>Berikut ini adalah penjelasan opsi:</p>
+
+
+
+<ul>
+<li>– A – indikasi iptables yang ingin dimodifikasi</li>
+
+
+
+<li>chain – nama aturan, misal INPUT, FORWARD or OUTPUT</li>
+
+
+
+<li>-i interface – interface yang digunakan untuk kontrol jaringan</li>
+
+
+
+<li>-p protocol – protokol jaringan, misal tcp/udp</li>
+
+
+
+<li>-s source – alamat ip sumber –dport – nomor port tujuan</li>
+
+
+
+<li>-j target – nama target misal ACCEPT, DROP atau RETURN.</li>
+</ul>
+
+
+
+<p>Ini mendefinisikan aksi yang digunakan untuk kasus paket yang sesuai rule.</p>
+
+
+
+<h3>3. Simpan perubahan iptables</h3>
+
+
+
+<p>Perubahan baru iptables membutuhkan definisi ulang dengan reboot. Untuk membuat perubahan ini persisten, kita perlu menggunakan perintah berikut:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo /sbin/iptables-save &gt; /etc/iptables.conf</code></pre>
+
+
+
+<p>Perintah diatas akan menyimpan konfigurasi rule iptables di path (/etc/iptables.conf). Anda perlu menjalankan perintah di atas setiap kali Anda membuat perubahan pada iptables.</p>
+
+
+
+<p>Tambahkan perintah berikut ke /etc/rc.local untuk memuat ruleiptables yang disimpan pada saat reboot.</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables-restore &lt; /etc/iptables.conf</code></pre>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity">
+
+
+
+<h2>Studi Kasus Iptables</h2>
+
+
+
+<p>Sekarang mari kita lihat beberapa contoh kasus iptables dibawah ini</p>
+
+
+
+<h3>1. Mengizinkan traffic dari localhost</h3>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -A INPUT -i lo -j ACCEPT</code></pre>
+
+
+
+<h3>2. Mengizinkan traffic ke http, https dan port ssh</h3>
+
+
+
+<p>Berikut adalah aturan iptables untuk mengizinkan traffic ke http (port 80), https (port 443) dan ssh (port 22)</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT</code></pre>
+
+
+
+<h3>3. Mengizinkan traffic dari alamat IP spesifik</h3>
+
+
+
+<p>Berikut adalah rule iptables untuk mengizinkan traffic dari alamat IP yang spesifik misal 54.43.32.21. Ganti IP tersebut sesuai kebutuhan Anda.</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -A INPUT -s 54.43.32.21 -j ACCEPT</code></pre>
+
+
+
+<h3>4. Block traffic dari alamat IP spesifik</h3>
+
+
+
+<p>Berikut adalah rule iptables untuk tidak mengizinkan traffic dari alamat IP misal 54.43.32.21, Ganti IP tersebut sesuai kebutuhan Anda.</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -A INPUT -s 54.43.32.21 -j DROP</code></pre>
+
+
+
+<h3>5. Drop traffic ke semua port</h3>
+
+
+
+<p>Berikut adalah rule iptables untuk mendrop traffic ke semua port selain iptables yang telah ditentukan.</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -A INPUT -j DROP</code></pre>
+
+
+
+<h3>6. Tampilkan semua daftar rules iptables</h3>
+
+
+
+<p>Berikut adalah perintah untuk menampilkan semua rules iptables dengan opsi -L</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -L</code></pre>
+
+
+
+<h3>7. Hapus semua daftar rules iptables</h3>
+
+
+
+<p>Berikut adalah perintah untuk menghapus semua rules iptables dengan opsi -F</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -F</code></pre>
+
+
+
+<h3>8. Hapus spesifik rule iptables</h3>
+
+
+
+<p>Jika Anda ingin menghapus rule IP tables spesifik, gunakan opsi -D, spesifik nama nama CHAIN dan nomor rule. Berikut adalah contoh perintah hapus spesifik rule iptables misal pada rule nomor 5.</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -D INPUT 5</code></pre>
+
+
+
+<h3>9. Simpan perubahan iptables</h3>
+
+
+
+<p>Perubahan baru iptables membutuhkan definisi ulang dengan reboot. Untuk membuat perubahan ini persisten, kita perlu menggunakan perintah berikut:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo /sbin/iptables-save &gt; /etc/iptables.conf</code></pre>
+
+
+
+<p>Perintah diatas akan menyimpan konfigurasi rule iptables di path (/etc/iptables.conf). Anda perlu menjalankan perintah di atas setiap kali Anda membuat perubahan pada iptables.</p>
+
+
+
+<p>Tambahkan perintah berikut ke /etc/rc.local untuk memuat ruleiptables yang disimpan pada saat reboot.</p>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables-restore &lt; /etc/iptables.conf</code></pre>
+
+
+
+<h3>10. Disable iptables pada sistem</h3>
+
+
+
+<pre class="wp-block-code"><code>sudo iptables -F  # sudo /sbin/iptables-save</code></pre>
+
+
+
+<p>Oke selesai, seperti itu cara menggunakan iptables untuk melindungi server Anda dari traffic yang tidak dikenal.</p>
+
+
+
+<p>Sumber : fedingo.com/how-to-configure-iptables-in-linux-step-by-step/<a name="more"></a></p>
+<!--kg-card-end: html-->
+    </section>
+
+
+</article>
+</main>
+
+    <section class="footer-cta outer">
+        <div class="inner">
+            <h2 class="footer-cta-title">Sign up for more like this.</h2>
+            <a class="footer-cta-button" href="#/portal" data-portal>
+                <div class="footer-cta-input">Enter your email</div>
+                <span>Subscribe</span>
+            </a>
+        </div>
+    </section>
+
+
+
+            <aside class="read-more-wrap outer">
+                <div class="read-more inner">
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-list/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/image.png 300w,
+                    /content/images/size/w600/wordpress/2023/03/image.png 600w,
+                    /content/images/size/w1000/wordpress/2023/03/image.png 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/image.png 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/image.png"
+            alt="Belajar React Dasar | List"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-list/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | List
+                </h2>
+            </header>
+                <div class="post-card-excerpt">List sangat penting dalam hal mengembangkan UI situs web. Terutama sering digunakan untuk menampilkan menu di situs web, misalnya menu navbar. Pada JavaScript biasa, kita dapat menggunakan array untuk membuat list. Kita dapat membuat list di React dengan cara yang sama seperti yang dilakukan pada javascript biasa.
+
+
+
+
+
+Selanjutnya artikel ini</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-07">Mar 7, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+
+        <img class="post-card-image"
+            srcset="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 300w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 600w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 1000w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE"
+            alt="Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Oke gan, mungkin hampir semua orang sudah pernah mengalami atau ingin tau, siapa aja sih orang yang tidak memfollback akun instagram kita. Apapun alasan kalian mengunjungi artikel ini, saya hanya akan share bagaimana cara mengetahui orang yang tidak memfollback dan mengunfollow akun tersebut secara grup.
+
+
+
+
+
+
+Syarat
+
+
+
+
+
+Sebelum masuk ke tutorial,</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-06">Mar 6, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-reactdom/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/REACT-DOM.jpg 300w,
+                    /content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg 600w,
+                    /content/images/size/w1000/wordpress/2023/03/REACT-DOM.jpg 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/REACT-DOM.jpg 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg"
+            alt="Belajar React Dasar | ReactDOM"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-reactdom/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | ReactDOM
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Di artikel sebelumnya yaitu Pengantar JSX, kita sudah mempelajari bahwa developer bisa menggunakan JSX untuk menyimpan markup HTML di dalam variabel Javascript. Karena, ReactJS adalah sebuah library untuk membangun Antarmuka Pengguna yang aktif sehingga rendering adalah salah satu bagian yang tidak terpisahkan dari ReactJS. React menyediakan sebuah paket yang bernama</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-05">Mar 5, 2023</time>
+                <span class="post-card-meta-length">3 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                </div>
+            </aside>
+
+
+
+    </div>
+
+    <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="http://localhost:2368">unixkuy</a> &copy; 2023</section>
+            <nav class="site-footer-nav">
+                <ul class="nav">
+    <li class="nav-sign-up"><a href="#/portal/">Sign up</a></li>
+</ul>
+
+            </nav>
+            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+</script>
+<script src="/assets/built/casper.js?v=146492131e"></script>
+<script>
+$(document).ready(function () {
+    // Mobile Menu Trigger
+    $('.gh-burger').click(function () {
+        $('body').toggleClass('gh-head-open');
+    });
+    // FitVids - Makes video embeds responsive
+    $(".gh-content").fitVids();
+});
+</script>
+
+
+
+</body>
+</html>

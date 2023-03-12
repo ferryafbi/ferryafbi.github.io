@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Rangkuman Materi CCNA-1: IPv4 Addressing</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=146492131e" />
+
+    <link rel="canonical" href="http://localhost:2368/rangkuman-materi-ccna-1-ipv4-addressing/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="unixkuy" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Rangkuman Materi CCNA-1: IPv4 Addressing" />
+    <meta property="og:description" content="Struktur Alamat IPv4
+
+
+
+
+
+Alamat IP versi 4 (IPv4) terdiri dari empat bilangan biner yang dipisahkan oleh titik. Setiap bilangan terdiri dari 8 bit atau 1 byte, sehingga jumlah bit pada sebuah alamat IPv4 adalah 32 bit.
+
+
+
+
+
+Contohnya, alamat IP “192.168.1.1” terdiri dari 32 bit yang terbagi menjadi" />
+    <meta property="og:url" content="http://localhost:2368/rangkuman-materi-ccna-1-ipv4-addressing/" />
+    <meta property="og:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg" />
+    <meta property="article:published_time" content="2023-01-04T09:47:27.000Z" />
+    <meta property="article:modified_time" content="2023-01-05T12:04:08.000Z" />
+    <meta property="article:tag" content="ccna-1" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rangkuman Materi CCNA-1: IPv4 Addressing" />
+    <meta name="twitter:description" content="Struktur Alamat IPv4
+
+
+
+
+
+Alamat IP versi 4 (IPv4) terdiri dari empat bilangan biner yang dipisahkan oleh titik. Setiap bilangan terdiri dari 8 bit atau 1 byte, sehingga jumlah bit pada sebuah alamat IPv4 adalah 32 bit.
+
+
+
+
+
+Contohnya, alamat IP “192.168.1.1” terdiri dari 32 bit yang terbagi menjadi" />
+    <meta name="twitter:url" content="http://localhost:2368/rangkuman-materi-ccna-1-ipv4-addressing/" />
+    <meta name="twitter:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Ferry Ananda Febian" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="ccna-1" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta property="og:image:width" content="5000" />
+    <meta property="og:image:height" content="3500" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "unixkuy",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ferry Ananda Febian",
+        "url": "http://localhost:2368/author/ferry/",
+        "sameAs": []
+    },
+    "headline": "Rangkuman Materi CCNA-1: IPv4 Addressing",
+    "url": "http://localhost:2368/rangkuman-materi-ccna-1-ipv4-addressing/",
+    "datePublished": "2023-01-04T09:47:27.000Z",
+    "dateModified": "2023-01-05T12:04:08.000Z",
+    "keywords": "ccna-1",
+    "description": "\n\n\n\nStruktur Alamat IPv4\n\n\n\n\n\nAlamat IP versi 4 (IPv4) terdiri dari empat bilangan biner yang dipisahkan oleh titik. Setiap bilangan terdiri dari 8 bit atau 1 byte, sehingga jumlah bit pada sebuah alamat IPv4 adalah 32 bit.\n\n\n\n\n\nContohnya, alamat IP “192.168.1.1” terdiri dari 32 bit yang terbagi menjadi empat bagian, yaitu “11000000.10101000.00000001.00000001”.\n\n\n\n\n\nBagian pertama dari alamat IP biasanya digunakan untuk menentukan kelas alamat IP. Ada empat kelas alamat IP, yaitu:\n\n\n\n\n\n * Kelas ",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.38" />
+    <link rel="alternate" type="application/rss+xml" title="unixkuy" href="http://localhost:2368/rss/" />
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.25/umd/portal.min.js" data-ghost="http://localhost:2368/" data-key="15ceee4aa109bb38c146da1571" data-api="http://localhost:2368/ghost/api/content/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="15ceee4aa109bb38c146da1571" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
+    <link href="http://localhost:2368/webmentions/receive/" rel="webmention" />
+    <script defer src="/public/cards.min.js?v=146492131e"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=146492131e">
+    <script defer src="/public/member-attribution.min.js?v=146492131e"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+</head>
+<body class="post-template tag-ccna-1 tag-hash-wordpress tag-hash-import-2023-03-12-12-53 is-head-left-logo has-cover">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head outer">
+        <div class="gh-head-inner inner">
+            <div class="gh-head-brand">
+                <a class="gh-head-logo no-image" href="http://localhost:2368">
+                        unixkuy
+                </a>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="http://localhost:2368/">Home</a></li>
+    <li class="nav-about"><a href="http://localhost:2368/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                    <button class="gh-search gh-icon-btn" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                    <div class="gh-head-members">
+                                <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
+                                <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+
+
+
+<main id="site-main" class="site-main">
+<article class="article post tag-ccna-1 tag-hash-wordpress tag-hash-import-2023-03-12-12-53 no-image ">
+
+    <header class="article-header gh-canvas">
+
+        <div class="article-tag post-card-tags">
+                <span class="post-card-primary-tag">
+                    <a href="/tag/ccna-1/">ccna-1</a>
+                </span>
+        </div>
+
+        <h1 class="article-title">Rangkuman Materi CCNA-1: IPv4 Addressing</h1>
+
+
+        <div class="article-byline">
+        <section class="article-byline-content">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="/author/ferry/" class="author-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+                </li>
+            </ul>
+
+            <div class="article-byline-meta">
+                <h4 class="author-name"><a href="/author/ferry/">Ferry Ananda Febian</a></h4>
+                <div class="byline-meta-content">
+                    <time class="byline-meta-date" datetime="2023-01-04">Jan 4, 2023</time>
+                        <span class="byline-reading-time"><span class="bull">&bull;</span> 6 min read</span>
+                </div>
+            </div>
+
+        </section>
+        </div>
+
+
+    </header>
+
+    <section class="gh-content gh-canvas">
+        <!--kg-card-begin: html-->
+<h2>Struktur Alamat IPv4</h2>
+
+
+
+<p>Alamat IP versi 4 (IPv4) terdiri dari empat bilangan biner yang dipisahkan oleh titik. Setiap bilangan terdiri dari 8 bit atau 1 byte, sehingga jumlah bit pada sebuah alamat IPv4 adalah 32 bit.</p>
+
+
+
+<p>Contohnya, alamat IP &#8220;192.168.1.1&#8221; terdiri dari 32 bit yang terbagi menjadi empat bagian, yaitu &#8220;11000000.10101000.00000001.00000001&#8221;.</p>
+
+
+
+<p>Bagian pertama dari alamat IP biasanya digunakan untuk menentukan kelas alamat IP. Ada empat kelas alamat IP, yaitu:</p>
+
+
+
+<ul>
+<li>Kelas A: Bagian pertama dari alamat IP dimulai dengan 0 hingga 126. Contohnya, alamat IP &#8220;10.0.0.1&#8221; termasuk ke dalam kelas A.</li>
+
+
+
+<li>Kelas B: Bagian pertama dari alamat IP dimulai dengan 128 hingga 191. Contohnya, alamat IP &#8220;172.16.0.1&#8221; termasuk ke dalam kelas B.</li>
+
+
+
+<li>Kelas C: Bagian pertama dari alamat IP dimulai dengan 192 hingga 223. Contohnya, alamat IP &#8220;192.168.1.1&#8221; termasuk ke dalam kelas C.</li>
+
+
+
+<li>Kelas D: Bagian pertama dari alamat IP dimulai dengan 224 hingga 239. Kelas D digunakan untuk multicast.</li>
+
+
+
+<li>Kelas E: Bagian pertama dari alamat IP dimulai dengan 240 hingga 255. Kelas E digunakan untuk testing dan eksperimentasi.</li>
+</ul>
+
+
+
+<p>Bagian-bagian sisanya dari alamat IP biasanya digunakan untuk menentukan jaringan dan host di dalam jaringan tersebut.</p>
+
+
+
+<p>Subnet mask adalah bilangan biner yang digunakan untuk menentukan bagian mana dari alamat IP yang merupakan bagian jaringan dan bagian mana yang merupakan bagian host. Contohnya, subnet mask &#8220;255.255.255.0&#8221; menandakan bahwa bagian terakhir dari alamat IP merupakan bagian host, sedangkan bagian-bagian sebelumnya merupakan bagian jaringan.</p>
+
+
+
+<h2>IPv4 Unicast, Broadcast, dan Multicast</h2>
+
+
+
+<p>Alamat IP unicast adalah alamat IP yang digunakan untuk mengirimkan paket ke satu perangkat di jaringan. Contohnya, jika seorang pengguna mengirimkan email ke alamat email milik orang lain, maka email tersebut akan dikirimkan ke alamat IP unicast milik perangkat yang dimiliki oleh penerima email tersebut.</p>
+
+
+
+<p>Alamat IP broadcast adalah alamat IP yang digunakan untuk mengirimkan paket ke semua perangkat di jaringan. Contohnya, jika sebuah router ingin mengirimkan pemberitahuan ke semua perangkat yang terhubung ke jaringannya, maka router tersebut akan mengirimkan paket ke alamat IP broadcast. Alamat IP broadcast biasanya terdiri dari angka-angka 255 pada setiap bagiannya, misalnya &#8220;255.255.255.255&#8221;.</p>
+
+
+
+<p>Alamat IP multicast adalah alamat IP yang digunakan untuk mengirimkan paket ke beberapa perangkat di jaringan yang terpilih. Contohnya, jika sebuah aplikasi streaming ingin mengirimkan video ke beberapa perangkat yang terhubung ke jaringannya, maka aplikasi tersebut akan mengirimkan paket ke alamat IP multicast. Alamat IP multicast biasanya terdiri dari angka-angka yang dimulai dari 224 hingga 239 pada bagian pertamanya, misalnya &#8220;224.0.0.1&#8221;.</p>
+
+
+
+<h2>Tipe Alamat IPv4</h2>
+
+
+
+<ol>
+<li>Alamat IP publik adalah alamat IP yang dapat diakses secara publik melalui internet. Alamat IP publik ini biasanya digunakan oleh perusahaan atau organisasi untuk menghubungkan server mereka ke internet.</li>
+</ol>
+
+
+
+<ol start="2">
+<li>Alamat IP privat adalah alamat IP yang hanya dapat diakses secara internal di dalam jaringan tertutup. Alamat IP privat ini biasanya digunakan di dalam jaringan rumah atau jaringan perusahaan yang tidak terhubung ke internet. Alamat IP privat yang paling sering digunakan adalah:</li>
+</ol>
+
+
+
+<ul>
+<li>10.0.0.0 hingga 10.255.255.255</li>
+
+
+
+<li>172.16.0.0 hingga 172.31.255.255</li>
+
+
+
+<li>192.168.0.0 hingga 192.168.255.255</li>
+</ul>
+
+
+
+<ol start="3">
+<li>Alamat IP reserved adalah alamat IP yang tidak dapat digunakan untuk dihubungkan ke internet atau digunakan sebagai alamat IP privat. Alamat IP reserved ini biasanya digunakan untuk tujuan tertentu, seperti loopback, testing, dan lainnya. Contohnya, alamat IP &#8220;127.0.0.1&#8221; merupakan alamat IP reserved yang digunakan sebagai loopback address.</li>
+</ol>
+
+
+
+<h2>Network Segmentasi</h2>
+
+
+
+<p>Subnetting adalah teknik yang digunakan untuk membagi jaringan menjadi beberapa bagian kecil atau subnet. Subnetting ini biasanya dilakukan untuk meningkatkan efisiensi komunikasi di dalam jaringan.</p>
+
+
+
+<p>Dengan subnetting, kita dapat mengelompokkan perangkat-perangkat di dalam jaringan ke dalam subnet yang berbeda-beda. Misalnya, kita dapat membuat subnet untuk komputer, printer, dan server, sehingga setiap subnet hanya terdiri dari perangkat-perangkat yang memiliki kebutuhan komunikasi yang sama.</p>
+
+
+
+<p>Hal ini akan membuat proses komunikasi di dalam jaringan menjadi lebih cepat dan efisien, karena paket-paket yang dikirimkan hanya akan diterima oleh perangkat-perangkat yang terdapat dalam subnet yang sama, bukan ke semua perangkat di dalam jaringan.</p>
+
+
+
+<p>Selain itu, subnetting juga dapat membantu mengurangi kebutuhan alamat IP di dalam suatu jaringan. Misalnya, jika kita memiliki jaringan dengan alamat IP &#8220;192.168.1.0/24&#8221; dan ingin membagi jaringan tersebut menjadi 4 subnet, maka kita dapat menggunakan subnet mask &#8220;/26&#8221; pada masing-masing subnet. Dengan demikian, kita akan memiliki 4 subnet yang masing-masing memiliki 62 alamat IP yang tersedia, sehingga kebutuhan alamat IP di dalam jaringan akan berkurang.</p>
+
+
+
+<h2>Subnet Jaringan IPv4</h2>
+
+
+
+<p>Untuk menghitung subnet pada prefix &#8220;/24&#8221;, Anda bisa menggunakan kalkulator subnetting atau mengikuti langkah-langkah berikut:</p>
+
+
+
+<ol>
+<li>Tentukan jumlah bit yang akan digunakan untuk subnet mask. Dalam contoh ini, kita akan menggunakan 8 bit karena prefix &#8220;/24&#8221; merupakan 24 bit.</li>
+
+
+
+<li>Tentukan jumlah subnet yang diinginkan. Misalnya, kita ingin membagi jaringan menjadi 4 subnet.</li>
+
+
+
+<li>Tentukan jumlah bit yang tersisa setelah 8 bit pertama digunakan untuk subnet mask. Dalam contoh ini, kita akan memiliki 24-8 = 16 bit yang tersisa.</li>
+
+
+
+<li>Tentukan jumlah subnet yang dapat dibuat dengan jumlah bit yang tersisa. Dalam contoh ini, kita akan dapat membuat 2^4 = 16 subnet.</li>
+
+
+
+<li>Tentukan jumlah alamat IP yang tersedia di setiap subnet. Dalam contoh ini, setiap subnet akan memiliki 2^(32-24-4) = 2^4 = 16 alamat IP.</li>
+
+
+
+<li>Tentukan range alamat IP pada setiap subnet. Misalnya, subnet pertama akan memiliki alamat IP &#8220;192.168.1.0&#8221; hingga &#8220;192.168.1.15&#8221;, subnet kedua akan memiliki alamat IP &#8220;192.168.1.16&#8221; hingga &#8220;192.168.1.31&#8221;, dan seterusnya.</li>
+</ol>
+
+
+
+<p>Jadi, hasilnya adalah sebagai berikut:</p>
+
+
+
+<ol>
+<li>Subnet 1: 192.168.1.0/28 (16 alamat IP tersedia, range: 192.168.1.0-192.168.1.15)</li>
+
+
+
+<li>Subnet 2: 192.168.1.16/28 (16 alamat IP tersedia, range: 192.168.1.16-192.168.1.31)</li>
+
+
+
+<li>Subnet 3: 192.168.1.32/28 (16 alamat IP tersedia, range: 192.168.1.32-192.168.1.47)</li>
+
+
+
+<li>Subnet 4: 192.168.1.48/28 (16 alamat IP tersedia, range: 192.168.1.48-192</li>
+</ol>
+
+
+
+<p>Subnet a /16 dan a /8 Prefix</p>
+
+
+
+<p>IPv4 adalah versi keempat dari Protokol Internet. IPv4 menggunakan alamat 32-bit yang terdiri dari empat bilangan yang dipisahkan oleh titik (misalnya: 192.0.2.1). IPv4 dapat dibagi menjadi subnet dengan menggunakan masker subnet.</p>
+
+
+
+<p>Jika Anda memiliki prefix /16, ini berarti bahwa 16 bit pertama dari alamat IPv4 Anda akan digunakan sebagai bagian network ID dan sisanya akan digunakan sebagai bagian host ID. Jadi, Anda akan memiliki 65536 subnet yang berbeda dengan 65,536 host per subnet.</p>
+
+
+
+<p>Jika Anda memiliki prefix /8, ini berarti bahwa 8 bit pertama dari alamat IPv4 Anda akan digunakan sebagai bagian network ID dan sisanya akan digunakan sebagai bagian host ID. Jadi, Anda akan memiliki 16,777,216 subnet yang berbeda dengan 16,777,216 host per subnet.</p>
+
+
+
+<h2>Skema Alamat IPv4</h2>
+
+
+
+<p>Untuk membuat skema alamat IPv4, pertama-tama Anda perlu menentukan jumlah jaringan dan host yang diperlukan. Kemudian, Anda perlu memilih prefix yang sesuai untuk mencocokkan dengan kebutuhan Anda.</p>
+
+
+
+<p>Misalnya, jika Anda memerlukan 1000 jaringan dengan masing-masing 1000 host, Anda dapat menggunakan prefix /20. Ini akan memberikan Anda 4096 subnet dengan 1024 host per subnet. Anda dapat menentukan alamat network ID untuk setiap subnet dengan menggunakan bit yang tersisa untuk host ID.</p>
+
+
+
+<p>Contoh skema alamat IPv4 yang mungkin bisa Anda gunakan adalah sebagai berikut:</p>
+
+
+
+<pre class="wp-block-code"><code>Subnet 1:
+Network ID: 10.0.0.0
+Broadcast address: 10.0.15.255
+Host range: 10.0.0.1 - 10.0.15.254</code></pre>
+
+
+
+<pre class="wp-block-code"><code>Subnet 2:
+Network ID: 10.0.16.0
+Broadcast address: 10.0.31.255
+Host range: 10.0.16.1 - 10.0.31.254</code></pre>
+
+
+
+<p>dan seterusnya hingga subnet ke-1000.</p>
+
+
+
+<p>Ingatlah bahwa ini hanyalah contoh dan Anda perlu memastikan bahwa skema alamat yang Anda buat sesuai dengan kebutuhan spesifik Anda.&nbsp;</p>
+
+
+
+<h2>Variable Length Subnet Masking (VLSM)</h2>
+
+
+
+<p>Variable Length Subnet Masking (VLSM) adalah teknik yang digunakan untuk menggunakan masker subnet dengan panjang yang berbeda pada subnet yang berbeda dalam satu jaringan. Ini memungkinkan Anda untuk membuat skema alamat yang lebih fleksibel dan efisien, karena Anda dapat menyesuaikan jumlah host yang tersedia pada setiap subnet sesuai dengan kebutuhan.</p>
+
+
+
+<p>Berikut adalah langkah-langkah umum untuk membuat skema alamat menggunakan VLSM:</p>
+
+
+
+<ol>
+<li>Tentukan jumlah jaringan dan host yang diperlukan untuk setiap subnet.</li>
+
+
+
+<li>Buat daftar subnet yang diperlukan beserta jumlah host yang dibutuhkan pada setiap subnet. Urutkan subnet dari yang membutuhkan jumlah host terbanyak hingga yang membutuhkan jumlah host terkecil.</li>
+
+
+
+<li>Pilih prefix yang sesuai untuk setiap subnet sesuai dengan jumlah host yang dibutuhkan. Misalnya, jika Anda membutuhkan 1000 host pada subnet pertama, Anda dapat menggunakan prefix /22 karena ini akan memberikan Anda 1024 host per subnet.</li>
+
+
+
+<li>Tentukan alamat network ID untuk setiap subnet dengan menggunakan bit yang tersisa untuk host ID.</li>
+
+
+
+<li>Pastikan bahwa semua subnet tersebut terkoneksi dengan benar dan memiliki akses ke internet.</li>
+</ol>
+
+
+
+<p>Ingatlah bahwa VLSM merupakan teknik yang sangat berguna untuk membuat skema alamat yang fleksibel, namun Anda perlu memastikan bahwa Anda memahami konsep dasar subnetting sebelum mencoba untuk menerapkannya.&nbsp;</p>
+
+
+
+<p>Baca kumpulan rangkuman materi CCNA-1 lainnya</p>
+
+
+
+<div class="is-layout-flex wp-block-buttons">
+<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link wp-element-button" href="https://unixkuy.com/rangkuman-materi-ccna-1-bahasa-indonesia/?ref=unixkuy">CCNA-1</a></div>
+</div>
+<!--kg-card-end: html-->
+    </section>
+
+
+</article>
+</main>
+
+    <section class="footer-cta outer">
+        <div class="inner">
+            <h2 class="footer-cta-title">Sign up for more like this.</h2>
+            <a class="footer-cta-button" href="#/portal" data-portal>
+                <div class="footer-cta-input">Enter your email</div>
+                <span>Subscribe</span>
+            </a>
+        </div>
+    </section>
+
+
+
+            <aside class="read-more-wrap outer">
+                <div class="read-more inner">
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-list/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/image.png 300w,
+                    /content/images/size/w600/wordpress/2023/03/image.png 600w,
+                    /content/images/size/w1000/wordpress/2023/03/image.png 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/image.png 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/image.png"
+            alt="Belajar React Dasar | List"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-list/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | List
+                </h2>
+            </header>
+                <div class="post-card-excerpt">List sangat penting dalam hal mengembangkan UI situs web. Terutama sering digunakan untuk menampilkan menu di situs web, misalnya menu navbar. Pada JavaScript biasa, kita dapat menggunakan array untuk membuat list. Kita dapat membuat list di React dengan cara yang sama seperti yang dilakukan pada javascript biasa.
+
+
+
+
+
+Selanjutnya artikel ini</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-07">Mar 7, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+
+        <img class="post-card-image"
+            srcset="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 300w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 600w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 1000w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE"
+            alt="Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Oke gan, mungkin hampir semua orang sudah pernah mengalami atau ingin tau, siapa aja sih orang yang tidak memfollback akun instagram kita. Apapun alasan kalian mengunjungi artikel ini, saya hanya akan share bagaimana cara mengetahui orang yang tidak memfollback dan mengunfollow akun tersebut secara grup.
+
+
+
+
+
+
+Syarat
+
+
+
+
+
+Sebelum masuk ke tutorial,</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-06">Mar 6, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-reactdom/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/REACT-DOM.jpg 300w,
+                    /content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg 600w,
+                    /content/images/size/w1000/wordpress/2023/03/REACT-DOM.jpg 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/REACT-DOM.jpg 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg"
+            alt="Belajar React Dasar | ReactDOM"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-reactdom/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | ReactDOM
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Di artikel sebelumnya yaitu Pengantar JSX, kita sudah mempelajari bahwa developer bisa menggunakan JSX untuk menyimpan markup HTML di dalam variabel Javascript. Karena, ReactJS adalah sebuah library untuk membangun Antarmuka Pengguna yang aktif sehingga rendering adalah salah satu bagian yang tidak terpisahkan dari ReactJS. React menyediakan sebuah paket yang bernama</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-05">Mar 5, 2023</time>
+                <span class="post-card-meta-length">3 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                </div>
+            </aside>
+
+
+
+    </div>
+
+    <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="http://localhost:2368">unixkuy</a> &copy; 2023</section>
+            <nav class="site-footer-nav">
+                <ul class="nav">
+    <li class="nav-sign-up"><a href="#/portal/">Sign up</a></li>
+</ul>
+
+            </nav>
+            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+</script>
+<script src="/assets/built/casper.js?v=146492131e"></script>
+<script>
+$(document).ready(function () {
+    // Mobile Menu Trigger
+    $('.gh-burger').click(function () {
+        $('body').toggleClass('gh-head-open');
+    });
+    // FitVids - Makes video embeds responsive
+    $(".gh-content").fitVids();
+});
+</script>
+
+
+
+</body>
+</html>

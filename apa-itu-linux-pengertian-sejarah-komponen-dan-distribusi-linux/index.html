@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Apa itu Linux? Pengertian, Sejarah, Komponen dan Distribusi Linux</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=146492131e" />
+
+    <link rel="canonical" href="http://localhost:2368/apa-itu-linux-pengertian-sejarah-komponen-dan-distribusi-linux/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    
+    <meta property="og:site_name" content="unixkuy" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Apa itu Linux? Pengertian, Sejarah, Komponen dan Distribusi Linux" />
+    <meta property="og:description" content="Pengertian Linux
+
+
+Linux adalah sistem operasi sumber terbuka atau biasa disebut open source, sama seperti sistem operasi lainnya yaitu Microsoft Windows, Apple Mac OS, iOS, Google android, dll. Sistem operasi adalah perangkat lunak yang memungkinkan komunikasi antara perangkat keras dan perangkat lunak pada sistem komputer. Sistem operasi mengirim input untuk" />
+    <meta property="og:url" content="http://localhost:2368/apa-itu-linux-pengertian-sejarah-komponen-dan-distribusi-linux/" />
+    <meta property="og:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg" />
+    <meta property="article:published_time" content="2022-11-04T06:52:00.000Z" />
+    <meta property="article:modified_time" content="2022-11-04T06:52:00.000Z" />
+    <meta property="article:tag" content="command" />
+    <meta property="article:tag" content="debian" />
+    <meta property="article:tag" content="linux" />
+    <meta property="article:tag" content="ubuntu" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Apa itu Linux? Pengertian, Sejarah, Komponen dan Distribusi Linux" />
+    <meta name="twitter:description" content="Pengertian Linux
+
+
+Linux adalah sistem operasi sumber terbuka atau biasa disebut open source, sama seperti sistem operasi lainnya yaitu Microsoft Windows, Apple Mac OS, iOS, Google android, dll. Sistem operasi adalah perangkat lunak yang memungkinkan komunikasi antara perangkat keras dan perangkat lunak pada sistem komputer. Sistem operasi mengirim input untuk" />
+    <meta name="twitter:url" content="http://localhost:2368/apa-itu-linux-pengertian-sejarah-komponen-dan-distribusi-linux/" />
+    <meta name="twitter:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Ferry Ananda Febian" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="command, debian, linux, ubuntu" />
+    <meta name="twitter:site" content="@ghost" />
+    <meta property="og:image:width" content="5000" />
+    <meta property="og:image:height" content="3500" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "unixkuy",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Ferry Ananda Febian",
+        "url": "http://localhost:2368/author/ferry/",
+        "sameAs": []
+    },
+    "headline": "Apa itu Linux? Pengertian, Sejarah, Komponen dan Distribusi Linux",
+    "url": "http://localhost:2368/apa-itu-linux-pengertian-sejarah-komponen-dan-distribusi-linux/",
+    "datePublished": "2022-11-04T06:52:00.000Z",
+    "dateModified": "2022-11-04T06:52:00.000Z",
+    "keywords": "command, debian, linux, ubuntu",
+    "description": "Pengertian Linux\n\n\nLinux adalah sistem operasi sumber terbuka atau biasa disebut open source, sama seperti sistem operasi lainnya yaitu Microsoft Windows, Apple Mac OS, iOS, Google android, dll. Sistem operasi adalah perangkat lunak yang memungkinkan komunikasi antara perangkat keras dan perangkat lunak pada sistem komputer. Sistem operasi mengirim input untuk diproses oleh prosesor dan membawa output ke perangkat keras untuk ditampilkan. Sistem operasi juga merupakan bagian dasar dari sistem ko",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.38" />
+    <link rel="alternate" type="application/rss+xml" title="unixkuy" href="http://localhost:2368/rss/" />
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.25/umd/portal.min.js" data-ghost="http://localhost:2368/" data-key="15ceee4aa109bb38c146da1571" data-api="http://localhost:2368/ghost/api/content/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="15ceee4aa109bb38c146da1571" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
+    <link href="http://localhost:2368/webmentions/receive/" rel="webmention" />
+    <script defer src="/public/cards.min.js?v=146492131e"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=146492131e">
+    <script defer src="/public/member-attribution.min.js?v=146492131e"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+</head>
+<body class="post-template tag-command tag-debian tag-linux tag-ubuntu tag-hash-wordpress tag-hash-import-2023-03-12-12-53 is-head-left-logo has-cover">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head outer">
+        <div class="gh-head-inner inner">
+            <div class="gh-head-brand">
+                <a class="gh-head-logo no-image" href="http://localhost:2368">
+                        unixkuy
+                </a>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="http://localhost:2368/">Home</a></li>
+    <li class="nav-about"><a href="http://localhost:2368/about/">About</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+                    <button class="gh-search gh-icon-btn" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                    <div class="gh-head-members">
+                                <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
+                                <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+
+
+
+<main id="site-main" class="site-main">
+<article class="article post tag-command tag-debian tag-linux tag-ubuntu tag-hash-wordpress tag-hash-import-2023-03-12-12-53 no-image ">
+
+    <header class="article-header gh-canvas">
+
+        <div class="article-tag post-card-tags">
+                <span class="post-card-primary-tag">
+                    <a href="/tag/command/">command</a>
+                </span>
+        </div>
+
+        <h1 class="article-title">Apa itu Linux? Pengertian, Sejarah, Komponen dan Distribusi Linux</h1>
+
+
+        <div class="article-byline">
+        <section class="article-byline-content">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+                    <a href="/author/ferry/" class="author-avatar author-profile-image"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"/></g></svg>
+</a>
+                </li>
+            </ul>
+
+            <div class="article-byline-meta">
+                <h4 class="author-name"><a href="/author/ferry/">Ferry Ananda Febian</a></h4>
+                <div class="byline-meta-content">
+                    <time class="byline-meta-date" datetime="2022-11-04">Nov 4, 2022</time>
+                        <span class="byline-reading-time"><span class="bull">&bull;</span> 5 min read</span>
+                </div>
+            </div>
+
+        </section>
+        </div>
+
+
+    </header>
+
+    <section class="gh-content gh-canvas">
+        <!--kg-card-begin: html--><h3 style="text-align: left;">Pengertian Linux</h3>
+<p>Linux adalah sistem operasi sumber terbuka atau biasa disebut open source, sama seperti sistem operasi lainnya yaitu Microsoft Windows, Apple Mac OS, iOS, Google android, dll. Sistem operasi adalah perangkat lunak yang memungkinkan komunikasi antara perangkat keras dan perangkat lunak pada sistem komputer. Sistem operasi mengirim input untuk diproses oleh prosesor dan membawa output ke perangkat keras untuk ditampilkan. Sistem operasi juga merupakan bagian dasar dari sistem komputer. Meskipun dapat melakukan banyak tugas penting lainnya, hal ini akan kita bahas di lain kesempatan.</p>
+<h3 style="text-align: left;">Sejarah Linux</h3>
+<p>OS Linux dikembangkan oleh Linus Torvalds pada tahun 1991, yang muncul sebagai ide untuk meningkatkan OS UNIX. Dia menyarankan perbaikan tetapi ditolak oleh desainer UNIX. Oleh karena itu, ia berpikir untuk meluncurkan sebuah OS baru yang dirancang sedemikian rupa sehingga dapat dimodifikasi oleh penggunanya.</p>
+<p>Saat ini, Linux adalah sistem operasi dengan pertumbuhan yang sangat cepat. Linux diterapkan mulai dari ponsel hingga superkomputer.</p>
+<h3 style="text-align: left;">Komponen Linux</h3>
+<p>Sistem operasi adalah kumpulan perangkat lunak, masing-masing dirancang untuk fungsi yang berbeda.</p>
+<p>OS Linux memiliki komponen-komponen berikut:</p>
+<h4 style="text-align: left;">1) Kernel</h4>
+<p>Kernel Linux adalah bagian inti dari sistem operasi. Kernel membangun komunikasi antara perangkat keras dan perangkat lunak. Selain itu, kernel juga mengelola sumber daya sistem. Kernel memiliki empat fungsi, yaitu:</p>
+<p>manajemen perangkat: Sebuah sistem memiliki banyak perangkat yang terhubung seperti CPU, memori, kartu suara, kartu grafis, dll. Kernel menyimpan semua data yang terkait dengan semua perangkat di driver perangkat (tanpa kernel, pengguna tidak dapat mengontrol perangkat). Dengan demikian kernel mengetahui apa yang dapat dilakukan perangkat dan bagaimana memanipulasinya untuk menghasilkan kinerja terbaik. Kernel juga mengelola komunikasi antara semua perangkat. Kernel memiliki aturan tertentu yang harus diikuti oleh semua perangkat. Manajemen memori: Fungsi lain yang harus dikelola kernel adalah manajemen memori. Kernel melacak memori yang digunakan dan tidak digunakan dan memastikan bahwa proses tidak boleh memanipulasi data satu sama lain menggunakan alamat memori virtual.</p>
+<p>Manajemen proses: Kernel memanajemen proses untuk memberikan waktu yang cukup dan memberikan prioritas pada proses sebelum CPU mengerjakan proses yang lain. Hal ini berkaitan dengan informasi keamanan dan kepemilikan.</p>
+<p>Menangani panggilan sistem: Panggilan sistem berarti pemrogram dapat menulis kueri atau meminta kernel untuk melakukan tugas.</p>
+<h4 style="text-align: left;">2) Perpustakaan Sistem</h4>
+<p>Pustaka sistem atau Library sistem adalah program khusus yang membantu mengakses fitur kernel. Kernel harus dipicu untuk melakukan tugas, dan pemicu ini dilakukan oleh aplikasi. Tetapi aplikasi harus mengetahui cara melakukan panggilan sistem karena setiap kernel memiliki rangkaian panggilan sistem yang berbeda. Pemrogram telah mengembangkan standar prosedur pustaka untuk berkomunikasi dengan kernel. Setiap sistem operasi mendukung standar ini, dan kemudian pustaka sistem akan ditransfer ke panggilan sistem untuk sistem operasi tersebut.</p>
+<p>Pustaka sistem yang paling terkenal untuk Linux adalah Glibc (Pustaka GNU C atau GNU C Library).</p>
+<h4 style="text-align: left;">3) Alat Sistem</h4>
+<p>OS Linux memiliki seperangkat alat atau tools, yang biasanya berupa perintah sederhana. Ini adalah perangkat lunak yang telah ditulis dan diterbitkan oleh proyek GNU di bawah lisensi open source mereka sehingga perangkat lunak tersedia secara bebas untuk semua orang.</p>
+<p>Dengan bantuan perintah, Anda dapat mengakses file, mengedit dan memanipulasi data di direktori atau file Anda, mengubah lokasi file dan lain-lain..</p>
+<h4 style="text-align: left;">4) Alat Pengembangan</h4>
+<p>Dengan tiga komponen di atas, OS Anda berjalan dan berfungsi. Tetapi untuk memperbarui sistem Anda, Anda memiliki alat dan pustaka tambahan. Alat dan pustaka tambahan ini ditulis oleh pemrogram dan disebut rantai alat. Toolchain adalah alat pengembangan penting yang digunakan oleh pengembang untuk menghasilkan aplikasi yang berfungsi.</p>
+<h4 style="text-align: left;">5) Alat Pengguna Akhir</h4>
+<p>Alat akhir ini membuat sistem menjadi unik bagi pengguna. Alat akhir tidak diperlukan untuk sistem operasi tetapi diperlukan untuk pengguna.</p>
+<p>Beberapa contoh alat akhir adalah alat desain grafis, suite kantor, browser, pemutar multimedia, dll.</p>
+<h3 style="text-align: left;">Kenapa Pakai Linux?</h3>
+<p>Ini adalah salah satu pertanyaan yang paling sering ditanyakan tentang sistem Linux. Mengapa kita menggunakan sistem operasi yang berbeda dan sedikit kompleks, jika kita memiliki sistem operasi sederhana seperti Windows? Jadi ada berbagai fitur sistem Linux yang membuatnya benar-benar berbeda dan salah satu sistem operasi yang paling banyak digunakan. Linux mungkin merupakan sistem operasi yang sempurna jika Anda ingin menghindari virus, malware, perlambatan, crash, perbaikan yang mahal, dan banyak lagi. Lebih lanjut, Linux memberikan berbagai keunggulan dibandingkan sistem operasi lain, dan kita tidak perlu membayar akan hal itu. Mari kita lihat lebih jauh beberapa fitur khusus yang mungkin akan menarik Anda untuk mengganti sistem operasi.</p>
+<h4 style="text-align: left;">Sistem Operasi Gratis &amp; Sumber Terbuka</h4>
+<p>Kebanyakan OS yang beredar adalah format terkompilasi berarti kode sumber utama telah dijalankan melalui program yang disebut kompiler yang menerjemahkan kode sumber ke dalam bahasa yang dikenal komputer.</p>
+<p>Memodifikasi kode yang dikompilasi ini adalah pekerjaan yang tidak mudah.</p>
+<p>Di sisi lain, open-source sama sekali berbeda. Kode sumber disertakan dengan versi yang dikompilasi dan memungkinkan modifikasi oleh siapa saja yang memiliki keahlian pemrograman. Hal ini memberikan kebebasan untuk menjalankan program, mengubah kode sesuai dengan penggunaan dan mendistribusikan kembali salinannya.</p>
+<p>Singkatnya, Linux adalah sistem operasi untuk semua orang atau &#8220;untuk rakyat, oleh rakyat.&#8221;</p>
+<h4 style="text-align: left;">Linux Super Aman</h4>
+<p>Linux mendukung berbagai opsi keamanan yang akan menyelamatkan pengguna dari virus, malware, perlambatan, crash. Serta, dapat menjaga data agar tetap terlindungi. Fitur keamanannya adalah alasan utama bahwa ini adalah opsi yang paling disukai oleh para developer. Mungkin terlalu berlebihan jika dikatakan super aman, tetapi linux punya tingkat kerentanan yang lebih rendah dibandingkan sistem operasi lainya.</p>
+<h4 style="text-align: left;">Rekomendasi Developer</h4>
+<p>Linux cocok untuk para pengembang atau developer, karena mendukung hampir semua bahasa pemrograman yang populer di dunia, seperti C/C++, Java, Python, Ruby, PHP, dan banyak lagi. Lebih lanjut, Linux juga difasilitasi dengan berbagai macam aplikasi yang berguna untuk pengembangan.</p>
+<p>Pengembang menemukan bahwa terminal Linux jauh lebih baik daripada baris perintah Windows, Jadi, mereka lebih memilih terminal daripada baris perintah Windows atau command prompt. Manajer paket pada sistem Linux membantu developer untuk memahami bagaimana suatu perintah dieksekusi. Bash Script juga merupakan fitur fungsional untuk programmer. Selain itu, dukungan SSH dapat membantu mengelola server dengan cepat.</p>
+<h4 style="text-align: left;">Sistem operasi yang fleksibel</h4>
+<p>Linux adalah OS yang fleksibel, karena dapat digunakan untuk aplikasi desktop, sistem tertanam, dan aplikasi server. Ini dapat digunakan dari jam tangan hingga superkomputer.</p>
+<h3 style="text-align: left;">Distribusi Linux</h3>
+<p>Banyak pihak yang memodifikasi sistem operasi Linux dan membuat distribusi Linux mereka dengan versi yang berbeda. Ada banyak distribusi Linux yang beredar di pasaran. Ini memberikan rasa yang berbeda dari sistem operasi Linux kepada pengguna. Pengguna bisa memilih distribusi apa saja sesuai dengan kebutuhan. Beberapa distro yang populer adalah Ubuntu, Fedora, Debian, Linux Mint, Arch Linux, dan masih banyak lagi.</p>
+<p>Untuk pemula, Ubuntu dan Linux Mint dianggap sebagai distro yang mudah untuk dioperasikan dan untuk pengembang yang mahir, Debian dan Fedora akan menjadi pilihan yang baik. Untuk melihat daftar distribusi, kunjungi Distribusi Linux.</p>
+<h3 style="text-align: left;">Cara kerja Linux</h3>
+<p>Linux adalah sistem operasi mirip UNIX, tetapi mendukung berbagai perangkat keras dari ponsel hingga superkomputer. Setiap sistem operasi berbasis Linux memiliki kernel Linux dan kumpulan paket perangkat lunak untuk mengelola sumber daya perangkat keras.</p>
+<p>OS Linux juga menyertakan beberapa alat inti GNU untuk menyediakan cara untuk mengelola sumber daya kernel, menginstal perangkat lunak, mengkonfigurasi pengaturan dan kinerja keamanan. Semua alat ini dikemas bersama untuk membuat sistem operasi yang fungsional.</p>
+<h3 style="text-align: left;">Cara Menggunakan Linux</h3>
+<p>Pengguna dapat menggunakan Linux melalui antarmuka pengguna yang interaktif maupun dari terminal (Command Line Interface). Distribusi yang berbeda memiliki antarmuka pengguna yang sedikit berbeda tetapi hampir semua perintah akan memiliki sintaks yang tidak jauh berbeda untuk semua distribusi. Untuk menjalankan Linux dari terminal, tekan tombol &#8220;CTRL+ALT+T&#8221; atau cari dengan kata kunci Terminal Emulator.</p>
+<div style="clear: both; text-align: center;"><a style="margin-left: 1em; margin-right: 1em;" href="https://blogger.googleusercontent.com/img/a/AVvXsEhlHV8qg58gqPSxkAV7tqvX-E54yg0zM5PSFkjo_-QRhNskiTj6NBy0Hp7aS2usPFoZAOoHt0r78mNXkyl6Rmz2q-JKgpQq64f4BCeUg8MZZblhw8QO0e9DIpurKpjGh8ZF8zo2o6_My38hvkhXOhXBZkZfBRt4BRHLWMgOP2MA7jT5xtJ0butVRqCw?ref=unixkuy"><img decoding="async" src="https://blogger.googleusercontent.com/img/a/AVvXsEhlHV8qg58gqPSxkAV7tqvX-E54yg0zM5PSFkjo_-QRhNskiTj6NBy0Hp7aS2usPFoZAOoHt0r78mNXkyl6Rmz2q-JKgpQq64f4BCeUg8MZZblhw8QO0e9DIpurKpjGh8ZF8zo2o6_My38hvkhXOhXBZkZfBRt4BRHLWMgOP2MA7jT5xtJ0butVRqCw=s16000" alt data-original-height="174" data-original-width="901"></a></div>
+<p>Sumber :&nbsp;https://www.javatpoint.com/what-is-linux</p>
+<!--kg-card-end: html-->
+    </section>
+
+
+</article>
+</main>
+
+    <section class="footer-cta outer">
+        <div class="inner">
+            <h2 class="footer-cta-title">Sign up for more like this.</h2>
+            <a class="footer-cta-button" href="#/portal" data-portal>
+                <div class="footer-cta-input">Enter your email</div>
+                <span>Subscribe</span>
+            </a>
+        </div>
+    </section>
+
+
+
+            <aside class="read-more-wrap outer">
+                <div class="read-more inner">
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-list/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/image.png 300w,
+                    /content/images/size/w600/wordpress/2023/03/image.png 600w,
+                    /content/images/size/w1000/wordpress/2023/03/image.png 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/image.png 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/image.png"
+            alt="Belajar React Dasar | List"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-list/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | List
+                </h2>
+            </header>
+                <div class="post-card-excerpt">List sangat penting dalam hal mengembangkan UI situs web. Terutama sering digunakan untuk menampilkan menu di situs web, misalnya menu navbar. Pada JavaScript biasa, kita dapat menggunakan array untuk membuat list. Kita dapat membuat list di React dengan cara yang sama seperti yang dilakukan pada javascript biasa.
+
+
+
+
+
+Selanjutnya artikel ini</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-07">Mar 7, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+
+        <img class="post-card-image"
+            srcset="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 300w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 600w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 1000w,
+                    https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="https://lh5.googleusercontent.com/gZMlZ0fSVb-kj7yrU6DtnXIlibLN6Q7Cl1af31Sin-_UzJ7b-oRLaDThSQ95KQ3ykS2h8XJH0ytOvwfukJ6wU1MZrBDvFnZoyVLu_CFclIo8h8R08CqyZF2wBu4Iar9gjJD6f6jgdsnrNuOARG53jcE"
+            alt="Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/cara-mengetahui-orang-yang-tidak-follback-akun-instagram-dan-unfollow-secara-bersamaan/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Cara Mengetahui Orang yang Tidak Follback Akun Instagram dan Unfollow Secara Bersamaan
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Oke gan, mungkin hampir semua orang sudah pernah mengalami atau ingin tau, siapa aja sih orang yang tidak memfollback akun instagram kita. Apapun alasan kalian mengunjungi artikel ini, saya hanya akan share bagaimana cara mengetahui orang yang tidak memfollback dan mengunfollow akun tersebut secara grup.
+
+
+
+
+
+
+Syarat
+
+
+
+
+
+Sebelum masuk ke tutorial,</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-06">Mar 6, 2023</time>
+                <span class="post-card-meta-length">2 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/belajar-react-dasar-reactdom/">
+
+        <img class="post-card-image"
+            srcset="/content/images/size/w300/wordpress/2023/03/REACT-DOM.jpg 300w,
+                    /content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg 600w,
+                    /content/images/size/w1000/wordpress/2023/03/REACT-DOM.jpg 1000w,
+                    /content/images/size/w2000/wordpress/2023/03/REACT-DOM.jpg 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="/content/images/size/w600/wordpress/2023/03/REACT-DOM.jpg"
+            alt="Belajar React Dasar | ReactDOM"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/belajar-react-dasar-reactdom/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Belajar React Dasar | ReactDOM
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Di artikel sebelumnya yaitu Pengantar JSX, kita sudah mempelajari bahwa developer bisa menggunakan JSX untuk menyimpan markup HTML di dalam variabel Javascript. Karena, ReactJS adalah sebuah library untuk membangun Antarmuka Pengguna yang aktif sehingga rendering adalah salah satu bagian yang tidak terpisahkan dari ReactJS. React menyediakan sebuah paket yang bernama</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2023-03-05">Mar 5, 2023</time>
+                <span class="post-card-meta-length">3 min read</span>
+        </footer>
+
+    </div>
+
+</article>
+                </div>
+            </aside>
+
+
+
+    </div>
+
+    <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="http://localhost:2368">unixkuy</a> &copy; 2023</section>
+            <nav class="site-footer-nav">
+                <ul class="nav">
+    <li class="nav-sign-up"><a href="#/portal/">Sign up</a></li>
+</ul>
+
+            </nav>
+            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+        </div>
+    </footer>
+
+</div>
+
+
+<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous">
+</script>
+<script src="/assets/built/casper.js?v=146492131e"></script>
+<script>
+$(document).ready(function () {
+    // Mobile Menu Trigger
+    $('.gh-burger').click(function () {
+        $('body').toggleClass('gh-head-open');
+    });
+    // FitVids - Makes video embeds responsive
+    $(".gh-content").fitVids();
+});
+</script>
+
+
+
+</body>
+</html>
